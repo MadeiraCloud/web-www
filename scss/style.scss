@@ -46,14 +46,7 @@ header {
 
 .nav_wrap {
   border-top : 4px solid #924775;
-  background : #111011 image-url("logo.png") center center no-repeat;
-
-  _background-image : image-url("logo_ie6.png");
-
-  @include retina() {
-    background-image : image-url("logo@2x.png");
-    @include background-size( image-width("logo.png"), auto );
-  }
+  background : #111011;
 
   height      : $headerHeight;
   line-height : $headerHeight;
@@ -71,19 +64,30 @@ header {
 }
 
 .nav_wrap nav {
-  padding : 0 50px;
   color   : #ccc;
 
+  padding   : 0 80px;
+  max-width : 1180px - 80 * 2;
   height    : 100%;
-  max-width : 1180px;
   margin    : 0 auto;
+
+  background : image-url("logo.png") 80px center no-repeat;
+
+  _background-image : image-url("logo_ie6.png");
+
+  @include retina() {
+    background-image : image-url("logo@2x.png");
+    @include background-size( image-width("logo.png"), auto );
+  }
 }
 
 .nav_lnk {
-  position  : relative;
-  height    : 58px;
-  display   : inline-block;
-  font-size : 18px;
+  position    : relative;
+  height      : 58px;
+  display     : inline-block;
+  font-size   : 16px;
+  float       : right;
+  margin-left : 55px;
 
   @include transition( color .2s linear );
 
@@ -115,18 +119,18 @@ header {
   left  : 0;
 }
 
-.nav_home_wrap {
-  float        : left;
-  width        : 80px;
-  margin-right : 120px;
+.nav_user {
+  float       : right;
+  width       : 180px;
+  height      : $headerHeight;
+  margin-left : 20px;
+  font-size   : 14px;
+  text-align  : center;
+  color       : #fff;
 }
 
-.nav_user {
-  float      : right;
-  width      : 180px;
-  font-size  : 14px;
-  text-align : center;
-  color      : #fff;
+.nav_user span {
+  display : none;
 }
 
 .nav_ide {
@@ -157,9 +161,30 @@ header {
   }
 }
 
-.nav_blog {
-  float : right;
-  margin-right : 120px;
+@media screen and (max-width: 880px) {
+  .nav_lnk {
+    font-size : 14px;
+    margin-left : 20px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .nav_wrap nav {
+    padding : 0 40px;
+    background-position : 40px center;
+  }
+}
+
+
+@media screen and (min-width: 1600px) {
+  .nav_wrap nav {
+    max-width : 100px * 10 + 11 * 24; /* Column width 100px, gutter width 24px */
+    padding   : 0 100px;
+  }
+
+  .nav_user {
+    margin-left : 2 * 100px + 2 * 24px - 180;
+  }
 }
 
 

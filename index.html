@@ -19,20 +19,27 @@
         <nav>
           <div class="nav_user">
 
-            <span class="unloggedin">
+            <span id="unloggedin">
               <a href="#" class="nav_register">Sign Up</a>
               <a href="#" class="nav_login">Log In</a>
             </span>
 
-            <span class="loggedin">
+            <span id="loggedin">
               <a href="#" class="nav_ide">Open Ide&gt;&gt;</a>
             </span>
+
+            <script type="text/javascript">
+            (function(){
+              var linkId = "unloggedin";
+              if ( document.cookie.indexOf("madeiracloud_ide_session_id=") != -1 ) { linkId = "loggedin"; }
+              document.getElementById( linkId ).style.display = "block";
+            })();
+            </script>
           </div>
 
           <a href="#" class="nav_lnk nav_blog">BLOG</a>
-
-          <span class="nav_home_wrap"><a href="/" class="nav_lnk nav_home selected">HOME</a></span>
           <a href="#" class="nav_lnk nav_doc">DOCUMENTATION</a>
+          <a href="/" class="nav_lnk nav_home selected">HOME</a>
         </nav>
       </div>
     </header>
