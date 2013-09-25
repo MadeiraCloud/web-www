@@ -1,42 +1,447 @@
-/* Reset */
-/* line 5, ../scss/style.scss */
+/* normalize.css v1.1.3 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+/* line 22, ../scss/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+/* line 32, ../scss/_normalize.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 43, ../scss/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+/* line 59, ../scss/_normalize.scss */
+html {
+  font-size: 100%;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+/* line 75, ../scss/_normalize.scss */
+a:focus {
+  outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+/* line 84, ../scss/_normalize.scss */
+a,
+a:active,
+a:hover {
+  color: inherit;
+  outline: 0;
+  text-decoration: none;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Address font sizes and margins set differently in IE 6/7.
+ * Address font sizes within `section` and `article` in Firefox 4+, Safari 5,
+ * and Chrome.
+ */
+/* line 100, ../scss/_normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* line 105, ../scss/_normalize.scss */
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+
+/* line 110, ../scss/_normalize.scss */
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+
+/* line 115, ../scss/_normalize.scss */
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+
+/* line 120, ../scss/_normalize.scss */
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+
+/* line 125, ../scss/_normalize.scss */
+h6 {
+  font-size: 0.67em;
+  margin: 2.33em 0;
+}
+
+/**
+ * Address styling not present in IE 7/8/9, Safari 5, and Chrome.
+ */
+/* line 134, ../scss/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 3+, Safari 4/5, and Chrome.
+ */
+/* line 143, ../scss/_normalize.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+/* line 151, ../scss/_normalize.scss */
+small {
+  font-size: 80%;
+}
+
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+/**
+ * Address margins set differently in IE 6/7.
+ */
+/* line 166, ../scss/_normalize.scss */
+dl,
+menu,
+ol,
+ul {
+  margin: 1em 0;
+}
+
+/* line 170, ../scss/_normalize.scss */
+dd {
+  margin: 0 0 0 40px;
+}
+
+/**
+ * Address paddings set differently in IE 6/7.
+ */
+/* line 180, ../scss/_normalize.scss */
+menu,
+ol,
+ul {
+  padding: 0 0 0 40px;
+}
+
+/**
+ * Correct list images handled incorrectly in IE 7.
+ */
+/* line 189, ../scss/_normalize.scss */
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/**
+ * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+ * 2. Improve image quality when scaled in IE 7.
+ */
+/* line 203, ../scss/_normalize.scss */
+img {
+  border: 0;
+  /* 1 */
+  -ms-interpolation-mode: bicubic;
+  /* 2 */
+}
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+/* line 212, ../scss/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+/* line 229, ../scss/_normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+  *overflow: visible;
+  /* 4 */
+}
+
+/**
+ * 1. Address box sizing set to content-box in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ * 3. Remove excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+/* line 243, ../scss/_normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *height: 13px;
+  /* 3 */
+  *width: 13px;
+  /* 3 */
+}
+
+/**
+ * Remove inner padding and border in Firefox 3+.
+ */
+/* line 255, ../scss/_normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+/* line 265, ../scss/_normalize.scss */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+/* line 278, ../scss/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Generic stuff */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../asset/lato-reg.eot");
+  src: url("../asset/lato-reg.eot?#iefix") format("embedded-opentype"), url("../asset/lato-reg.woff") format("woff"), url("../asset/lato-reg.ttf") format("truetype"), url("../asset/lato-reg.svg#latoregular") format("svg");
+}
+
+/* line 19, ../scss/style.scss */
 html, body {
-  width: 100%;
   margin: 0;
   padding: 0;
   background: #fcfcfc;
 }
 
+/* line 29, ../scss/style.scss */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: Lato, Helvetica, Arial, sans-serif;
+}
+
 /* Header */
-/* line 15, ../scss/style.scss */
+/* line 37, ../scss/style.scss */
 header {
+  height: 58px;
+}
+
+/* line 41, ../scss/style.scss */
+.nav_wrap {
   border-top: 4px solid #924775;
   background: #111011;
   height: 58px;
+  line-height: 58px;
   width: 100%;
   _position: relative;
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 10;
+  overflow: hidden;
+  font-size: 14px;
+}
+
+/* line 60, ../scss/style.scss */
+.nav_wrap nav {
+  padding: 0 50px;
+  color: #ccc;
+  height: 100%;
+}
+
+/* line 67, ../scss/style.scss */
+.nav_lnk {
+  -webkit-transition: color 0.2s linear;
+  -moz-transition: color 0.2s linear;
+  -o-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+}
+
+/* line 71, ../scss/style.scss */
+.nav_lnk:hover {
+  color: #fff;
+}
+
+/* line 75, ../scss/style.scss */
+.nav_home {
+  color: #f0f0f0;
+  border-bottom: 3px solid #fff;
+}
+
+/* line 80, ../scss/style.scss */
+.nav_home_wrap {
+  float: left;
+  width: 80px;
+  margin-right: 120px;
+}
+
+/* line 86, ../scss/style.scss */
+.nav_user {
+  float: right;
+  font-size: 0;
+}
+
+/* line 91, ../scss/style.scss */
+.nav_register, .nav_login {
+  width: 90px;
+  height: 58px;
+  display: inline-block;
+  *zoom: 1;
+  background: #3781c9;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  -webkit-transition: background 0.2s linear;
+  -moz-transition: background 0.2s linear;
+  -o-transition: background 0.2s linear;
+  transition: background 0.2s linear;
+}
+/* line 101, ../scss/style.scss */
+.nav_register:hover, .nav_login:hover {
+  background: #3174b5;
+}
+
+/* line 108, ../scss/style.scss */
+.nav_login {
+  background: #a55789;
+}
+/* line 111, ../scss/style.scss */
+.nav_login:hover {
+  background: #944e7b;
+}
+
+/* line 116, ../scss/style.scss */
+.nav_blog {
+  float: right;
+  margin-right: 120px;
 }
 
 /* Feature Banner */
-/* line 30, ../scss/style.scss */
-.feature {
-  height: 630px;
+/* line 123, ../scss/style.scss */
+.features {
   background: url('../asset/feature_bg.png?1380080926') repeat-y;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #0b2540), color-stop(100%, #2e465d));
   background-image: -webkit-linear-gradient(top, #0b2540, #2e465d);
   background-image: -moz-linear-gradient(top, #0b2540, #2e465d);
   background-image: -o-linear-gradient(top, #0b2540, #2e465d);
   background-image: linear-gradient(top, #0b2540, #2e465d);
+  height: 630px;
+  width: 100%;
+  position: fixed;
+  z-index: 3;
+}
+
+/* line 134, ../scss/style.scss */
+.features_ph {
+  height: 630px;
+  position: relative;
+  z-index: 2;
 }
 
 /* Intro */
-/* line 38, ../scss/style.scss */
+/* line 144, ../scss/style.scss */
 .intro {
-  height: 100px;
+  height: 1000px;
   -webkit-box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.3);
   box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 4;
+  background: #fcfcfc;
 }

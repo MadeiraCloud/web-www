@@ -1,41 +1,152 @@
 
 @import "compass/css3";
+@import "normalize";
 
-/* Reset */
+/* Generic stuff */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+
+  src: url('../asset/lato-reg.eot');
+  src: url('../asset/lato-reg.eot?#iefix') format('embedded-opentype'),
+       url('../asset/lato-reg.woff') format('woff'),
+       url('../asset/lato-reg.ttf') format('truetype'),
+       url('../asset/lato-reg.svg#latoregular') format('svg');
+}
+
+$mc2BgColor : #fcfcfc;
 html, body {
-  width   : 100%;
-  margin  : 0;
-  padding : 0;
+  margin     : 0;
+  padding    : 0;
+  background : $mc2BgColor;
+}
 
-  background : #fcfcfc;
+html,
+button,
+input,
+select,
+textarea {
+    font-family : Lato, Helvetica, Arial, sans-serif;
 }
 
 
 /* Header */
+$headerHeight : 58px;
+
 header {
+  height : $headerHeight;
+}
+
+.nav_wrap {
   border-top : 4px solid #924775;
   background : #111011;
 
-  height     : 58px;
-  width      : 100%;
+  height      : $headerHeight;
+  line-height : $headerHeight;
+  width       : 100%;
 
   _position : relative;
   position  : fixed;
   top       : 0;
   left      : 0;
+  z-index   : 10;
+
+  overflow  : hidden;
+  font-size : 14px;
+
+}
+
+.nav_wrap nav {
+  padding : 0 50px;
+  color   : #ccc;
+
+  height  : 100%;
+}
+
+.nav_lnk {
+  @include transition( color .2s linear );
+}
+
+.nav_lnk:hover {
+  color : #fff;
+}
+
+.nav_home {
+  color : #f0f0f0;
+  border-bottom : 3px solid #fff;
+}
+
+.nav_home_wrap {
+  float        : left;
+  width        : 80px;
+  margin-right : 120px;
+}
+
+.nav_user {
+  float     : right;
+  font-size : 0;
+}
+
+.nav_register, .nav_login {
+  width      : 90px;
+  height     : $headerHeight;
+  display    : inline-block;
+  *zoom      : 1;
+  background : #3781c9;
+  text-align : center;
+  font-size  : 14px;
+  color      : #fff;
+
+  &:hover {
+    background : darken(#3781c9, 5%);
+  }
+
+  @include transition( background .2s linear );
+}
+
+.nav_login {
+  background : #a55789;
+
+  &:hover {
+    background : darken(#a55789, 5%);
+  }
+}
+
+.nav_blog {
+  float : right;
+  margin-right : 120px;
 }
 
 
 /* Feature Banner */
-.feature {
-  height : 630px;
+.features {
   background : image-url("feature_bg.png") repeat-y;
   @include background-image( linear-gradient(top, #0b2540, #2e465d) );
+
+  height : 630px;
+  width  : 100%;
+
+  position : fixed;
+  z-index  : 3;
 }
+
+.features_ph {
+  height   : 630px;
+  position : relative;
+  z-index  : 2;
+}
+
+
 
 
 /* Intro */
 .intro {
-  height : 100px;
+  height : 1000px;
   @include box-shadow( 0 -10px 20px rgba(0,0,0,0.3) );
+
+  position : relative;
+  z-index  : 4;
+
+  background : $mc2BgColor;
 }
