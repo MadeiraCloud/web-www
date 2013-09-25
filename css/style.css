@@ -367,31 +367,57 @@ header {
   transition: color 0.2s linear;
 }
 
-/* line 86, ../scss/style.scss */
-.nav_lnk:hover {
-  color: #fff;
-}
-
-/* line 90, ../scss/style.scss */
-.nav_home {
-  color: #f0f0f0;
+/* line 87, ../scss/style.scss */
+.lt-ie8 .nav_lnk:hover {
   border-bottom: 3px solid #fff;
 }
 
-/* line 95, ../scss/style.scss */
+/* line 92, ../scss/style.scss */
+.nav_lnk {
+  position: relative;
+  height: 58px;
+  display: inline-block;
+}
+/* line 97, ../scss/style.scss */
+.nav_lnk:hover {
+  color: #f0f0f0;
+}
+
+/* line 102, ../scss/style.scss */
+.nav_lnk:after {
+  content: ' ';
+  position: absolute;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background: #fff;
+  top: 40px;
+  -webkit-transition: all 0.15s ease-in-out;
+  -moz-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+
+/* line 114, ../scss/style.scss */
+.nav_lnk:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+/* line 119, ../scss/style.scss */
 .nav_home_wrap {
   float: left;
   width: 80px;
   margin-right: 120px;
 }
 
-/* line 101, ../scss/style.scss */
+/* line 125, ../scss/style.scss */
 .nav_user {
   float: right;
   font-size: 0;
 }
 
-/* line 106, ../scss/style.scss */
+/* line 130, ../scss/style.scss */
 .nav_register, .nav_login {
   width: 90px;
   height: 58px;
@@ -406,28 +432,28 @@ header {
   -o-transition: background 0.2s linear;
   transition: background 0.2s linear;
 }
-/* line 116, ../scss/style.scss */
+/* line 140, ../scss/style.scss */
 .nav_register:hover, .nav_login:hover {
   background: #3174b5;
 }
 
-/* line 123, ../scss/style.scss */
+/* line 147, ../scss/style.scss */
 .nav_login {
   background: #a55789;
 }
-/* line 126, ../scss/style.scss */
+/* line 150, ../scss/style.scss */
 .nav_login:hover {
   background: #944e7b;
 }
 
-/* line 131, ../scss/style.scss */
+/* line 155, ../scss/style.scss */
 .nav_blog {
   float: right;
   margin-right: 120px;
 }
 
 /* Feature Banner */
-/* line 138, ../scss/style.scss */
+/* line 162, ../scss/style.scss */
 .features {
   background: url('../asset/feature_bg.png?1380080926') repeat-y;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #0b2540), color-stop(100%, #2e465d));
@@ -441,7 +467,7 @@ header {
   z-index: 3;
 }
 
-/* line 149, ../scss/style.scss */
+/* line 173, ../scss/style.scss */
 .features_ph {
   height: 630px;
   position: relative;
@@ -449,7 +475,7 @@ header {
 }
 
 /* Intro */
-/* line 159, ../scss/style.scss */
+/* line 183, ../scss/style.scss */
 .intro {
   height: 1000px;
   -webkit-box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.3);

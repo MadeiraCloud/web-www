@@ -83,13 +83,37 @@ header {
   @include transition( color .2s linear );
 }
 
-.nav_lnk:hover {
-  color : #fff;
+.lt-ie8 {
+  .nav_lnk:hover {
+    border-bottom : 3px solid #fff;
+  }
 }
 
-.nav_home {
-  color : #f0f0f0;
-  border-bottom : 3px solid #fff;
+.nav_lnk {
+  position : relative;
+  height   : 58px;
+  display  : inline-block;
+
+  &:hover {
+    color : #f0f0f0;
+  }
+}
+
+.nav_lnk:after {
+  content    : ' ';
+  position   : absolute;
+  left       : 50%;
+  width      : 0;
+  height     : 3px;
+  background : #fff;
+  top        : 40px;
+
+  @include transition( all .15s ease-in-out );
+}
+
+.nav_lnk:hover:after {
+  width : 100%;
+  left  : 0;
 }
 
 .nav_home_wrap {
