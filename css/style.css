@@ -364,22 +364,23 @@ header {
   position: relative;
   height: 58px;
   display: inline-block;
+  font-size: 18px;
   -webkit-transition: color 0.2s linear;
   -moz-transition: color 0.2s linear;
   -o-transition: color 0.2s linear;
   transition: color 0.2s linear;
 }
-/* line 89, ../scss/style.scss */
+/* line 90, ../scss/style.scss */
 .nav_lnk:hover {
   color: #f0f0f0;
 }
 
-/* line 95, ../scss/style.scss */
+/* line 96, ../scss/style.scss */
 .lt-ie8 .nav_lnk:hover {
   border-bottom: 3px solid #fff;
 }
 
-/* line 100, ../scss/style.scss */
+/* line 101, ../scss/style.scss */
 .nav_lnk:after {
   content: ' ';
   position: absolute;
@@ -394,20 +395,20 @@ header {
   transition: all 0.15s ease-in-out;
 }
 
-/* line 112, ../scss/style.scss */
+/* line 113, ../scss/style.scss */
 .nav_lnk.selected:after, .nav_lnk:hover:after {
   width: 100%;
   left: 0;
 }
 
-/* line 117, ../scss/style.scss */
+/* line 118, ../scss/style.scss */
 .nav_home_wrap {
   float: left;
   width: 80px;
   margin-right: 120px;
 }
 
-/* line 123, ../scss/style.scss */
+/* line 124, ../scss/style.scss */
 .nav_user {
   float: right;
   width: 180px;
@@ -416,7 +417,7 @@ header {
   color: #fff;
 }
 
-/* line 131, ../scss/style.scss */
+/* line 132, ../scss/style.scss */
 .nav_ide {
   width: 145px;
   text-align: center;
@@ -424,7 +425,7 @@ header {
   height: 58px;
 }
 
-/* line 138, ../scss/style.scss */
+/* line 139, ../scss/style.scss */
 .nav_register, .nav_login {
   width: 90px;
   height: 58px;
@@ -435,28 +436,28 @@ header {
   -o-transition: background 0.2s linear;
   transition: background 0.2s linear;
 }
-/* line 144, ../scss/style.scss */
+/* line 145, ../scss/style.scss */
 .nav_register:hover, .nav_login:hover {
   background: #3174b5;
 }
 
-/* line 151, ../scss/style.scss */
+/* line 152, ../scss/style.scss */
 .nav_login, .nav_ide {
   background: #a55789;
 }
-/* line 154, ../scss/style.scss */
+/* line 155, ../scss/style.scss */
 .nav_login:hover, .nav_ide:hover {
   background: #944e7b;
 }
 
-/* line 159, ../scss/style.scss */
+/* line 160, ../scss/style.scss */
 .nav_blog {
   float: right;
   margin-right: 120px;
 }
 
 /* Feature Banner */
-/* line 166, ../scss/style.scss */
+/* line 167, ../scss/style.scss */
 .features {
   background: url('../asset/feature_bg.png?1380080926') repeat-y;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #0b2540), color-stop(100%, #2e465d));
@@ -470,7 +471,7 @@ header {
   z-index: 3;
 }
 
-/* line 177, ../scss/style.scss */
+/* line 178, ../scss/style.scss */
 .features_ph {
   height: 630px;
   position: relative;
@@ -478,7 +479,7 @@ header {
 }
 
 /* Intro */
-/* line 187, ../scss/style.scss */
+/* line 188, ../scss/style.scss */
 .intro {
   height: 1000px;
   -webkit-box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.3);

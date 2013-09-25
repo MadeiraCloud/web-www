@@ -80,9 +80,10 @@ header {
 }
 
 .nav_lnk {
-  position : relative;
-  height   : 58px;
-  display  : inline-block;
+  position  : relative;
+  height    : 58px;
+  display   : inline-block;
+  font-size : 18px;
 
   @include transition( color .2s linear );
 
