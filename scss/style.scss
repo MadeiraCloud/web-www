@@ -111,7 +111,7 @@ header {
   @include transition( all .15s ease-in-out );
 }
 
-.nav_lnk:hover:after {
+.nav_lnk.selected:after, .nav_lnk:hover:after {
   width : 100%;
   left  : 0;
 }
@@ -123,19 +123,25 @@ header {
 }
 
 .nav_user {
-  float     : right;
-  font-size : 0;
+  float      : right;
+  width      : 180px;
+  font-size  : 14px;
+  text-align : center;
+  color      : #fff;
+}
+
+.nav_ide {
+  width      : 145px;
+  text-align : center;
+  float      : right;
+  height     : $headerHeight;
 }
 
 .nav_register, .nav_login {
   width      : 90px;
   height     : $headerHeight;
-  display    : inline-block;
-  *zoom      : 1;
+  float      : right;
   background : #3781c9;
-  text-align : center;
-  font-size  : 14px;
-  color      : #fff;
 
   &:hover {
     background : darken(#3781c9, 5%);
@@ -144,7 +150,7 @@ header {
   @include transition( background .2s linear );
 }
 
-.nav_login {
+.nav_login, .nav_ide {
   background : #a55789;
 
   &:hover {
