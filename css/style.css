@@ -316,14 +316,21 @@ textarea {
   font-family: Lato, Helvetica, Arial, sans-serif;
 }
 
+/* line 40, ../scss/style.scss */
+h1 {
+  font-size: 16px;
+  color: #999;
+  text-align: center;
+}
+
 /* Header */
-/* line 43, ../scss/style.scss */
+/* line 49, ../scss/style.scss */
 header {
   height: 61px;
   /* nav has 3px border */
 }
 
-/* line 47, ../scss/style.scss */
+/* line 53, ../scss/style.scss */
 .nav_wrap {
   border-top: 4px solid #924775;
   background: #111011;
@@ -339,7 +346,7 @@ header {
   font-size: 14px;
 }
 
-/* line 66, ../scss/style.scss */
+/* line 72, ../scss/style.scss */
 .nav_wrap nav {
   color: #ccc;
   padding: 0 80px;
@@ -360,7 +367,7 @@ header {
   }
 }
 
-/* line 84, ../scss/style.scss */
+/* line 90, ../scss/style.scss */
 .nav_lnk {
   position: relative;
   height: 58px;
@@ -373,17 +380,17 @@ header {
   -o-transition: color 0.2s linear;
   transition: color 0.2s linear;
 }
-/* line 94, ../scss/style.scss */
+/* line 100, ../scss/style.scss */
 .nav_lnk:hover {
   color: #f0f0f0;
 }
 
-/* line 100, ../scss/style.scss */
+/* line 106, ../scss/style.scss */
 .lt-ie8 .nav_lnk:hover {
   border-bottom: 3px solid #fff;
 }
 
-/* line 105, ../scss/style.scss */
+/* line 111, ../scss/style.scss */
 .nav_lnk:after {
   content: ' ';
   position: absolute;
@@ -398,13 +405,13 @@ header {
   transition: all 0.15s ease-in-out;
 }
 
-/* line 117, ../scss/style.scss */
+/* line 123, ../scss/style.scss */
 .nav_lnk.selected:after, .nav_lnk:hover:after {
   width: 100%;
   left: 0;
 }
 
-/* line 122, ../scss/style.scss */
+/* line 128, ../scss/style.scss */
 .nav_user {
   float: right;
   width: 180px;
@@ -415,12 +422,12 @@ header {
   color: #fff;
 }
 
-/* line 132, ../scss/style.scss */
+/* line 138, ../scss/style.scss */
 .nav_user span {
   display: none;
 }
 
-/* line 136, ../scss/style.scss */
+/* line 142, ../scss/style.scss */
 .nav_ide {
   width: 145px;
   text-align: center;
@@ -428,7 +435,7 @@ header {
   height: 58px;
 }
 
-/* line 143, ../scss/style.scss */
+/* line 149, ../scss/style.scss */
 .nav_register, .nav_login {
   width: 90px;
   height: 58px;
@@ -439,49 +446,49 @@ header {
   -o-transition: background 0.2s linear;
   transition: background 0.2s linear;
 }
-/* line 149, ../scss/style.scss */
+/* line 155, ../scss/style.scss */
 .nav_register:hover, .nav_login:hover {
   background: #3174b5;
 }
 
-/* line 156, ../scss/style.scss */
+/* line 162, ../scss/style.scss */
 .nav_login, .nav_ide {
   background: #a55789;
 }
-/* line 159, ../scss/style.scss */
+/* line 165, ../scss/style.scss */
 .nav_login:hover, .nav_ide:hover {
   background: #944e7b;
 }
 
 @media screen and (max-width: 880px) {
-  /* line 165, ../scss/style.scss */
+  /* line 171, ../scss/style.scss */
   .nav_lnk {
     font-size: 14px;
     margin-left: 20px;
   }
 }
 @media screen and (max-width: 980px) {
-  /* line 172, ../scss/style.scss */
+  /* line 178, ../scss/style.scss */
   .nav_wrap nav {
     padding: 0 40px;
     background-position: 40px center;
   }
 }
 @media screen and (min-width: 1600px) {
-  /* line 180, ../scss/style.scss */
+  /* line 186, ../scss/style.scss */
   .nav_wrap nav {
     max-width: 1264px;
     /* Column width 100px, gutter width 24px */
     padding: 0 100px;
   }
 
-  /* line 185, ../scss/style.scss */
+  /* line 191, ../scss/style.scss */
   .nav_user {
     margin-left: 68px;
   }
 }
 /* Feature Banner */
-/* line 192, ../scss/style.scss */
+/* line 198, ../scss/style.scss */
 .features {
   background: url('../asset/feature_bg.png?1380080926') repeat-y;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #0b2540), color-stop(100%, #2e465d));
@@ -495,7 +502,7 @@ header {
   z-index: 3;
 }
 
-/* line 203, ../scss/style.scss */
+/* line 209, ../scss/style.scss */
 .features_ph {
   height: 630px;
   position: relative;
@@ -503,13 +510,14 @@ header {
 }
 
 /* Intro */
-/* line 213, ../scss/style.scss */
+/* line 219, ../scss/style.scss */
 .intro {
   height: 1000px;
   -webkit-box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.3);
   box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.3);
+  background: #fcfcfc;
+  padding-top: 20px;
   position: relative;
   z-index: 4;
-  background: #fcfcfc;
 }
