@@ -1,0 +1,41 @@
+
+@import "compass/css3";
+
+/* Reset */
+html, body {
+  width   : 100%;
+  margin  : 0;
+  padding : 0;
+
+  background : #fcfcfc;
+}
+
+
+/* Header */
+header {
+  border-top : 4px solid #924775;
+  background : #111011;
+
+  height     : 58px;
+  width      : 100%;
+
+  _position : relative;
+  position  : fixed;
+  top       : 0;
+  left      : 0;
+}
+
+
+/* Feature Banner */
+.feature {
+  height : 630px;
+  background : image-url("feature_bg.png") repeat-y;
+  @include background-image( linear-gradient(top, #0b2540, #2e465d) );
+}
+
+
+/* Intro */
+.intro {
+  height : 100px;
+  @include box-shadow( 0 -10px 20px rgba(0,0,0,0.3) );
+}
