@@ -80,22 +80,20 @@ header {
 }
 
 .nav_lnk {
+  position : relative;
+  height   : 58px;
+  display  : inline-block;
+
   @include transition( color .2s linear );
+
+  &:hover {
+    color : #f0f0f0;
+  }
 }
 
 .lt-ie8 {
   .nav_lnk:hover {
     border-bottom : 3px solid #fff;
-  }
-}
-
-.nav_lnk {
-  position : relative;
-  height   : 58px;
-  display  : inline-block;
-
-  &:hover {
-    color : #f0f0f0;
   }
 }
 
