@@ -673,3 +673,44 @@ header {
   height: 40px;
   background: rgba(255, 0, 0, 0.1);
 }
+
+/* Footers */
+/* line 407, ../scss/style.scss */
+.signup_footer {
+  text-align: center;
+  background: #f0eeef;
+  color: #808d99;
+  font-size: 24px;
+  padding-top: 0;
+  height: 90px;
+  line-height: 90px;
+}
+
+/* line 418, ../scss/style.scss */
+.big_signup {
+  color: #fff;
+  background: #3781c9;
+  border-top: 1px solid #73a7d9;
+  border-bottom: 1px solid #303030;
+  font-size: 18px;
+  margin-left: 10px;
+  padding: 5px 20px;
+}
+
+/* line 428, ../scss/style.scss */
+footer {
+  background: #111011;
+  padding-bottom: 33px;
+}
+
+/* line 433, ../scss/style.scss */
+.footer_wrap {
+  color: #cdd1d6;
+  width: 80%;
+  margin: 0 auto;
+  line-height: 24px;
+}
+/* line 439, ../scss/style.scss */
+.footer_wrap a {
+  color: #3781c9;
+}

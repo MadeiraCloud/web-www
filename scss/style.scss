@@ -395,17 +395,48 @@ $social_img_height : 40px;
 }
 
 
-.sp_gigaom {
+.sp_gigaom {}
+.sp_thenextweb {}
+.sp_venturebeat {}
+.sp_theregister {}
+.sp_aws {}
+
+
+
+/* Footers */
+.signup_footer {
+  text-align : center;
+  background : #f0eeef;
+  color      : #808d99;
+  font-size  : 24px;
+
+  padding-top : 0;
+  height      : 90px;
+  line-height : 90px;
 }
 
-.sp_thenextweb {
+.big_signup {
+  color         : #fff;
+  background    : #3781c9;
+  border-top    : 1px solid #73a7d9;
+  border-bottom : 1px solid #303030;
+  font-size     : 18px;
+  margin-left   : 10px;
+  padding       : 5px 20px;
 }
 
-.sp_venturebeat {
+footer {
+  background     : #111011;
+  padding-bottom : 33px;
 }
 
-.sp_theregister {
-}
+.footer_wrap {
+  color       : #cdd1d6;
+  width       : 80%;
+  margin      : 0 auto;
+  line-height : 24px;
 
-.sp_aws {
+  a {
+    color : #3781c9;
+  }
 }
