@@ -10,9 +10,8 @@
 }
 
 @font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 400;
+  font-family : 'Lato';
+  font-weight : 400;
 
   src: url('../asset/lato-reg.eot');
   src: url('../asset/lato-reg.eot?#iefix') format('embedded-opentype'),
@@ -21,7 +20,18 @@
        url('../asset/lato-reg.svg#latoregular') format('svg');
 }
 
-$mc2BgColor : #fcfcfc;
+@font-face {
+  font-family : 'Lato';
+  font-weight : bold;
+
+  src: url('../asset/lato-bold.eot');
+  src: url('../asset/lato-bold.eot?#iefix') format('embedded-opentype'),
+       url('../asset/lato-bold.woff') format('woff'),
+       url('../asset/lato-bold.ttf') format('truetype'),
+       url('../asset/lato-bold.svg#latoregular') format('svg');
+}
+
+$mc2BgColor : #f0eeef;
 html, body {
   margin     : 0;
   padding    : 0;
@@ -36,11 +46,29 @@ textarea {
     font-family : Lato, Helvetica, Arial, sans-serif;
 }
 
+ul, li {
+  list-style : none;
+  padding    : 0;
+  margin     : 0;
+}
+
 
 h1 {
-  font-size  : 16px;
-  color      : #999;
-  text-align : center
+  font-size     : 24px;
+  color         : #808d99;
+  text-align    : center;
+  font-weight   : bold;
+  margin-top    : 0;
+  margin-bottom : 64px;
+}
+
+.clearfix {
+  &:after {
+    content : " ";
+    clear   : both;
+    display : block;
+  }
+  *zoom : 1;
 }
 
 /* Header */
@@ -215,14 +243,169 @@ header {
 
 
 
-/* Intro */
-.intro {
-  height : 1000px;
-  @include box-shadow( 0 -10px 20px rgba(0,0,0,0.3) );
-
-  background  : $mc2BgColor;
-  padding-top : 20px;
-
+/* Shared */
+.cover {
   position : relative;
   z-index  : 4;
+
+  padding-top : 33px;
+  overflow-x  : hidden;
+}
+
+
+
+
+/* Intro */
+.intro {
+  @include box-shadow( 0 -10px 20px rgba(0,0,0,0.3) );
+
+  background : $mc2BgColor image-url("intro_bg.png") left bottom repeat-x;
+  padding-bottom : 80px;
+
+
+
+  @include retina() {
+    background-image : image-url("intro_bg@2x.png");
+    @include background-size( image-width("intro_bg.png"), auto );
+  }
+}
+
+.intro_wrap {
+  width  : 380px * 3 + 20 * 2;
+  margin : 0 auto;
+
+  @extend .clearfix;
+
+  .last {
+    margin-right : 0;
+  }
+}
+
+.intro_block {
+  /* This is for screenwidth >= 1280 */
+  width        : 380px;
+  float        : left;
+  margin-right : 20px;
+  text-align   : center;
+  color        : #667;
+  font-size    : 16px;
+  line-height  : 24px;
+
+  h2 {
+    font-size     : 24px;
+    font-weight   : bold;
+    margin-top    : 16px;
+    margin-bottom : 13px;
+  }
+
+}
+
+.intro_img {
+  width  : 292px;
+  height : 197px;
+  margin : 0 auto;
+
+  border        : 4px solid #fff;
+  border-radius : 4px;
+  @include box-shadow( 0 2px 5px rgba(176,176,176,.6) );
+
+  background-color : #c8c8c8;
+}
+
+
+
+
+/* Services */
+.services {
+  height      : 600px;
+  background  : #1e1c2a;
+
+  h1 {
+    color : #adbcca;
+  }
+}
+
+
+
+
+
+/* Vision */
+.vision {
+  background     : #3781c9;
+  padding-bottom : 40px;
+
+  h1 {
+    color : #c7d5e2;
+  }
+
+  blockquote {
+    color       : #fff;
+    font-family : "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    font-style  : italic;
+    font-size   : 22px;
+
+    width     : 80%;
+    max-width : 1020px - 120 * 2;
+    padding   : 0 120px;
+
+    margin        : 0 auto;
+    margin-bottom : 42px;
+  }
+}
+
+.emphasize {
+  border-bottom : 1px solid #fff;
+}
+
+
+
+
+
+/* Social media */
+$social_img_width  : 200px;
+$social_img_height : 40px;
+
+.socialmedia {
+
+  $socialHeight     : 180px;
+  $socialPaddingTop : ceil(($socialHeight - $social_img_height) / 2);
+
+  background  : #F8F8F8;
+  text-align  : center;
+  line-height : $social_img_height + 20px;
+  padding     : $socialPaddingTop 0;
+  font-size   : 3em;
+}
+
+.social_wrap {
+  width  : 90%;
+  margin : 0 auto;
+}
+
+.social_post{
+  text-indent : 100000px;
+  overflow    : hidden;
+  display     : inline-block;
+  *zoom       : 1;
+
+  width  : $social_img_width;
+  height : $social_img_height;
+
+  background: rgba(red, 0.1);
+}
+
+
+.sp_gigaom {
+}
+
+.sp_thenextweb {
+}
+
+.sp_venturebeat {
+}
+
+.sp_theregister {
+}
+
+.sp_aws {
 }
