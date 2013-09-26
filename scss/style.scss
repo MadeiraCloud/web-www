@@ -71,6 +71,17 @@ h1 {
   *zoom : 1;
 }
 
+.sprite {
+  background : image-url("sprite.png") no-repeat;
+
+  _background-image : image-url("sprite_ie6.png");
+
+  @include retina() {
+    background-image : image-url("sprite@2x.png");
+    @include background-size( image-width("sprite.png"), auto );
+  }
+}
+
 /* Header */
 $headerHeight : 58px;
 
@@ -359,12 +370,10 @@ header {
       position     : absolute;
       margin-left  : -60px;
       margin-top   : -10px;
-      background   : image-url("sprite.png") no-repeat;
 
-      @include retina() {
-        background-image : image-url("sprite@2x.png");
-        @include background-size( image-width("sprite.png"), auto );
-      }
+      background-position : 0 -250px;
+
+      @extend .sprite;
     }
 
     @media screen and (min-width: 1280px) {
@@ -422,7 +431,7 @@ header {
 
 /* Social media */
 $social_img_width  : 200px;
-$social_img_height : 40px;
+$social_img_height : 50px;
 
 .socialmedia {
 
@@ -458,15 +467,75 @@ $social_img_height : 40px;
   width  : $social_img_width;
   height : $social_img_height;
 
-  background: rgba(red, 0.1);
+  position : relative;
+
+  @extend .sprite;
+
+  &:before {
+    content  : " ";
+    display  : block;
+    position : absolute;
+    width    : 100%;
+    height   : 100%;
+
+    opacity  : 0;
+
+    @include transition( opacity .3s ease-in-out );
+
+    @extend .sprite;
+  }
+
+  &:hover:before {
+    opacity : 1;
+  }
+}
+
+.lt-ie8 {
+  .social_post:before {
+    display : none;
+  }
+  .sp_gigaom {
+    &:hover { background-position : -200px 0; }
+  }
+  .sp_thenextweb {
+    &:hover { background-position : -200px -50px * 1; }
+  }
+  .sp_venturebeat {
+    &:hover { background-position : -200px -50px * 2; }
+  }
+  .sp_theregister {
+    &:hover { background-position : -200px -50px * 3; }
+  }
+  .sp_aws {
+    &:hover { background-position : -200px -50px * 4; }
+  }
 }
 
 
-.sp_gigaom {}
-.sp_thenextweb {}
-.sp_venturebeat {}
-.sp_theregister {}
-.sp_aws {}
+.sp_gigaom {
+
+  &:before { background-position : -200px 0; }
+}
+.sp_thenextweb {
+  background-position : 0 -50px * 1;
+
+  &:before { background-position : -200px -50px * 1; }
+}
+.sp_venturebeat {
+  background-position : 0 -50px * 2;
+
+  &:before { background-position : -200px -50px * 2; }
+}
+.sp_theregister {
+  background-position : 0 -50px * 3;
+
+  &:before { background-position : -200px -50px * 3; }
+}
+.sp_aws {
+  background-position : 0 -50px * 4;
+
+  &:before { background-position : -200px -50px * 4; }
+}
 
 
 
