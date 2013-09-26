@@ -893,32 +893,37 @@ header {
   margin-left: 10px;
   padding: 5px 20px;
 }
+/* line 584, ../scss/style.scss */
+.big_signup:hover {
+  background: #4b8ece;
+  color: #fff;
+}
 
-/* line 585, ../scss/style.scss */
+/* line 590, ../scss/style.scss */
 footer {
   background: #111011;
   padding-bottom: 33px;
 }
 
-/* line 590, ../scss/style.scss */
+/* line 595, ../scss/style.scss */
 .footer_wrap {
   color: #cdd1d6;
   width: 80%;
   margin: 0 auto;
   line-height: 24px;
 }
-/* line 596, ../scss/style.scss */
+/* line 601, ../scss/style.scss */
 .footer_wrap a {
   color: #3781c9;
 }
 @media screen and (max-width: 560px) {
-  /* line 601, ../scss/style.scss */
+  /* line 606, ../scss/style.scss */
   .footer_wrap {
     width: 90%;
   }
 }
 @media screen and (max-width: 490px) {
-  /* line 605, ../scss/style.scss */
+  /* line 610, ../scss/style.scss */
   .footer_wrap {
     font-size: 14px;
   }

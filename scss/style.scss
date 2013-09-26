@@ -580,6 +580,11 @@ $social_img_height : 50px;
   font-size     : 18px;
   margin-left   : 10px;
   padding       : 5px 20px;
+
+  &:hover {
+    background : lighten(#3781c9, 5%);
+    color : #fff;
+  }
 }
 
 footer {
