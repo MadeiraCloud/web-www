@@ -375,11 +375,19 @@ $social_img_height : 40px;
   line-height : $social_img_height + 20px;
   padding     : $socialPaddingTop 0;
   font-size   : 3em;
+
+  @media screen and (max-width: 430px) {
+    padding : 25px 0;
+  }
 }
 
 .social_wrap {
   width  : 90%;
   margin : 0 auto;
+
+  @media screen and (max-width: 480px) {
+    width : 95%;
+  }
 }
 
 .social_post{
@@ -410,9 +418,22 @@ $social_img_height : 40px;
   color      : #808d99;
   font-size  : 24px;
 
-  padding-top : 0;
-  height      : 90px;
-  line-height : 90px;
+  padding     : (90px - 24px)/2 0;
+  line-height : 1em;
+
+  @media screen and (max-width: 430px) {
+    & {
+      padding     : (90px - 34px)/2 0;
+      line-height : 35px;
+
+      span {
+        display : block;
+      }
+      .big_signup {
+        margin : 0;
+      }
+    }
+  }
 }
 
 .big_signup {
@@ -438,5 +459,13 @@ footer {
 
   a {
     color : #3781c9;
+  }
+
+  @media screen and (max-width: 490px) {
+    & { font-size : 14px; }
+  }
+
+  @media screen and (max-width: 560px) {
+    & { width : 90%; }
   }
 }

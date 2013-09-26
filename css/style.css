@@ -656,14 +656,26 @@ header {
   padding: 70px 0;
   font-size: 3em;
 }
+@media screen and (max-width: 430px) {
+  /* line 368, ../scss/style.scss */
+  .socialmedia {
+    padding: 25px 0;
+  }
+}
 
-/* line 380, ../scss/style.scss */
+/* line 384, ../scss/style.scss */
 .social_wrap {
   width: 90%;
   margin: 0 auto;
 }
+@media screen and (max-width: 480px) {
+  /* line 384, ../scss/style.scss */
+  .social_wrap {
+    width: 95%;
+  }
+}
 
-/* line 385, ../scss/style.scss */
+/* line 393, ../scss/style.scss */
 .social_post {
   text-indent: 100000px;
   overflow: hidden;
@@ -675,18 +687,32 @@ header {
 }
 
 /* Footers */
-/* line 407, ../scss/style.scss */
+/* line 415, ../scss/style.scss */
 .signup_footer {
   text-align: center;
   background: #f0eeef;
   color: #808d99;
   font-size: 24px;
-  padding-top: 0;
-  height: 90px;
-  line-height: 90px;
+  padding: 33px 0;
+  line-height: 1em;
+}
+@media screen and (max-width: 430px) {
+  /* line 425, ../scss/style.scss */
+  .signup_footer {
+    padding: 28px 0;
+    line-height: 35px;
+  }
+  /* line 429, ../scss/style.scss */
+  .signup_footer span {
+    display: block;
+  }
+  /* line 432, ../scss/style.scss */
+  .signup_footer .big_signup {
+    margin: 0;
+  }
 }
 
-/* line 418, ../scss/style.scss */
+/* line 439, ../scss/style.scss */
 .big_signup {
   color: #fff;
   background: #3781c9;
@@ -697,20 +723,32 @@ header {
   padding: 5px 20px;
 }
 
-/* line 428, ../scss/style.scss */
+/* line 449, ../scss/style.scss */
 footer {
   background: #111011;
   padding-bottom: 33px;
 }
 
-/* line 433, ../scss/style.scss */
+/* line 454, ../scss/style.scss */
 .footer_wrap {
   color: #cdd1d6;
   width: 80%;
   margin: 0 auto;
   line-height: 24px;
 }
-/* line 439, ../scss/style.scss */
+/* line 460, ../scss/style.scss */
 .footer_wrap a {
   color: #3781c9;
+}
+@media screen and (max-width: 490px) {
+  /* line 465, ../scss/style.scss */
+  .footer_wrap {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 560px) {
+  /* line 469, ../scss/style.scss */
+  .footer_wrap {
+    width: 90%;
+  }
 }
