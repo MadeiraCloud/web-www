@@ -328,8 +328,16 @@ header {
 
 /* Services */
 .services {
-  height      : 600px;
-  background  : #1e1c2a;
+  height      : image-height("services_bg.png") - 63px;
+  background  : #1e1c2a image-url("services_bg.png") repeat;
+
+  @include background-image( image-url("services_bg_m.png"), linear-gradient(top, #283138, #3a2542) );
+
+  @include retina() {
+    @include background-image( image-url("services_bg_m@2x.png"), linear-gradient(top, #283138, #3a2542) );
+
+    @include background-size( image-width("services_bg_m.png") auto, cover );
+  }
 
   h1 {
     color : #adbcca;
@@ -344,6 +352,8 @@ header {
 .vision {
   background     : #3781c9;
   padding-bottom : 40px;
+
+  @include box-shadow( 0 -35px 35px rgba(0,0,0,0.15) );
 
   h1 {
     color : #c7d5e2;
@@ -479,8 +489,6 @@ $social_img_height : 50px;
     height   : 100%;
 
     opacity  : 0;
-
-    @include transition( opacity .3s ease-in-out );
 
     @extend .sprite;
   }
