@@ -269,6 +269,19 @@ header {
   overflow-x  : hidden;
 }
 
+@media screen and (max-width: 860px) {
+  /* Disable drawer effect for small device */
+  .features {
+    position : static;
+  }
+  .features_ph {
+    display : none;
+  }
+  .cover {
+    position : static;
+  }
+}
+
 
 
 
@@ -325,8 +338,40 @@ header {
   border-radius : 4px;
   @include box-shadow( 0 2px 5px rgba(176,176,176,.6) );
 
-  background-color : #c8c8c8;
+  background-color : #f0f0f0;
+
+  @include background-size( 100%, auto );
 }
+
+.intro_img_design {
+
+}
+
+.intro_img_config {
+  background : image-url("ser_sg.png") no-repeat;
+}
+
+.intro_img_launch {
+  background : image-url("ser_launch.png") no-repeat;
+}
+
+@media (-webkit-min-device-pixel-ratio:2), (min--moz-device-pixel-ratio:2), (-o-min-device-pixel-ratio:2/1), (min-device-pixel-ratio: 2) {
+  .intro_img {
+    @include background-size( 100%, auto );
+  }
+  .intro_img_design {
+
+  }
+
+  .intro_img_config {
+    background-image : image-url("ser_sg@2x.png");
+  }
+
+  .intro_img_launch {
+    background-image : image-url("ser_launch@2x.png");
+  }
+}
+
 
 @media screen and (min-width: 1600px) {
   .intro_wrap {
