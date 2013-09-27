@@ -487,8 +487,7 @@ header {
 
 /* Services */
 .services {
-  height      : image-height("services_bg.png") - 63px;
-  background  : #1e1c2a image-url("services_bg.png") repeat;
+  background : #1e1c2a image-url("services_bg.png") left bottom repeat;
 
   @include background-image( image-url("services_bg_m.png"), linear-gradient(top, #283138, #3a2542) );
 
@@ -503,7 +502,66 @@ header {
   }
 }
 
+.service_tags {
+  height : 230px;
+}
 
+.dashboard {
+  height        : 292px + 32px;
+  width         : 80%;
+  max-width     : 1020px;
+  margin        : 0 auto;
+  background    : #fff;
+  border-radius : 8px 8px 0 0;
+  padding       : 2px 2px 0 2px;
+}
+
+.dashboard_wrap {
+  background    : #bebebe;
+  height        : 100%;
+  border-radius : 6px 6px 0 0;
+  padding       : 0 4px;
+
+  .control {
+    height : 32px;
+    @extend .sprite;
+
+    background-position : 4px -300px;
+  }
+
+  .content {
+    background : #fff;
+    height : 292px;
+
+    background : image-url("dashboard1012.png") no-repeat;
+
+    @include retina() {
+      background-image : image-url("dashboard1012@2x.png");
+    }
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .dashboard {
+    max-width : 1280px;
+
+    .content {
+      background : image-url("dashboard.png") no-repeat;
+    }
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio:2), (min--moz-device-pixel-ratio:2), (-o-min-device-pixel-ratio:2/1), (min-device-pixel-ratio: 2) and (min-width: 1600px) {
+  .dashboard .content {
+    background-image : image-url("dashboard@2x.png");
+  }
+}
+
+@media screen and (max-width : 600px) {
+  .dashboard {
+    display : none;
+  }
+}
 
 
 
