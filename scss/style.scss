@@ -500,11 +500,128 @@ header {
 
   h1 {
     color : #adbcca;
+    margin-bottom : 30px;
   }
 }
 
 .service_tags {
-  height : 230px;
+  height   : 260px;
+  position : relative;
+  width    : 80%;
+  margin   : 0 auto;
+
+  .tag {
+    position      : absolute;
+    border-radius : 4px;
+    color         : #fff;
+    text-shadow   : 0 -1px 1px rgba(0,0,0,0.3);
+    text-align    : center;
+    font-size     : 14px;
+
+    @include box-shadow( 0 4px 8px rgba(0,0,0,.3) );
+  }
+
+  .green {
+    background  : #3fb34f;
+    top         : 88px;
+    left        : 3%;
+    width       : 66px;
+    height      : 37px;
+    line-height : 37px;
+  }
+
+  .orange {
+    background  : #f59331;
+    left        : 13%;
+    top         : 15px;
+    width       : 165px;
+    height      : 40px;
+    line-height : 40px;
+  }
+
+  .purple {
+    background  : #65318f;
+    left        : 31%;
+    top         : 174px;
+    width       : 128px;
+    height      : 50px;
+    line-height : 50px;
+
+    font-size : 24px;
+  }
+
+  .lightblue {
+    background : #00afec;
+
+    left        : 56%;
+    top         : 84px;
+    width       : 176px;
+    height      : 55px;
+    line-height : 55px;
+
+    font-size : 24px;
+  }
+
+  .red {
+    background : #f06d54;
+
+    left        : 70%;
+    top         : 158px;
+    width       : 116px;
+    height      : 32px;
+    line-height : 32px;
+  }
+
+  .blue {
+    background : #1d85ea;
+
+    left        : 76%;
+    top         : 21px;
+    width       : 66px;
+    height      : 29px;
+    line-height : 29px;
+
+    font-size : 12px;
+  }
+
+  .gray {
+    background : #66686d;
+
+    left        : 88%;
+    top         : 95px;
+    width       : 146px;
+    height      : 29px;
+    line-height : 29px;
+
+    font-size : 12px;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .service_tags {
+    .green  { left : -3%; }
+    .orange { left : 10%; }
+    .purple { left : 26%; }
+    .lightblue { left : 20%; }
+    .red    { left : 67%; }
+    .blue   { left : 72%; }
+    .gray   { left : 70%; }
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .service_tags {
+    .tag {
+      position : static;
+      display  : block;
+      float    : left;
+      margin   : 0 20px 20px 0;
+    }
+    .blue {
+      height      : 32px;
+      line-height : 32px;
+    }
+  }
 }
 
 .dashboard {
