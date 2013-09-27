@@ -651,6 +651,11 @@ header {
   background-size: 100%, auto;
 }
 
+/* line 346, ../scss/style.scss */
+.intro_img_design {
+  background: url('../asset/ser_design.png') no-repeat;
+}
+
 /* line 350, ../scss/style.scss */
 .intro_img_config {
   background: url('../asset/ser_sg.png?1380195374') no-repeat;
@@ -658,7 +663,7 @@ header {
 
 /* line 354, ../scss/style.scss */
 .intro_img_launch {
-  background: url('../asset/ser_launch.png?1380196239') no-repeat;
+  background: url('../asset/ser_launch.png?1380250552') no-repeat;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2 / 1), (min-device-pixel-ratio: 2) {
@@ -670,6 +675,11 @@ header {
     background-size: 100%, auto;
   }
 
+  /* line 362, ../scss/style.scss */
+  .intro_img_design {
+    background-image: url('../asset/ser_design@2x.png?1380253931');
+  }
+
   /* line 366, ../scss/style.scss */
   .intro_img_config {
     background-image: url('../asset/ser_sg@2x.png?1380194905');
@@ -677,7 +687,7 @@ header {
 
   /* line 370, ../scss/style.scss */
   .intro_img_launch {
-    background-image: url('../asset/ser_launch@2x.png?1380196165');
+    background-image: url('../asset/ser_launch@2x.png?1380250489');
   }
 }
 @media screen and (min-width: 1600px) {

@@ -344,7 +344,7 @@ header {
 }
 
 .intro_img_design {
-
+  background : image-url("ser_design.png") no-repeat;
 }
 
 .intro_img_config {
@@ -360,7 +360,7 @@ header {
     @include background-size( 100%, auto );
   }
   .intro_img_design {
-
+    background-image : image-url("ser_design@2x.png");
   }
 
   .intro_img_config {
