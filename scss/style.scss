@@ -269,7 +269,7 @@ header {
   overflow-x  : hidden;
 }
 
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 640px) {
   /* Disable drawer effect for small device */
   .features {
     position : static;
@@ -609,6 +609,8 @@ $social_img_height : 50px;
 
     opacity  : 0;
 
+    @include transition( opacity .25s ease-in-out );
+
     @extend .sprite;
   }
 
@@ -707,12 +709,12 @@ $social_img_height : 50px;
 }
 
 footer {
+  color          : #cdd1d6;
   background     : #111011;
   padding-bottom : 33px;
 }
 
 .footer_wrap {
-  color       : #cdd1d6;
   width       : 80%;
   margin      : 0 auto;
   line-height : 24px;
@@ -728,4 +730,75 @@ footer {
   @media screen and (max-width: 490px) {
     & { font-size : 14px; }
   }
+}
+
+.network_wrap {
+  float : right;
+
+  li {
+    width       : 50px;
+    height      : 50px;
+    margin-left : 10px;
+    float       : left;
+  }
+
+  a {
+    width       : 50px;
+    height      : 50px;
+    display     : block;
+    text-indent : 100000px;
+    overflow    : hidden;
+
+    opacity : 0.8;
+
+    @extend .sprite;
+  }
+
+  @media screen and (min-width: 821px) and (max-width: 1000px) {
+    & {
+      width : 380px;
+      padding-top : 12px;
+    }
+  }
+
+  @media screen and (max-width: 820px) {
+    & {
+      float : none;
+      padding-bottom : 12px;
+    }
+
+    &:after {
+      content : " ";
+      clear   : both;
+      display : block;
+    }
+
+    li {
+      float : left;
+      margin-left  : 0;
+      margin-right : 10px;
+    }
+  }
+
+  @media screen and (max-width : 400px) {
+    & {
+      width : auto;
+    }
+
+    li {
+      width  : 40px;
+      height : 40px;
+    }
+    a {
+      @include scale( 40 / 50 );
+      // @include background-size( ceil(image-width("sprite.png") * 36 / 48), auto );
+    }
+  }
+
+  .github   { background-position : -100px -250px; }
+  .twitter  { background-position : -150px -250px; }
+  .facebook { background-position : -200px -250px; }
+  .gplus    { background-position : -250px -250px; }
+  .vimeo    { background-position : -300px -250px; }
+  .linkedin { background-position : -350px -250px; }
 }
