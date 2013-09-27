@@ -302,8 +302,9 @@ header {
   overflow-x  : hidden;
 }
 
-@media screen and (max-width: 640px) {
-  /* Disable drawer effect for small device */
+@media screen and (max-width: 1024px) {
+  /* Disable drawer effect for small device*/
+  /* Seems like even in ipad, there's rendering issue */
   .features {
     position : static;
   }
@@ -537,6 +538,7 @@ header {
 
     @include retina() {
       background-image : image-url("dashboard1012@2x.png");
+      @include background-size( image-width("dashboard1012.png"), auto );
     }
   }
 }
@@ -551,9 +553,10 @@ header {
   }
 }
 
-@media (-webkit-min-device-pixel-ratio:2), (min--moz-device-pixel-ratio:2), (-o-min-device-pixel-ratio:2/1), (min-device-pixel-ratio: 2) and (min-width: 1600px) {
+@media (min-width: 1600px) and (-webkit-min-device-pixel-ratio:2), (min--moz-device-pixel-ratio:2), (-o-min-device-pixel-ratio:2/1), (min-device-pixel-ratio: 2) {
   .dashboard .content {
     background-image : image-url("dashboard@2x.png");
+    @include background-size( image-width("dashboard.png"), auto );
   }
 }
 
