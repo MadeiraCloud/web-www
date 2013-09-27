@@ -524,18 +524,22 @@ header {
   .green {
     background  : #3fb34f;
     top         : 88px;
-    left        : 3%;
+    left        : 5%;
     width       : 66px;
     height      : 37px;
+    margin-left : ceil( -66px / 2 );
+    margin-top  : ceil( -37px / 2 );
     line-height : 37px;
   }
 
   .orange {
     background  : #f59331;
-    left        : 13%;
+    left        : 20%;
     top         : 15px;
     width       : 165px;
     height      : 40px;
+    margin-left : ceil( -165px / 2 );
+    margin-top  : ceil( -40px / 2 );
     line-height : 40px;
   }
 
@@ -546,6 +550,9 @@ header {
     width       : 128px;
     height      : 50px;
     line-height : 50px;
+
+    margin-left : ceil( -128px / 2 );
+    margin-top  : ceil( -50px / 2 );
 
     font-size : 24px;
   }
@@ -559,6 +566,9 @@ header {
     height      : 55px;
     line-height : 55px;
 
+    margin-left : ceil( -176px / 2 );
+    margin-top  : ceil( -55px / 2 );
+
     font-size : 24px;
   }
 
@@ -570,6 +580,9 @@ header {
     width       : 116px;
     height      : 32px;
     line-height : 32px;
+
+    margin-left : ceil( -116px / 2 );
+    margin-top  : ceil( -32px / 2 );
   }
 
   .blue {
@@ -580,6 +593,9 @@ header {
     width       : 66px;
     height      : 29px;
     line-height : 29px;
+
+    margin-left : ceil( -66px / 2 );
+    margin-top  : ceil( -29px / 2 );
 
     font-size : 12px;
   }
@@ -593,23 +609,35 @@ header {
     height      : 29px;
     line-height : 29px;
 
+    margin-left : ceil( -146px / 2 );
+    margin-top  : ceil( -29px / 2 );
+
     font-size : 12px;
+  }
+}
+
+.hide {
+  .tag {
   }
 }
 
 @media screen and (max-width: 840px) {
   .service_tags {
+    .tag {
+      margin-left : 0;
+      margin-top  : 0;
+    }
     .green  { left : -3%; }
     .orange { left : 10%; }
     .purple { left : 26%; }
-    .lightblue { left : 20%; }
+    .lightblue { left : 32%; }
     .red    { left : 67%; }
     .blue   { left : 72%; }
     .gray   { left : 70%; }
   }
 }
 
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 580px) {
   .service_tags {
     .tag {
       position : static;
