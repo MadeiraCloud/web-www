@@ -26,11 +26,51 @@ $(function(){
     var scrollY = window.scrollTop || window.scrollY;
     if ( scrollY >= baseline ) {
       // Show tags
-      $("#mcServices").removeTag("hide");
+      $("#mcServices").removeClass("hide");
       $(window).off("scroll", onWinScroll).off("resize", onWinResize);
     }
   }
-  $(window).
 
+  $(window).on("scroll", onWinScroll).on("resize", onWinResize);
+
+  /* Feature silder */
+  $("#mcFeatures")
+    .on("click", ".btn_prev", function( evt ){ nextSilder( evt, true); })
+    .on("click", ".btn_next", nextSilder );
+
+  function nextSilder( evt, isPrev ) {
+    var $lastShow = $("#mcFeatureContent .show");
+    var $children = $("#mcFeatureContent").children();
+    var index = $lastShow.index();
+    if ( isPrev === true ) {
+      if ( index <= 0 ) {
+        index = $children.length - 1;
+      } else {
+        --index;
+      }
+    } else {
+      ++index;
+      if ( index == $children.length ) {
+        index = 0;
+      }
+    }
+
+    $lastShow.removeClass("show");
+    var $show = $children.eq( index ).addClass("show");
+
+    if ( false /* Doesn't support transition */ )
+    {
+      $lastShow.animate({opacity : 0}, 300);
+      $show.animate({opacity : 1}, 300);
+    }
+  }
+
+  /* Auto slider */
+  haltAutoSlide = false;
+  setInterval(function(){
+    if ( haltAutoSlide )
+      return;
+    $("#mcFeatures").children(".btn_next").click();
+  }, 5000);
 
 });
