@@ -35,10 +35,20 @@ $(function(){
 
   /* Feature silder */
   $("#mcFeatures")
-    .on("click", ".btn_prev", function( evt ){ nextSilder( evt, true); })
-    .on("click", ".btn_next", nextSilder );
+    .on("click", ".btn_prev", function( evt ){ nextSlide( evt, true); })
+    .on("click", ".btn_next", nextSlide );
 
-  function nextSilder( evt, isPrev ) {
+
+  /* Auto slide */
+  autoSlideTO = null;
+  function doNextSlide () {
+    autoSlideTO = setTimeout(function(){
+      $("#mcFeatures").children(".btn_next").click();
+    }, 5000)
+  }
+  doNextSlide();
+
+  function nextSlide( evt, isPrev ) {
     var $lastShow = $("#mcFeatureContent .show");
     var $children = $("#mcFeatureContent").children();
     var index = $lastShow.index();
@@ -63,14 +73,8 @@ $(function(){
       $lastShow.animate({opacity : 0}, 300);
       $show.animate({opacity : 1}, 300);
     }
-  }
 
-  /* Auto slider */
-  haltAutoSlide = false;
-  setInterval(function(){
-    if ( haltAutoSlide )
-      return;
-    $("#mcFeatures").children(".btn_next").click();
-  }, 5000);
+    doNextSlide();
+  }
 
 });
