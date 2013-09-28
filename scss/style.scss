@@ -52,6 +52,10 @@ ul, li {
   margin     : 0;
 }
 
+header, footer {
+  margin : 0;
+}
+
 
 .cover h1 {
   font-size     : 24px;
@@ -969,9 +973,10 @@ $social_img_height : 50px;
   }
 }
 
-.lt-ie8 {
+.lt-ie9 {
   .social_post:before {
     display : none;
+    opacity : 0;
   }
   .sp_gigaom {
     &:hover { background-position : -200px 0; }
