@@ -588,7 +588,7 @@ header {
 /* Feature Banner */
 /* line 276, ../scss/style.scss */
 .features {
-  background: url('../asset/feature_bg.png?1380269496') repeat-y;
+  background: url('../asset/feature_bg.png?1380269496') top center repeat;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #0b2540), color-stop(100%, #2e465d));
   background-image: -webkit-linear-gradient(top, #0b2540, #2e465d);
   background-image: -moz-linear-gradient(top, #0b2540, #2e465d);

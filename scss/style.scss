@@ -274,7 +274,7 @@ header {
 
 /* Feature Banner */
 .features {
-  background : image-url("feature_bg.png") repeat-y;
+  background : image-url("feature_bg.png") top center repeat;
   @include background-image( linear-gradient(top, #0b2540, #2e465d) );
 
   width  : 100%;
