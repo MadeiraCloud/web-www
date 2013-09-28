@@ -42,6 +42,9 @@ $(function(){
   /* Auto slide */
   autoSlideTO = null;
   function doNextSlide () {
+    if ( autoSlideTO ) {
+      clearTimeout( autoSlideTO );
+    }
     autoSlideTO = setTimeout(function(){
       $("#mcFeatures").children(".btn_next").click();
     }, 5000)

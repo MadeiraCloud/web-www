@@ -368,6 +368,17 @@ header {
   }
 }
 
+.lt-ie9 {
+
+  .feature {
+    display : none;
+  }
+
+  .show {
+    display : block;
+  }
+}
+
 .feature_1 {
   background : red;
 }
