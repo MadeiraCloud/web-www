@@ -54,28 +54,48 @@ $(function(){
   function nextSlide( evt, isPrev ) {
     var $lastShow = $("#mcFeatureContent .show");
     var $children = $("#mcFeatureContent").children();
-    var index = $lastShow.index();
+    var index     = $lastShow.index();
+    var nextIndex = index;
     if ( isPrev === true ) {
-      if ( index <= 0 ) {
-        index = $children.length - 1;
+      if ( nextIndex <= 0 ) {
+        nextIndex = $children.length - 1;
       } else {
-        --index;
+        --nextIndex;
       }
     } else {
-      ++index;
-      if ( index == $children.length ) {
-        index = 0;
+      ++nextIndex;
+      if ( nextIndex == $children.length ) {
+        nextIndex = 0;
       }
     }
 
     $lastShow.removeClass("show");
-    var $show = $children.eq( index ).addClass("show");
+    var $show = $children.eq( nextIndex ).addClass("show");
 
     if ( false /* Doesn't support transition */ )
     {
       $lastShow.animate({opacity : 0}, 300);
       $show.animate({opacity : 1}, 300);
     }
+
+    // Animate Desc
+    var $desc = $("#mcFeatureDescs").children();
+    var $descHide = $desc.eq( index ).removeClass("show");
+    var $descShow = $desc.eq( nextIndex ).addClass("show");
+
+    cssprop   = isPrev ? "margin-right" : "margin-left";
+    resetprop = !isPrev ? "margin-right" : "margin-left";
+    animator  = {};
+
+    animator[ cssprop ] = "-150px";
+
+    $descHide.children("h3").stop().animate( animator );
+
+    animator[ cssprop ] = "0px";
+    reset = {}
+    reset[ cssprop ]  = "150px";
+    reset[ resetprop ] = "0px";
+    $descShow.children("h3").stop().css( reset ).animate( animator );
 
     doNextSlide();
   }
