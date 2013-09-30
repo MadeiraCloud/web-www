@@ -286,8 +286,8 @@ header {
 
 /* Feature Banner */
 .features {
-  background : image-url("feature_bg.png") top center repeat;
-  @include background-image( linear-gradient(top, #0b2540, #2e465d) );
+  background : #03284a image-url("bg.jpg") top center no-repeat;
+  @include background-size( cover, cover );
 
   width  : 100%;
 
@@ -439,17 +439,38 @@ header {
 }
 
 .feature_1 {
-  background : red;
+  background : image-url("feature_1.png") center top no-repeat;
 }
 
 .feature_2 {
-  background : blue;
+  background : image-url("feature_2.png") center top no-repeat;
 }
 
 .focus_bg {
   width      : 50%;
   height     : 100%;
-  background : yellow;
+  background : image-url("feature_2_left.png") left top no-repeat;
+}
+
+@media (-webkit-min-device-pixel-ratio:2), (min--moz-device-pixel-ratio:2), (-o-min-device-pixel-ratio:2/1), (min-device-pixel-ratio: 2) {
+  .features {
+    background-image : image-url("bg@2x.jpg");
+  }
+
+  .feature_1 {
+    background-image : image-url("feature_1@2x.png");
+    @include background-size( image-width("feature_1.png"), auto );
+  }
+
+  .feature_2 {
+    background-image : image-url("feature_2_right@2x.png");
+    @include background-size( image-width("feature_2_right.png"), auto );
+  }
+
+  .focus_bg {
+    background-image : image-url("feature_2_left@2x.png");
+    @include background-size( image-width("feature_2_left.png"), auto );
+  }
 }
 
 .focus_control {
