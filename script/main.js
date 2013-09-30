@@ -42,6 +42,7 @@ $(function(){
   /* Auto slide */
   autoSlideTO = null;
   function doNextSlide () {
+    return;
     if ( autoSlideTO ) {
       clearTimeout( autoSlideTO );
     }
