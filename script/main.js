@@ -42,7 +42,6 @@ $(function(){
   /* Auto slide */
   autoSlideTO = null;
   function doNextSlide () {
-    return;
     if ( autoSlideTO ) {
       clearTimeout( autoSlideTO );
     }
@@ -107,4 +106,48 @@ $(function(){
     doNextSlide();
   }
 
+  // Focus drag
+  $(".focus_hanlder")
+    .on("mousedown touchstart", function( evt ){
+      var handle = $(".focus_hanlder")
+        .addClass("active")
+        .data("xpos", evt.pageX);
+
+      var onmove = function( evt ) {
+        var offsetX = evt.pageX - parseInt( handle.data("xpos") );
+        handle.data("xpos", evt.pageX);
+
+        var $control = $(".focus_control");
+        var newX = Math.round( $control.position().left + offsetX );
+        var max  = $(".feature_2").outerWidth();
+        if ( newX < 0 ) {
+          newX = 0;
+        } else if ( newX > max ) {
+          newX = max;
+        }
+
+        newX = (newX * 100.0 / max) + "%";
+        $control
+          //.data("pos", newX / max)
+          .css("left", newX );
+
+        $(".focus_bg").width( newX );
+
+        // Disable auto slide for now
+        if ( autoSlideTO ) {
+          clearTimeout( autoSlideTO );
+        }
+      }
+
+      $("body").one("mouseup touchend", function(){
+        $(".focus_hanlder").removeClass("active");
+        $("body").off("mousemove touchmove", onmove);
+
+        // Enable auto slide
+        doNextSlide();
+      })
+      $("body").on("mousemove touchmove", onmove);
+
+      return false;
+    });
 });

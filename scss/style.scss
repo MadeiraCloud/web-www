@@ -312,8 +312,8 @@ header {
   p {
     font-size   : 24px;
     color       : #000;
-    height      : 30px;
-    line-height : 30px;
+    height      : 1.3em;
+    line-height : 1.3em;
   }
 }
 
@@ -447,8 +447,9 @@ header {
 }
 
 .focus_bg {
-  width  : 100%;
-  height : 100%;
+  width      : 50%;
+  height     : 100%;
+  background : yellow;
 }
 
 .focus_control {
@@ -507,6 +508,8 @@ header {
 
 
   h3 {
+    white-space : nowrap;
+    overflow    : hidden;
     line-height : 95px;
     height      : 95px;
   }
@@ -534,6 +537,71 @@ header {
   }
 }
 
+@media screen and ( max-width : 980px ) {
+  .feature_desc {
+    p {
+      font-size : 20px;
+    }
+  }
+}
+
+@media screen and ( max-width : 800px ) {
+  .feature_desc {
+    p {
+      font-size : 18px;
+    }
+  }
+}
+
+@media screen and ( max-width : 750px ) {
+  .feature_desc {
+    h3 {
+      font-size   : 40px;
+      line-height : 80px;
+      height      : 80px;
+    }
+  }
+}
+
+@media screen and ( max-width : 600px ) {
+  .feature_desc {
+    h3 {
+      font-size   : 32px;
+      line-height : 64px;
+      height      : 64px;
+    }
+
+    p {
+      font-size : 16px;
+    }
+  }
+
+  .feature_desc_wrap {
+    height : 105px;
+  }
+}
+
+@media screen and ( max-width : 430px ) {
+  .feature_desc {
+    h3 {
+      font-size   : 26px;
+      line-height : 52px;
+      height      : 52px;
+    }
+  }
+
+  .feature_desc_wrap {
+    height : 95px;
+  }
+}
+
+@media screen and ( max-width : 360px ) {
+  .feature_desc {
+    h3 {
+      font-size : 22px;
+    }
+  }
+}
 
 /* Shared */
 .cover {
