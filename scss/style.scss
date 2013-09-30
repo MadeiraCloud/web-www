@@ -335,6 +335,7 @@ header {
     left       : 0;
     margin-top : -25px;
     cursor : pointer;
+    z-index    : 20;
 
     @extend .sprite;
   }
@@ -364,6 +365,7 @@ header {
     width    : 100%;
     height   : 100%;
     position : relative;
+    z-index  : 10px;
   }
 }
 
@@ -405,11 +407,24 @@ header {
   top      : 0;
   left     : 0;
   opacity  : 0;
+  z-index  : 1;
 
-  @include transition( opacity .3s ease-in-out );
+  // @include scale( 1.15 );
+
+  @include transition( all .3s ease-in-out );
+  @include transition-property( opacity, transform );
+
+  // &.preshow {
+  //   @include scale( 0.8 );
+  //   @include transition( none );
+  // }
 
   &.show {
+    // @include transition( all .38s ease-in-out );
+    // @include scale( 1 );
     opacity : 1;
+
+    z-index : 10;
   }
 }
 
@@ -441,6 +456,7 @@ header {
   position : absolute;
   left     : 0;
   top      : 0;
+  width    : 100%;
 
 
   h3 {

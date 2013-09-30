@@ -69,14 +69,20 @@ $(function(){
       }
     }
 
-    $lastShow.removeClass("show");
-    var $show = $children.eq( nextIndex ).addClass("show");
+    $lastShow.removeClass("preshow");
+    // Enlarge the showing feature.
+    var $show = $children.eq( nextIndex ).addClass("preshow");
+    setTimeout( function(){
+      $lastShow.removeClass("show");
+      $show.addClass("show");
+    }, 18 );
 
     if ( false /* Doesn't support transition */ )
     {
       $lastShow.animate({opacity : 0}, 300);
       $show.animate({opacity : 1}, 300);
     }
+
 
     // Animate Desc
     var $desc = $("#mcFeatureDescs").children();
