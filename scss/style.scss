@@ -443,7 +443,7 @@ header {
 }
 
 .feature_2 {
-  background : image-url("feature_2.png") center top no-repeat;
+  background : image-url("feature_2_right.png") center top no-repeat;
 }
 
 .focus_bg {
@@ -457,20 +457,20 @@ header {
     background-image : image-url("bg@2x.jpg");
   }
 
-  .feature_1 {
-    background-image : image-url("feature_1@2x.png");
-    @include background-size( image-width("feature_1.png"), auto );
-  }
+  // .feature_1 {
+  //   background-image : image-url("feature_1@2x.png");
+  //   @include background-size( image-width("feature_1.png"), auto );
+  // }
 
-  .feature_2 {
-    background-image : image-url("feature_2_right@2x.png");
-    @include background-size( image-width("feature_2_right.png"), auto );
-  }
+  // .feature_2 {
+  //   background-image : image-url("feature_2_right@2x.png");
+  //   @include background-size( image-width("feature_2_right.png"), auto );
+  // }
 
-  .focus_bg {
-    background-image : image-url("feature_2_left@2x.png");
-    @include background-size( image-width("feature_2_left.png"), auto );
-  }
+  // .focus_bg {
+  //   background-image : image-url("feature_2_left@2x.png");
+  //   @include background-size( image-width("feature_2_left.png"), auto );
+  // }
 }
 
 .focus_control {
