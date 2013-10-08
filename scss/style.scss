@@ -1339,10 +1339,17 @@ footer {
     display     : block;
     text-indent : 100000px;
     overflow    : hidden;
+    border      : 1px solid #eee;
 
     opacity : 0.8;
 
+    @include transition( opacity .2s linear );
+
     @extend .sprite;
+  }
+
+  a:hover {
+    opacity: 1;
   }
 
   @media screen and (min-width: 821px) and (max-width: 1000px) {
