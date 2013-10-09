@@ -518,6 +518,8 @@ header {
 .features_ph {
   position : relative;
   z-index  : 2;
+
+  height : 640px;
 }
 
 .feature_desc {
@@ -1339,7 +1341,6 @@ footer {
     display     : block;
     text-indent : 100000px;
     overflow    : hidden;
-    border      : 1px solid #eee;
 
     opacity : 0.8;
 
