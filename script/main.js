@@ -134,8 +134,8 @@ $(function(){
         .data("xpos", getPageX( evt ) );
 
       var onmove = function( evt ) {
-        var offsetX = getPageX( evt ) - parseInt( handle.data("xpos") );
-        handle.data("xpos", getPageX( evt ) );
+        var pageX   = getPageX( evt );
+        var offsetX = pageX - parseInt( handle.data("xpos") );
 
         var $control = $(".focus_control");
         var newX = Math.round( $control.position().left + offsetX );
@@ -144,6 +144,8 @@ $(function(){
           newX = 0;
         } else if ( newX > max ) {
           newX = max;
+        } else {
+          handle.data("xpos", pageX );
         }
 
         newX = (newX * 100.0 / max) + "%";
@@ -159,7 +161,7 @@ $(function(){
         }
       }
 
-      $("body").one("mouseup touchend mouseleave", function(){
+      $("body").one("mouseup touchend", function(){
         $(".focus_hanlder").removeClass("active")
         $("body").off("mousemove touchmove", onmove);
 

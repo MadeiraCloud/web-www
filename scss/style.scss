@@ -295,18 +295,18 @@ header {
 /* Feature Banner */
 .features {
   background : #03284a image-url("bg.jpg") top center no-repeat;
-  @include background-size( cover, cover );
+  @include background-size( cover );
 
-  width  : 100%;
-
-  position : fixed;
+  width : 100%;
+  position : absolute;
   z-index  : 3;
+
 }
 
 .feature_desc_wrap, .feature_content {
   height     : 95 + 30px;
   width      : 80%;
-  max-width  : 1020px;
+  max-width  : 980px;
   margin     : 0 auto;
   text-align : center;
   position   : relative;
@@ -331,7 +331,7 @@ header {
 }
 
 .feature_content {
-  height   : 445px;
+  height : auto;
 
   .slider_btn {
     width  : 50px;
@@ -370,10 +370,11 @@ header {
   }
 
   .content_wrap {
-    width    : 100%;
-    height   : 100%;
-    position : relative;
-    z-index  : 10px;
+    width       : 100%;
+    height      : 0;
+    padding-top : 44.89%;
+    position    : relative;
+    z-index     : 10;
   }
 }
 
@@ -394,7 +395,7 @@ header {
 
   .feature_content {
     width  : 90%;
-    height : 300px;
+    // height : 300px;
 
     .slider_btn {
       display : none;
@@ -402,11 +403,11 @@ header {
   }
 }
 
-@media screen and (max-width : 400px) {
-  .feature_content {
-    height : 240px;
-  }
-}
+// @media screen and (max-width : 400px) {
+//   .feature_content {
+//     height : 240px;
+//   }
+// }
 
 .feature {
   width    : 100%;
@@ -423,7 +424,17 @@ header {
     opacity : 1;
     z-index : 10;
   }
+
+  img {
+    max-width : 100%;
+  }
+
+  background-repeat   : no-repeat;
+  background-position : center top;
+  @include background-size( cover );
 }
+
+
 
 .lt-ie9 {
   .feature, .feature_desc {
@@ -435,18 +446,36 @@ header {
   }
 }
 
+:not(.lt-ie9) .feature img, :not(.lt-ie9) .focus_bg img {
+  display : none;
+}
+
+
 .feature_1 {
-  background : image-url("feature_1.png") center top no-repeat;
+  background-image : image-url("feature_1.png");
 }
 
 .feature_2 {
-  background : image-url("feature_2_right.png") center top no-repeat;
+  background-image : image-url("feature_2_right.png");
 }
 
 .focus_bg {
-  width      : 50%;
-  height     : 100%;
-  background : image-url("feature_2_left.png") left top no-repeat;
+  position : absolute;
+  left     : 0;
+  top      : 0;
+  width    : 50%;
+  height   : 100%;
+  overflow : hidden;
+
+  background-image : image-url("feature_2_left.png");
+
+  @include background-size( cover );
+
+  img {
+    max-height : 100%;
+    max-width  : inherit;
+    width      : auto;
+  }
 }
 
 @media (-webkit-min-device-pixel-ratio:2), (min--moz-device-pixel-ratio:2), (-o-min-device-pixel-ratio:2/1), (min-device-pixel-ratio: 2) {
@@ -454,20 +483,17 @@ header {
     background-image : image-url("bg@2x.jpg");
   }
 
-  // .feature_1 {
-  //   background-image : image-url("feature_1@2x.png");
-  //   @include background-size( image-width("feature_1.png"), auto );
-  // }
+  .feature_1 {
+    background-image : image-url("feature_1@2x.png");
+  }
 
-  // .feature_2 {
-  //   background-image : image-url("feature_2_right@2x.png");
-  //   @include background-size( image-width("feature_2_right.png"), auto );
-  // }
+  .feature_2 {
+    background-image : image-url("feature_2_right@2x.png");
+  }
 
-  // .focus_bg {
-  //   background-image : image-url("feature_2_left@2x.png");
-  //   @include background-size( image-width("feature_2_left.png"), auto );
-  // }
+  .focus_bg {
+    background-image : image-url("feature_2_left@2x.png");
+  }
 }
 
 .focus_control {
@@ -516,7 +542,14 @@ header {
   position : relative;
   z-index  : 2;
 
-  height : 640px;
+  .feature_desc {
+    position : static;
+    height   : 195px;
+  }
+
+  .feature_content {
+    width : 80;
+  }
 }
 
 .feature_desc {
