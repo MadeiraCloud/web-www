@@ -766,7 +766,7 @@ header {
 .focus_bg {
   width: 50%;
   height: 100%;
-  background: url('../asset/feature_2_left.png?1381286505') left top no-repeat;
+  background: url('../asset/feature_2_left.png?1381288493') left top no-repeat;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2 / 1), (min-device-pixel-ratio: 2) {
@@ -1183,38 +1183,43 @@ header {
   -moz-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
-  -webkit-transition-property: top, left, margin-left, margin-top, opacity, width, height, line-height, font-size;
-  -moz-transition-property: top, left, margin-left, margin-top, opacity, width, height, line-height, font-size;
-  -o-transition-property: top, left, margin-left, margin-top, opacity, width, height, line-height, font-size;
-  transition-property: top, left, margin-left, margin-top, opacity, width, height, line-height, font-size;
+  -webkit-transition-property: opacity, -webkit-transform;
+  -moz-transition-property: opacity, -moz-transform;
+  -o-transition-property: opacity, -o-transform;
+  transition-property: opacity, transform;
+  -webkit-transform: scale(1, 1);
+  -moz-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  -o-transform: scale(1, 1);
+  transform: scale(1, 1);
 }
-/* line 862, ../scss/style.scss */
+/* line 863, ../scss/style.scss */
 .service_tags .green {
   background: #3fb34f;
   top: 88px;
   left: 5%;
   width: 66px;
   height: 37px;
+  line-height: 37px;
   margin-left: -33px;
   margin-top: -18px;
-  line-height: 37px;
 }
-/* line 873, ../scss/style.scss */
+/* line 874, ../scss/style.scss */
 .service_tags .orange {
   background: #f59331;
   left: 20%;
   top: 15px;
   width: 165px;
   height: 40px;
+  line-height: 40px;
   margin-left: -82px;
   margin-top: -20px;
-  line-height: 40px;
   -webkit-transition-duration: 0.5s;
   -moz-transition-duration: 0.5s;
   -o-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-/* line 886, ../scss/style.scss */
+/* line 888, ../scss/style.scss */
 .service_tags .purple {
   background: #65318f;
   left: 31%;
@@ -1230,7 +1235,7 @@ header {
   -o-transition-duration: 0.44s;
   transition-duration: 0.44s;
 }
-/* line 902, ../scss/style.scss */
+/* line 904, ../scss/style.scss */
 .service_tags .lightblue {
   background: #00afec;
   left: 56%;
@@ -1246,7 +1251,7 @@ header {
   -o-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
-/* line 919, ../scss/style.scss */
+/* line 921, ../scss/style.scss */
 .service_tags .red {
   background: #f06d54;
   left: 70%;
@@ -1261,7 +1266,7 @@ header {
   -o-transition-duration: 0.6s;
   transition-duration: 0.6s;
 }
-/* line 934, ../scss/style.scss */
+/* line 936, ../scss/style.scss */
 .service_tags .blue {
   background: #1d85ea;
   left: 76%;
@@ -1277,7 +1282,7 @@ header {
   -o-transition-duration: 0.45s;
   transition-duration: 0.45s;
 }
-/* line 950, ../scss/style.scss */
+/* line 952, ../scss/style.scss */
 .service_tags .gray {
   background: #66686d;
   left: 88%;
@@ -1294,53 +1299,58 @@ header {
   transition-duration: 0.35s;
 }
 
-/* line 969, ../scss/style.scss */
+/* line 971, ../scss/style.scss */
 :not(.lt-ie9) .hide .tag {
-  margin: 0 !important;
-  width: 0 !important;
-  line-height: 0 !important;
-  height: 0 !important;
   opacity: 0.3;
-  font-size: 0 !important;
+  -webkit-transform: scale(0, 0);
+  -moz-transform: scale(0, 0);
+  -ms-transform: scale(0, 0);
+  -o-transform: scale(0, 0);
+  transform: scale(0, 0);
 }
 
 @media screen and (max-width: 840px) {
-  /* line 982, ../scss/style.scss */
+  /* line 980, ../scss/style.scss */
   .service_tags .green {
     left: 3%;
   }
-  /* line 983, ../scss/style.scss */
+  /* line 981, ../scss/style.scss */
   .service_tags .orange {
     left: 19%;
   }
-  /* line 984, ../scss/style.scss */
+  /* line 982, ../scss/style.scss */
   .service_tags .purple {
     left: 31%;
   }
-  /* line 985, ../scss/style.scss */
+  /* line 983, ../scss/style.scss */
   .service_tags .lightblue {
     left: 41%;
   }
-  /* line 986, ../scss/style.scss */
+  /* line 984, ../scss/style.scss */
   .service_tags .red {
     left: 70%;
   }
-  /* line 987, ../scss/style.scss */
+  /* line 985, ../scss/style.scss */
   .service_tags .blue {
     left: 75%;
   }
-  /* line 988, ../scss/style.scss */
+  /* line 986, ../scss/style.scss */
   .service_tags .gray {
     left: 83%;
   }
 }
 @media screen and (max-width: 580px) {
-  /* line 994, ../scss/style.scss */
+  /* line 992, ../scss/style.scss */
   .service_tags .tag {
     position: static;
     display: block;
     float: left;
     margin: 0 20px 20px 0;
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
   }
   /* line 1000, ../scss/style.scss */
   .service_tags .blue {

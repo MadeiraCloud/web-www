@@ -856,7 +856,8 @@ header {
     @include box-shadow( 0 4px 8px rgba(0,0,0,.3) );
 
     @include transition( all .4s ease-in-out );
-    @include transition-property( top, left, margin-left, margin-top, opacity, width, height, line-height, font-size );
+    @include transition-property( opacity, transform );
+    @include scale(1, 1);
   }
 
   .green {
@@ -865,9 +866,9 @@ header {
     left        : 5%;
     width       : 66px;
     height      : 37px;
-    margin-left : ceil( -66px / 2 );
-    margin-top  : ceil( -37px / 2 );
     line-height : 37px;
+    margin-left : ceil( -66px / 2);
+    margin-top  : ceil( -37px / 2 );
   }
 
   .orange {
@@ -876,9 +877,10 @@ header {
     top         : 15px;
     width       : 165px;
     height      : 40px;
+    line-height : 40px;
+
     margin-left : ceil( -165px / 2 );
     margin-top  : ceil( -40px / 2 );
-    line-height : 40px;
 
     @include transition-duration( .5s );
   }
@@ -967,12 +969,8 @@ header {
 
 :not(.lt-ie9) .hide {
   .tag {
-    margin      : 0 !important;
-    width       : 0 !important;
-    line-height : 0 !important;
-    height      : 0 !important;
-    opacity     : 0.3;
-    font-size   : 0 !important;
+    opacity : 0.3;
+    @include scale(0, 0);
   }
 }
 
@@ -996,6 +994,8 @@ header {
       display  : block;
       float    : left;
       margin   : 0 20px 20px 0;
+
+      @include translate( 0, 0 );
     }
     .blue {
       height      : 32px;
