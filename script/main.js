@@ -18,7 +18,13 @@ $(function(){
 
   function doResize() {
     var $services = $("#mcServices");
-    baseline = $services.offset().top + $services.height() + 100 - docEl.clientHeight;
+    var viewport  = docEl.clientHeight;
+    if ( viewport <= 640 && docEl.clientWidth <= 480 ) {
+      viewport += 30;
+    } else {
+      viewport += 100;
+    }
+    baseline = $services.offset().top + $services.height() - viewport;
   }
   doResize();
 
@@ -45,11 +51,26 @@ $(function(){
     if ( autoSlideTO ) {
       clearTimeout( autoSlideTO );
     }
-    autoSlideTO = setTimeout(function(){
-      $("#mcFeatures").children(".btn_next").click();
-    }, 5000)
+    // autoSlideTO = setTimeout(function(){
+    //   $("#mcFeatures").children(".btn_next").click();
+    // }, 5000)
   }
   doNextSlide();
+
+  var supportsTransitions = (function supportsTransitions() {
+    var b = document.body || document.documentElement;
+    var s = b.style;
+    var p = 'transition';
+    if(typeof s[p] == 'string') {return true; }
+
+    // Tests for vendor specific prop
+    v = ['Moz', 'Webkit', 'Khtml', 'O', 'ms'],
+    p = p.charAt(0).toUpperCase() + p.substr(1);
+    for(var i=0; i<v.length; i++) {
+      if(typeof s[v[i] + p] == 'string') { return true; }
+    }
+    return false;
+  })();
 
   function nextSlide( evt, isPrev ) {
     var $lastShow = $("#mcFeatureContent .show");
@@ -77,7 +98,7 @@ $(function(){
       $show.addClass("show");
     }, 18 );
 
-    if ( false /* Doesn't support transition */ )
+    if ( supportsTransitions == false /* Doesn't support transition */ )
     {
       $lastShow.animate({opacity : 0}, 300);
       $show.animate({opacity : 1}, 300);
@@ -85,25 +106,24 @@ $(function(){
 
 
     // Animate Desc
-    var $desc = $("#mcFeatureDescs").children();
-    var $descHide = $desc.eq( index ).removeClass("show");
-    var $descShow = $desc.eq( nextIndex ).addClass("show");
-
-    cssprop   = isPrev ? "margin-right" : "margin-left";
-    resetprop = !isPrev ? "margin-right" : "margin-left";
-    animator  = {};
-
-    animator[ cssprop ] = "-150px";
-
-    $descHide.children("h3").stop().animate( animator );
-
-    animator[ cssprop ] = "0px";
-    reset = {}
-    reset[ cssprop ]  = "150px";
-    reset[ resetprop ] = "0px";
-    $descShow.children("h3").stop().css( reset ).animate( animator );
+    var $desc = $("#mcFeatureDescs").addClass("no_ani").children().removeClass("left right");
+    var $descHide = $desc.eq( index ).addClass( isPrev ? "right" : "left" );
+    var $descShow = $desc.eq( nextIndex ).addClass( isPrev ? "left" : "right" );
+    setTimeout(function(){
+      $("#mcFeatureDescs").removeClass("no_ani");
+      $descHide.removeClass("show");
+      $descShow.addClass("show");
+    }, 50);
 
     doNextSlide();
+  }
+
+  function getPageX( evt ) {
+    if ( evt.originalEvent.touches && evt.originalEvent.touches.length ) {
+      return evt.originalEvent.touches[0].pageX;
+    } else {
+      return evt.pageX;
+    }
   }
 
   // Focus drag
@@ -111,11 +131,11 @@ $(function(){
     .on("mousedown touchstart", function( evt ){
       var handle = $(".focus_hanlder")
         .addClass("active")
-        .data("xpos", evt.pageX);
+        .data("xpos", getPageX( evt ) );
 
       var onmove = function( evt ) {
-        var offsetX = evt.pageX - parseInt( handle.data("xpos") );
-        handle.data("xpos", evt.pageX);
+        var offsetX = getPageX( evt ) - parseInt( handle.data("xpos") );
+        handle.data("xpos", getPageX( evt ) );
 
         var $control = $(".focus_control");
         var newX = Math.round( $control.position().left + offsetX );
@@ -140,7 +160,7 @@ $(function(){
       }
 
       $("body").one("mouseup touchend mouseleave", function(){
-        $(".focus_hanlder").removeClass("active");
+        $(".focus_hanlder").removeClass("active")
         $("body").off("mousemove touchmove", onmove);
 
         // Enable auto slide

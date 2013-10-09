@@ -123,6 +123,14 @@ header {
 
   overflow  : hidden;
   font-size : 14px;
+
+
+  @media screen and (max-height:640px) {
+    /* Make header not sticky for cellphones */
+    & {
+      position : static;
+    }
+  }
 }
 
 .nav_wrap nav {
@@ -409,21 +417,10 @@ header {
   opacity  : 0;
   z-index  : 1;
 
-  // @include scale( 1.15 );
-
-  @include transition( all .3s ease-in-out );
-  @include transition-property( opacity, transform );
-
-  // &.preshow {
-  //   @include scale( 0.8 );
-  //   @include transition( none );
-  // }
+  @include transition( all .5s ease-in-out );
 
   &.show {
-    // @include transition( all .38s ease-in-out );
-    // @include scale( 1 );
     opacity : 1;
-
     z-index : 10;
   }
 }
@@ -540,13 +537,28 @@ header {
   h3, p {
     margin  : 0;
     opacity : 0;
-    @include transition( opacity .35s ease-in-out );
+    @include transition( all .35s ease-in-out );
   }
 
-  &.show {
-    h3, p {
-      opacity : 1;
-    }
+  .no_ani & h3 {
+    @include transition( none );
+  }
+
+  &.left h3 {
+    @include translate(-150px, 0);
+  }
+
+  &.right h3 {
+    @include translate(150px, 0);
+  }
+
+  &.show h3 {
+    opacity : 1;
+    @include translate(0, 0);
+  }
+
+  &.show p {
+    opacity : 1;
   }
 
   .lt-ie9 {
