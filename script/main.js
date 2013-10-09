@@ -139,7 +139,7 @@ $(function(){
         }
       }
 
-      $("body").one("mouseup touchend", function(){
+      $("body").one("mouseup touchend mouseleave", function(){
         $(".focus_hanlder").removeClass("active");
         $("body").off("mousemove touchmove", onmove);
 
