@@ -51,9 +51,9 @@ $(function(){
     if ( autoSlideTO ) {
       clearTimeout( autoSlideTO );
     }
-    // autoSlideTO = setTimeout(function(){
-    //   $("#mcFeatures").children(".btn_next").click();
-    // }, 5000)
+    autoSlideTO = setTimeout(function(){
+      $("#mcFeatures").children(".btn_next").click();
+    }, 5000);
   }
   doNextSlide();
 
