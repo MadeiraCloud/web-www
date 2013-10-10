@@ -307,19 +307,20 @@ header {
   height     : 95 + 30px;
   width      : 80%;
   max-width  : 980px;
-  margin     : 0 auto;
+  margin     : 40px auto;
   text-align : center;
   position   : relative;
 
   h3 {
-    font-size   : 48px;
-    color       : #d4dce4;
-    text-shadow : 0 2px 6px rgba(0,0,0,0.9);
+    font-size      : 48px;
+    color          : #eee;
+    // color          : #252525;
+    text-shadow : 0 2px 6px rgba(0,0,0,0.8);
   }
 
   p {
     font-size   : 24px;
-    color       : #000;
+    color       : #333;
     height      : 1.3em;
     line-height : 1.3em;
   }
@@ -375,6 +376,14 @@ header {
     padding-top : 44.89%;
     position    : relative;
     z-index     : 10;
+    margin-left : -40px;
+    
+    border-radius : 20px 20px 0 0;
+    border        : 40px solid #111111;
+    border-bottom : none;
+
+    box-shadow: 0 0 50px rgba(0,0,0,.5);
+
   }
 }
 
@@ -676,7 +685,7 @@ header {
   position : relative;
   z-index  : 4;
 
-  padding-top : 33px;
+  padding-top : 60px;
   overflow-x  : hidden;
 }
 
@@ -752,8 +761,15 @@ header {
 
   background-color  : #f0f0f0;
   background-repeat : no-repeat;
+  opacity           : .9;
 
   @include background-size( 292px, auto );
+
+  @include transition(opacity .2s ease-in-out);
+
+  &:hover {
+    opacity:  1;
+  }
 }
 
 .intro_img_design {
@@ -1316,6 +1332,10 @@ $social_img_height : 50px;
   padding     : (90px - 24px)/2 0;
   line-height : 1em;
 
+  span {
+    margin-right: 10px;
+  }
+
   @media screen and (max-width: 430px) {
     & {
       padding     : (90px - 34px)/2 0;
@@ -1332,13 +1352,14 @@ $social_img_height : 50px;
 }
 
 .big_signup {
-  color         : #fff;
-  background    : #3781c9;
-  border-top    : 1px solid #73a7d9;
-  border-bottom : 1px solid #303030;
-  font-size     : 18px;
-  margin-left   : 10px;
-  padding       : 5px 20px;
+  color          : #fff;
+  background     : #3781c9;
+  border-top     : 1px solid #73a7d9;
+  border-bottom  : 1px solid #303030;
+  font-size      : 22px;
+  // margin-left : 10px;
+  padding        : 15px 25px;
+  border-radius  : 4px;
 
   &:hover {
     background : lighten(#3781c9, 5%);
