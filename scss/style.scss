@@ -298,9 +298,8 @@ header {
   @include background-size( cover );
 
   width : 100%;
-  position : absolute;
+  position : fixed;
   z-index  : 3;
-
 }
 
 .feature_desc_wrap, .feature_content {
