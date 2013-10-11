@@ -311,7 +311,7 @@ table {
 html, body {
   margin: 0;
   padding: 0;
-  background: #f0eeef;
+  background: #111011;
 }
 
 /* line 45, ../scss/style.scss */
@@ -784,7 +784,7 @@ header {
 
 /* line 463, ../scss/style.scss */
 .feature_1 {
-  background-image: url('../asset/feature_1.png?1381286505');
+  background-image: url('../asset/feature_1.png?1381462531');
 }
 
 /* line 467, ../scss/style.scss */
@@ -826,7 +826,7 @@ header {
 
   /* line 499, ../scss/style.scss */
   .feature_1 {
-    background-image: url('../asset/feature_1@2x.png?1381286505');
+    background-image: url('../asset/feature_1@2x.png?1381462491');
   }
 
   /* line 503, ../scss/style.scss */

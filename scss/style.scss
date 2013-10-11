@@ -31,7 +31,7 @@
        url('../asset/lato-bold.svg#latoregular') format('svg');
 }
 
-$mc2BgColor : #f0eeef;
+$mc2BgColor : #111011;
 html, body {
   margin     : 0;
   padding    : 0;
@@ -714,7 +714,7 @@ header {
 .intro {
   @include box-shadow( 0 -10px 20px rgba(0,0,0,0.3) );
 
-  background : $mc2BgColor image-url("intro_bg.png") left bottom repeat-x;
+  background : #f0eeef image-url("intro_bg.png") left bottom repeat-x;
   padding-bottom : 80px;
 
 
