@@ -1789,7 +1789,7 @@ header {
 footer {
   color: #cdd1d6;
   background: #111011;
-  padding-bottom: 33px;
+  padding: 33px 0 !important;
 }
 
 /* line 1380, ../scss/style.scss */
