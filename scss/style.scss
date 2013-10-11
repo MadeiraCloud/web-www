@@ -164,6 +164,10 @@ header {
   &:hover {
     color : #f0f0f0;
   }
+
+  &.selected {
+    color : #fff;
+  }
 }
 
 .lt-ie8 {

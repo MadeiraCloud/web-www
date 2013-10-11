@@ -1,0 +1,117 @@
+@import "compass/css3";
+
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex:  $values;
+  -webkit-flex:  $values;
+  -ms-flex:  $values;
+  flex:  $values;
+}
+
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;
+  -moz-box-ordinal-group: $val;
+  -ms-flex-order: $val;
+  -webkit-order: $val;
+  order: $val;
+}
+
+html {
+  height : 100%;
+}
+
+body {
+  min-height : 100%;
+  height     : 100%;
+}
+
+.about_content {
+  background : #f6f6f6;
+  min-height : 100%;
+  padding    : 1px 0;
+}
+
+.about_nav {
+  position    : static;
+  border      : none;
+  height      : 80px;
+  line-height : 80px;
+  color       : #e0e0e0;
+  font-size   : 18px;
+
+  background-color : #9e569f;
+  @include background-image( linear-gradient(top, #925193, #aa5aab) );
+  @include box-shadow( inset 0 -5px 30px rgba(0,0,0,.1) );
+
+  @media screen and (max-width: 490px) {
+    & {
+      font-size: 14px;
+    }
+
+    .nav_lnk {
+      margin-right : 1em;
+    }
+  }
+
+  @media screen and (max-width: 360px) {
+    & {
+      font-size: 12px;
+    }
+  }
+
+  nav {
+    background : none;
+  }
+
+  .nav_lnk {
+    font-size : inherit;
+    float     : left;
+    display   : block !important;
+
+    &:after {
+      top : 55px;
+    }
+  }
+}
+
+.header_like_wrap {
+  padding   : 0 80px;
+  max-width : 1180px - 80 * 2;
+  margin    : 0 auto;
+
+  @media screen and (min-width: 1600px) {
+    & {
+      max-width : 1306px;
+      padding   : 0 100px;
+    }
+  }
+
+  @media screen and (max-width: 980px) {
+    & {
+      padding : 0 40px;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    & {
+      padding : 0 20px;
+    }
+  }
+
+}
+
+
+
+
+.team_wrap {
+  @extend .nav_wrap;
+  @include flexbox;
+}

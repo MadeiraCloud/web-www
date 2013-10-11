@@ -1,0 +1,101 @@
+/* line 27, ../scss/about.scss */
+html {
+  height: 100%;
+}
+
+/* line 31, ../scss/about.scss */
+body {
+  min-height: 100%;
+  height: 100%;
+}
+
+/* line 36, ../scss/about.scss */
+.about_content {
+  background: #f6f6f6;
+  min-height: 100%;
+  padding: 1px 0;
+}
+
+/* line 42, ../scss/about.scss */
+.about_nav {
+  position: static;
+  border: none;
+  height: 80px;
+  line-height: 80px;
+  color: #e0e0e0;
+  font-size: 18px;
+  background-color: #9e569f;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #925193), color-stop(100%, #aa5aab));
+  background-image: -webkit-linear-gradient(top, #925193, #aa5aab);
+  background-image: -moz-linear-gradient(top, #925193, #aa5aab);
+  background-image: -o-linear-gradient(top, #925193, #aa5aab);
+  background-image: linear-gradient(top, #925193, #aa5aab);
+  -webkit-box-shadow: inset 0 -5px 30px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0 -5px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 -5px 30px rgba(0, 0, 0, 0.1);
+}
+@media screen and (max-width: 490px) {
+  /* line 55, ../scss/about.scss */
+  .about_nav {
+    font-size: 14px;
+  }
+  /* line 59, ../scss/about.scss */
+  .about_nav .nav_lnk {
+    margin-right: 1em;
+  }
+}
+@media screen and (max-width: 360px) {
+  /* line 65, ../scss/about.scss */
+  .about_nav {
+    font-size: 12px;
+  }
+}
+/* line 70, ../scss/about.scss */
+.about_nav nav {
+  background: none;
+}
+/* line 74, ../scss/about.scss */
+.about_nav .nav_lnk {
+  font-size: inherit;
+  float: left;
+  display: block !important;
+}
+/* line 79, ../scss/about.scss */
+.about_nav .nav_lnk:after {
+  top: 55px;
+}
+
+/* line 85, ../scss/about.scss */
+.header_like_wrap {
+  padding: 0 80px;
+  max-width: 1020px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1600px) {
+  /* line 91, ../scss/about.scss */
+  .header_like_wrap {
+    max-width: 1306px;
+    padding: 0 100px;
+  }
+}
+@media screen and (max-width: 980px) {
+  /* line 98, ../scss/about.scss */
+  .header_like_wrap {
+    padding: 0 40px;
+  }
+}
+@media screen and (max-width: 400px) {
+  /* line 104, ../scss/about.scss */
+  .header_like_wrap {
+    padding: 0 20px;
+  }
+}
+
+/* line 114, ../scss/about.scss */
+.team_wrap {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
