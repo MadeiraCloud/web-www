@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MadeiraCloud</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <!--[if lt IE 9]><script>for(var a=['section','article','nav','header','footer','aside','blockquote'],i=a.length-1;i>=0;--i){document.createElement(a[i]);}</script><![endif]-->
+  </head>
+  <body>
+
+    <header>
+      <div class="nav_wrap">
+        <nav>
+          <div class="nav_user">
+
+            <span id="unloggedin">
+              <a href="/login" class="nav_login">Log In</a>
+              <a href="/register" class="nav_register">Sign Up</a>
+            </span>
+
+            <span id="loggedin">
+              <a href="https://ide.madeiracloud.com" class="nav_ide">Open Ide&gt;&gt;</a>
+            </span>
+
+            <script type="text/javascript">
+            (function(){
+              var linkId = "unloggedin";
+              if ( document.cookie.indexOf("madeiracloud_ide_session_id=") != -1 ) { linkId = "loggedin"; }
+              document.getElementById( linkId ).style.display = "block";
+            })();
+            </script>
+          </div>
+
+          <a href="/about" class="nav_lnk nav_blog">ABOUT</a>
+          <a href="http://madeiracloud-document.readthedocs.org/en/latest/" target="_blank" class="nav_lnk nav_doc">DOCUMENTATION</a>
+          <a href="/" class="nav_lnk nav_home selected">HOME</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="features">
+      <div class="feature_wrap ofh">
+        <div class="feature_desc_wrap" id="mcFeatureDescs">
+          <div class="feature_desc feature_desc_1 clearfix show">
+            <h3>Visual Cloud Management</h3>
+            <p>Powerfuly simply tools to design, provision and manage your AWS cloud.</p>
+          </div>
+
+          <div class="feature_desc feature_desc_2 clearfix ">
+            <h3>Architecture Comes to Life</h3>
+            <p>Design network architecture directly into diagram with real configurations. </p>
+          </div>
+
+          <div class="feature_desc feature_desc_3 clearfix ">
+            <h3>Meet us at AWS re:Invent</h3>
+            <p>Booth #113. Don’t miss it! </p>
+          </div>
+
+        </div>
+
+        <div class="feature_signup tac">
+          <a href="/register" class="big_signup">Sign Up for Free</a>
+        </div>
+
+        <div class="feature_content" id="mcFeatures">
+          <span class="slider_btn btn_prev"></span>
+          <span class="slider_btn btn_next"></span>
+
+          <div class="content_wrap" id="mcFeatureContent">
+            <div class="feature feature_1 show">
+              <img src="./asset/feature_1.png" alt="">
+            </div>
+
+            <div class="feature feature_2">
+              <img class="feature_2_img" src="./asset/feature_2_right.png" alt="">
+              <div class="focus_bg"><img src="./asset/feature_2_left.png" alt=""></div>
+              <div class="focus_control">
+                <span class="focus_hanlder"></span>
+              </div>
+            </div>
+
+            <div class="feature feature_3">
+              <img src="./asset/feature_3.png" alt="">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="features_ph">
+      <div class="feature_desc"></div>
+      <div class="feature_content"><div class="content_wrap"></div></div>
+    </section>
+
+    <section class="intro cover">
+      <h1>HOW IT WORKS</h1>
+      <ul class="intro_wrap">
+        <li class="intro_block">
+          <div class="intro_img intro_img_design"></div>
+          <h2>Design</h2>
+          <p>Drag and drop real AWS resources to a canvas to quickly design your application architecture.</p>
+        </li>
+        <li class="intro_block">
+          <div class="intro_img intro_img_config"></div>
+          <h2>Configure</h2>
+          <p>Dig into detailed configurations of resources and security group rules. No need to remember commands to configure auto scaling group or other resources.</p>
+        </li>
+        <li class="intro_block last">
+          <div class="intro_img intro_img_launch"></div>
+          <h2>Launch</h2>
+          <p>Launch your design into real enviornment. AWS resources will be created according to your design and configuration with a single click.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="services cover">
+      <h1>SUPPORTED SERVICES</h1>
+
+      <div class="service_tags hide" id="mcServices">
+        <span class="tag green">EC2</span>
+        <span class="tag orange">Elastic Load Blancing</span>
+        <span class="tag purple">VPC</span>
+        <span class="tag lightblue">Auto Scaling</span>
+        <span class="tag red">CloudWatch</span>
+        <span class="tag blue">SNS</span>
+        <span class="tag gray">More Coming Soon...</span>
+      </div>
+
+      <div class="dashboard">
+        <div class="dashboard_wrap">
+          <div class="control"></div>
+          <div class="content"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="vision cover">
+      <h1>VISION</h1>
+      <blockquote>Now, imagine that you can compose the actual systems similar to the way you draw the conceptual diagrams, drag &amp; drop icons and connect them. While you focus on the architecture, the rest of the “heavy-lifting” work is left to us.</blockquote>
+
+      <blockquote>Madeira is a set of automation tools built on top of AWS to help the users design, build and manage their applications in a <span class="emphasize">WYSIWYG</span> way. It makes the cloud easier and more efficient to use.</blockquote>
+    </section>
+
+    <section class="socialmedia cover">
+      <div class="social_wrap">
+        <a class="social_post sp_gigaom" href="http://gigaom.com/2013/05/09/madeiracloud-nets-1-5m-to-watch-your-amazon-cloud/" target="_blank">MadeiraCloud nets $1.5M to paint a pretty picture of your Amazon cloud</a>
+
+        <a class="social_post sp_thenextweb" href="http://thenextweb.com/insider/2013/05/09/madeiracloud-picks-up-funding-from-sequoia-capital-for-its-visual-cloud-interface/" target="_blank">MadeiraCloud picks up $1.5M in Series A funding from Sequoia Capital for its visual cloud interface</a>
+
+        <a class="social_post sp_venturebeat" href="http://venturebeat.com/2013/05/09/madeiracloud/" target="_blank">MadeiraCloud nabs $1.5M from Sequoia for AWS-based visual cloud management</a>
+
+        <a class="social_post sp_theregister" href="http://www.theregister.co.uk/2013/05/09/amazon_madeiracloud_funding/" target="_blank">MadeiraCloud trousers $1.5 million to explain AWS to bosses</a>
+
+        <a class="social_post sp_aws" href="https://aws.amazon.com/solution-providers/isv/madeiracloud" target="_blank">AWS Partner Network</a>
+      </div>
+    </section>
+
+    <section class="signup_footer cover">
+      <span>Get interested?</span>
+      <a href="/register" class="big_signup">Sign Up for Free Now</a>
+    </section>
+
+    <footer class="cover">
+      <div class="footer_wrap">
+        <ul class="network_wrap">
+          <li><a href="https://github.com/MadeiraCloud" title="MedeiraCloud on Github" class="network github" target="_blank">Github</a></li>
+          <li><a href="http://www.twitter.com/madeiracloud" title="Follow Us on Twitter" class="network twitter" target="_blank">Twitter</a></li>
+          <li><a href="https://www.facebook.com/madeiracloud" title="Like us on Facebook" class="network facebook" target="_blank">Facebook</a></li>
+          <li><a href="https://plus.google.com/u/0/109295117031738876065/posts" title="Add us to a Circle on Google+" class="network gplus" target="_blank">Google+</a></li>
+          <li><a href="http://vimeo.com/madeiracloud" title="Watch our Videos on Vimeo" class="network vimeo" target="_blank">Vimeo</a></li>
+          <li><a href="http://www.linkedin.com/company/madeiracloud" class="network linkedin" target="_blank">LinkedIn</a></li>
+        </ul>
+
+        <div>
+          © MadeiraCloud 2013 &nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Terms, Conditions and Privacy Policy</a><br>795 Folsom St, San Francisco, CA, USA.
+        </div>
+      </div>
+    </footer>
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="' + "script/jquery.min.js" + '"><\/script>')</script>
+    <script src="script/main.js"></script>
+  </body>
+</html>
