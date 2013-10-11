@@ -334,6 +334,7 @@ header {
 
 .feature_content {
   height : auto;
+  margin-bottom : 0;
 
   .slider_btn {
     width  : 50px;
@@ -378,13 +379,12 @@ header {
     position    : relative;
     z-index     : 10;
     margin-left : -40px;
-    
+
     border-radius : 20px 20px 0 0;
     border        : 40px solid #111111;
     border-bottom : none;
 
-    box-shadow: 0 -10px 80px rgba(203, 215, 233, 0.3);
-
+    @include box-shadow( 0 -10px 80px rgba(203, 215, 233, 0.3) );
   }
 }
 
@@ -410,14 +410,14 @@ header {
     .slider_btn {
       display : none;
     }
+
+    .content_wrap {
+      border-width  : 16px;
+      margin-left   : -16px;
+      border-radius : 10px;
+    }
   }
 }
-
-// @media screen and (max-width : 400px) {
-//   .feature_content {
-//     height : 240px;
-//   }
-// }
 
 .feature {
   width    : 100%;
@@ -428,7 +428,7 @@ header {
   opacity  : 0;
   z-index  : 1;
 
-  @include transition( all .5s ease-in-out );
+  @include transition( opacity .5s ease-in-out );
 
   &.show {
     opacity : 1;
@@ -558,7 +558,7 @@ header {
 
   .feature_desc {
     position : static;
-    height   : 195px;
+    height   : 275px;
   }
 
   .feature_content {
