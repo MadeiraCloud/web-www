@@ -24,6 +24,12 @@
   order: $val;
 }
 
+@mixin retina {
+  @media (-webkit-min-device-pixel-ratio:2), (min--moz-device-pixel-ratio:2), (-o-min-device-pixel-ratio:2/1), (min-device-pixel-ratio: 2) {
+      & { @content; }
+  }
+}
+
 html {
   height : 100%;
 }
@@ -36,7 +42,7 @@ body {
 .about_content {
   background : #f6f6f6;
   min-height : 100%;
-  padding    : 1px 0;
+  padding    : 1px 0 100px 0;
 }
 
 .about_nav {
@@ -109,9 +115,92 @@ body {
 }
 
 
-
-
 .team_wrap {
+  margin-left : -20px;
   @extend .nav_wrap;
-  @include flexbox;
+
+  .avatar {
+    width      : 298px;
+    height     : 298px;
+    float      : left;
+    margin     : 0 0 20px 20px;
+    overflow   : hidden;
+    border     : 1px solid #848484;
+    color      : #ccc;
+
+    h3 {
+      height      : 50px;
+      line-height : 50px;
+      margin      : 0;
+      overflow    : hidden;
+      white-space : nowrap;
+      font-size   : 16px;
+      padding     : 0 10px;
+      font-weight : normal;
+    }
+
+    p {
+      padding : 0 10px;
+    }
+
+    div {
+      @include translateY( 298px - 50 );
+      width    : 100%;
+      height   : 100%;
+      background : rgba(#171115, 0.8);
+
+      @include transition( transform .15s ease-in-out );
+    }
+
+    &:hover {
+      div {
+        @include translateY(0);
+        @include transition-duration( .25s );
+      }
+    }
+  }
+
+  .lt-ie9 & .avatar {
+    position : relative;
+
+    div {
+      position : absolute;
+      left : 0;
+      top  : 298px - 50;
+      background : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADYAAAA7CAYAAAAw23kDAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABaSURBVHja7M9BEQAgCAAwpAEPz/59CEUP3BrsvLodC2UsJSYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJib2YWwAAAD//wMAfdgBfxhhGQYAAAAASUVORK5CYII=) repeat;
+    }
+
+    &:hover {
+      div {
+        top : 0;
+      }
+    }
+  }
+
+  .peng   { background-image : image-url("avatar_peng.png"); }
+  .tibo   { background-image : image-url("avatar_tibo.png"); }
+  .ada    { background-image : image-url("avatar_ada.png"); }
+  .jimmy  { background-image : image-url("avatar_jimmy.png"); }
+  .ken    { background-image : image-url("avatar_ken.png"); }
+  .song   { background-image : image-url("avatar_song.png"); }
+  .tim    { background-image : image-url("avatar_tim.png"); }
+  .michael{ background-image : image-url("avatar_michael.png"); }
+  .morris { background-image : image-url("avatar_morris.png"); }
+  .paula  { background-image : image-url("avatar_paula.png"); }
+  .kenshin{ background-image : image-url("avatar_kenshin.png"); }
+  .angel  { background-image : image-url("avatar_angel.png"); }
+  .xuwong { background-image : image-url("avatar_xuwong.png"); }
+  .cat    { background-image : image-url("avatar_cat.png"); }
+}
+
+.sequoiacap {
+  float  : left;
+  width  : image-width("sequoiacap.png");
+  height : image-height("sequoiacap.png");
+  background-image : image-url("sequoiacap.png");
+
+  @include retina {
+    background-image : image-url("sequoiacap@2x.png");
+    @include background-size( image-width("sequoiacap.png") auto );
+  }
 }
