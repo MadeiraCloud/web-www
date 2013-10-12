@@ -90,12 +90,18 @@ body {
     padding: 0 20px;
   }
 }
+/* line 115, ../scss/about.scss */
+.header_like_wrap h2 {
+  color: #555;
+  font-size: 32px;
+  font-weight: normal;
+}
 
-/* line 118, ../scss/about.scss */
+/* line 123, ../scss/about.scss */
 .team_wrap {
   margin-left: -20px;
 }
-/* line 122, ../scss/about.scss */
+/* line 127, ../scss/about.scss */
 .team_wrap .avatar {
   width: 298px;
   height: 298px;
@@ -105,7 +111,7 @@ body {
   border: 1px solid #848484;
   color: #ccc;
 }
-/* line 131, ../scss/about.scss */
+/* line 136, ../scss/about.scss */
 .team_wrap .avatar h3 {
   height: 50px;
   line-height: 50px;
@@ -116,11 +122,11 @@ body {
   padding: 0 10px;
   font-weight: normal;
 }
-/* line 142, ../scss/about.scss */
+/* line 147, ../scss/about.scss */
 .team_wrap .avatar p {
   padding: 0 10px;
 }
-/* line 146, ../scss/about.scss */
+/* line 151, ../scss/about.scss */
 .team_wrap .avatar div {
   -webkit-transform: translateY(248px);
   -moz-transform: translateY(248px);
@@ -135,7 +141,7 @@ body {
   -o-transition: -o-transform 0.15s ease-in-out;
   transition: transform 0.15s ease-in-out;
 }
-/* line 156, ../scss/about.scss */
+/* line 161, ../scss/about.scss */
 .team_wrap .avatar:hover div {
   -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
@@ -147,79 +153,79 @@ body {
   -o-transition-duration: 0.25s;
   transition-duration: 0.25s;
 }
-/* line 163, ../scss/about.scss */
+/* line 168, ../scss/about.scss */
 .lt-ie9 .team_wrap .avatar {
   position: relative;
 }
-/* line 166, ../scss/about.scss */
+/* line 171, ../scss/about.scss */
 .lt-ie9 .team_wrap .avatar div {
   position: absolute;
   left: 0;
   top: 248px;
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADYAAAA7CAYAAAAw23kDAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABaSURBVHja7M9BEQAgCAAwpAEPz/59CEUP3BrsvLodC2UsJSYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJib2YWwAAAD//wMAfdgBfxhhGQYAAAAASUVORK5CYII=) repeat;
 }
-/* line 174, ../scss/about.scss */
+/* line 179, ../scss/about.scss */
 .lt-ie9 .team_wrap .avatar:hover div {
   top: 0;
 }
-/* line 180, ../scss/about.scss */
+/* line 185, ../scss/about.scss */
 .team_wrap .peng {
   background-image: url('../asset/avatar_peng.jpg?1381549993');
 }
-/* line 181, ../scss/about.scss */
+/* line 186, ../scss/about.scss */
 .team_wrap .tibo {
   background-image: url('../asset/avatar_tibo.jpg?1381549993');
 }
-/* line 182, ../scss/about.scss */
+/* line 187, ../scss/about.scss */
 .team_wrap .ada {
   background-image: url('../asset/avatar_ada.jpg?1381549993');
 }
-/* line 183, ../scss/about.scss */
+/* line 188, ../scss/about.scss */
 .team_wrap .jimmy {
   background-image: url('../asset/avatar_jimmy.jpg?1381549993');
 }
-/* line 184, ../scss/about.scss */
+/* line 189, ../scss/about.scss */
 .team_wrap .ken {
   background-image: url('../asset/avatar_ken.jpg?1381549993');
 }
-/* line 185, ../scss/about.scss */
+/* line 190, ../scss/about.scss */
 .team_wrap .song {
   background-image: url('../asset/avatar_song.jpg?1381549993');
 }
-/* line 186, ../scss/about.scss */
+/* line 191, ../scss/about.scss */
 .team_wrap .tim {
   background-image: url('../asset/avatar_tim.jpg?1381549993');
 }
-/* line 187, ../scss/about.scss */
+/* line 192, ../scss/about.scss */
 .team_wrap .michael {
   background-image: url('../asset/avatar_michael.jpg?1381549993');
 }
-/* line 188, ../scss/about.scss */
+/* line 193, ../scss/about.scss */
 .team_wrap .morris {
   background-image: url('../asset/avatar_morris.jpg?1381549993');
 }
-/* line 189, ../scss/about.scss */
+/* line 194, ../scss/about.scss */
 .team_wrap .paula {
-  background-image: url('../asset/avatar_paula.jpg?1381549993');
+  background-image: url('../asset/avatar_paula.jpg?1381565550');
 }
-/* line 190, ../scss/about.scss */
+/* line 195, ../scss/about.scss */
 .team_wrap .kenshin {
   background-image: url('../asset/avatar_kenshin.jpg?1381549993');
 }
-/* line 191, ../scss/about.scss */
+/* line 196, ../scss/about.scss */
 .team_wrap .angel {
   background-image: url('../asset/avatar_angel.jpg?1381549993');
 }
-/* line 192, ../scss/about.scss */
+/* line 197, ../scss/about.scss */
 .team_wrap .xuwong {
   background-image: url('../asset/avatar_xuwong.jpg?1381549993');
 }
-/* line 193, ../scss/about.scss */
+/* line 198, ../scss/about.scss */
 .team_wrap .cat {
-  background-image: url('../asset/avatar_cat.jpg');
+  background-image: url('../asset/avatar_cat.jpg?1381565550');
 }
 
-/* line 196, ../scss/about.scss */
+/* line 201, ../scss/about.scss */
 .sequoiacap {
   float: left;
   width: 300px;
@@ -235,4 +241,81 @@ body {
     -o-background-size: 300px auto;
     background-size: 300px auto;
   }
+}
+
+/* line 213, ../scss/about.scss */
+.media {
+  margin-top: 40px;
+}
+/* line 216, ../scss/about.scss */
+.media li {
+  padding-left: 220px;
+  margin-bottom: 80px;
+  color: #555;
+  font-size: 18px;
+  background: #f6f6f6 10px top no-repeat;
+}
+/* line 223, ../scss/about.scss */
+.media li h3 {
+  font-size: 24px;
+  color: #555;
+  margin-bottom: 1.2em;
+}
+/* line 228, ../scss/about.scss */
+.media li h3:hover {
+  text-decoration: underline;
+}
+/* line 233, ../scss/about.scss */
+.media li p a {
+  margin-left: 0.3em;
+  color: #3781c9;
+}
+/* line 237, ../scss/about.scss */
+.media li p a:hover {
+  color: #2c67a1;
+  text-decoration: underline;
+}
+/* line 244, ../scss/about.scss */
+.media .gigaom {
+  background-image: url('../asset/press/gigaom.jpg?1381568074');
+}
+/* line 245, ../scss/about.scss */
+.media .tnw {
+  background-image: url('../asset/press/tnw.jpg?1381568074');
+}
+/* line 246, ../scss/about.scss */
+.media .venture {
+  background-image: url('../asset/press/vb.jpg?1381568074');
+}
+/* line 247, ../scss/about.scss */
+.media .theregister {
+  background-image: url('../asset/press/reg.jpg?1381568074');
+}
+/* line 248, ../scss/about.scss */
+.media .cloudave {
+  background-image: url('../asset/press/cav.jpg?1381568074');
+}
+/* line 249, ../scss/about.scss */
+.media .cloudcom {
+  background-image: url('../asset/press/ccj.jpg?1381568074');
+}
+/* line 250, ../scss/about.scss */
+.media .yourstory {
+  background-image: url('../asset/press/ysi.jpg?1381568074');
+}
+/* line 251, ../scss/about.scss */
+.media .techinasia {
+  background-image: url('../asset/press/tia.jpg?1381568074');
+}
+/* line 252, ../scss/about.scss */
+.media .technode {
+  background-image: url('../asset/press/tn.jpg?1381568074');
+}
+/* line 253, ../scss/about.scss */
+.media .startup50 {
+  background-image: url('../asset/press/s50.jpg?1381568074');
+}
+/* line 254, ../scss/about.scss */
+.media .techcrunch {
+  background-image: url('../asset/press/tc.jpg?1381568074');
 }

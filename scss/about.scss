@@ -112,6 +112,11 @@ body {
     }
   }
 
+  h2 {
+    color       : #555;
+    font-size   : 32px;
+    font-weight : normal;
+  }
 }
 
 
@@ -203,4 +208,48 @@ body {
     background-image : image-url("sequoiacap@2x.png");
     @include background-size( image-width("sequoiacap.png") auto );
   }
+}
+
+.media {
+  margin-top : 40px;
+
+  li {
+    padding-left  : 220px;
+    margin-bottom : 80px;
+    color         : #555;
+    font-size     : 18px;
+    background    : #f6f6f6 10px top no-repeat;
+
+    h3 {
+      font-size : 24px;
+      color     : #555;
+      margin-bottom : 1.2em;
+
+      &:hover {
+        text-decoration : underline;
+      }
+    }
+
+    p a {
+      margin-left : 0.3em;
+      color : #3781c9;
+
+      &:hover {
+        color : darken(#3781c9, 10%);
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .gigaom { background-image : image-url("press/gigaom.jpg"); }
+  .tnw    { background-image : image-url("press/tnw.jpg"); }
+  .venture{ background-image : image-url("press/vb.jpg"); }
+  .theregister { background-image : image-url("press/reg.jpg"); }
+  .cloudave { background-image : image-url("press/cav.jpg"); }
+  .cloudcom { background-image : image-url("press/ccj.jpg"); }
+  .yourstory { background-image : image-url("press/ysi.jpg");}
+  .techinasia { background-image : image-url("press/tia.jpg");}
+  .technode { background-image : image-url("press/tn.jpg");}
+  .startup50 { background-image : image-url("press/s50.jpg");}
+  .techcrunch { background-image : image-url("press/tc.jpg");}
 }
