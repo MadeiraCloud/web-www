@@ -162,16 +162,17 @@ $(function(){
         if ( autoSlideTO ) {
           clearTimeout( autoSlideTO );
         }
+        return false;
       }
 
-      $("body").one("mouseup touchend", function(){
+      $(document).one("mouseup touchend", function(){
         $(".focus_hanlder").removeClass("active")
-        $("body").off("mousemove touchmove", onmove);
+        $(document).off("mousemove touchmove", onmove);
 
         // Enable auto slide
         doNextSlide();
       })
-      $("body").on("mousemove touchmove", onmove);
+      $(document).on("mousemove touchmove", onmove);
 
       return false;
     });
