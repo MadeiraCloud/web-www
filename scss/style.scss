@@ -36,6 +36,7 @@ html, body {
   margin     : 0;
   padding    : 0;
   background : $mc2BgColor;
+  border     : none;
 }
 
 html,
@@ -330,6 +331,19 @@ header {
   width : 100%;
   position : fixed;
   z-index  : 3;
+}
+
+.feature_bg {
+  position : absolute;
+  top      : 0;
+  left     : 0;
+  width    : 100%;
+  height   : 100%;
+  display  : none;
+}
+
+.lt-ie9 .feature_bg {
+  display : block;
 }
 
 .feature_desc_wrap, .feature_content {
