@@ -326,3 +326,23 @@ body {
   max-width: 960px !important;
   width: 80% !important;
 }
+
+/* line 264, ../scss/about.scss */
+.contact_social {
+  float: left;
+}
+/* line 267, ../scss/about.scss */
+.contact_social li {
+  margin-left: 0;
+  margin-right: 10px;
+}
+
+/* line 273, ../scss/about.scss */
+.link {
+  color: #3781c9;
+}
+/* line 276, ../scss/about.scss */
+.link:hover {
+  color: #2c67a1;
+  text-decoration: underline;
+}

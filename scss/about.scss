@@ -260,3 +260,21 @@ body {
   max-width : 960px !important;
   width : 80% !important;
 }
+
+.contact_social {
+  float : left;
+
+  li {
+    margin-left  : 0;
+    margin-right : 10px;
+  }
+}
+
+.link {
+  color : #3781c9;
+
+  &:hover {
+    color : darken(#3781c9, 10%);
+    text-decoration: underline;
+  }
+}
