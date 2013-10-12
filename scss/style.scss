@@ -411,6 +411,41 @@ header {
 
     @include box-shadow( 0 -10px 80px rgba(203, 215, 233, 0.3) );
   }
+
+  .indicator {
+    width      : 100%;
+    height     : 25px;
+    position   : absolute;
+    top        : 9px;
+    left       : 0;
+    z-index    : 11;
+    text-align : center;
+    opacity    : 0.5;
+  }
+
+  .dot {
+    width         : 8px;
+    height        : 8px;
+    display       : inline-block;
+    margin-left   : 7px;
+    *zoom         : 1;
+    background    : #9f9f9f;
+    border-radius : 4px;
+
+    @include transition( background .2s ease-in-out );
+
+    &.highlight {
+      background : #fff;
+    }
+  }
+
+  .lt-ie9 & .dot {
+    background : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAICAYAAADwdn+XAAAAcElEQVR42q3RwQmAMAyF4UxhXUDqaN1G9NYhOpuoA9RX+L0U4kUD3yWBJk2s1tpMUuRAIWcYJMmKRM5aMcoufezUgiySO4sEo5sXhW7ZkYyRvbgYOTu2zw/88oXZWyK18WWJ43OmSLcThZwh9GckZzf4l842qwV9IgAAAABJRU5ErkJggg==) right center;
+  }
+
+  .lt-ie9 & .highlight {
+    background-position : left center;
+  }
 }
 
 @media screen and (max-width : 880px) {
@@ -471,7 +506,7 @@ header {
 
 
 
-.lt-ie9 {
+.lt-ie9 .features {
   .feature, .feature_desc {
     display : none;
   }

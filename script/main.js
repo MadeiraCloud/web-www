@@ -115,6 +115,9 @@ $(function(){
       $descShow.addClass("show");
     }, 50);
 
+    // Update Indicator
+    $("#mcIndicator").children().removeClass("highlight").eq( nextIndex ).addClass("highlight");
+
     doNextSlide();
   }
 
