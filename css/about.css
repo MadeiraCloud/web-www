@@ -319,3 +319,10 @@ body {
 .media .techcrunch {
   background-image: url('../asset/press/tc.jpg?1381568074');
 }
+
+/* line 258, ../scss/about.scss */
+.terms_content {
+  color: #555;
+  max-width: 960px !important;
+  width: 80% !important;
+}
