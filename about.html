@@ -32,9 +32,8 @@
 
             <script type="text/javascript">
             (function(){
-              var linkId = "unloggedin";
-              if ( document.cookie.indexOf("madeiracloud_ide_session_id=") != -1 ) { linkId = "loggedin"; }
-              document.getElementById( linkId ).style.display = "block";
+              var m = document.cookie.match(/madeiracloud_ide_session_id=([^; ]+)/);
+              document.getElementById( m && m.length > 1 ? "loggedin" : "unloggedin" ).style.display = "block";
             })();
             </script>
           </div>
