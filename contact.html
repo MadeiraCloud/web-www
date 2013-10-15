@@ -21,19 +21,15 @@
         <nav>
           <div class="nav_user">
 
-            <span id="unloggedin">
-              <a href="https://ide.madeiracloud.com/" class="nav_login">Log In</a>
-              <a href="https://ide.madeiracloud.com/register/" class="nav_register">Sign Up</a>
-            </span>
-
-            <span id="loggedin">
-              <a href="https://ide.madeiracloud.com" class="nav_ide">Open Ide&gt;&gt;</a>
+            <span>
+              <a href="https://ide.madeiracloud.com/" class="nav_login">Launch IDE</a>
+              <a href="https://ide.madeiracloud.com/register/" class="nav_register" id="mcRegister">Sign Up</a>
             </span>
 
             <script type="text/javascript">
             (function(){
               var m = document.cookie.match(/madeiracloud_ide_session_id=([^; ]+)/);
-              document.getElementById( m && m.length > 1 ? "loggedin" : "unloggedin" ).style.display = "block";
+              if ( m ) { document.getElementById("mcRegister").style.display = "none"; }
             })();
             </script>
           </div>
@@ -59,7 +55,7 @@
     <section class="about_content">
       <div class="header_like_wrap">
         <h2>Get In Touch</h2>
-        
+
           <p>Have suggestion, questions, need support or simply want to chat? Don't hesitate to contact <a class="link" href="mailto:live@mc2.io">live@mc2.io</a>.</p>
           <p>Interested to work with us? Show us yourself to <a class="link" href="mailto:hr@mc2.io">hr@mc2.io</a>.</p>
         <h2>MadeiraCloud Around the Web</h2>

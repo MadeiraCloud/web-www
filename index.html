@@ -20,19 +20,15 @@
         <nav>
           <div class="nav_user">
 
-            <span id="unloggedin">
-              <a href="https://ide.madeiracloud.com/" class="nav_login">Log In</a>
-              <a href="https://ide.madeiracloud.com/register/" class="nav_register">Sign Up</a>
-            </span>
-
-            <span id="loggedin">
-              <a href="https://ide.madeiracloud.com" class="nav_ide">Open Ide&gt;&gt;</a>
+            <span>
+              <a href="https://ide.madeiracloud.com/" class="nav_login">Launch IDE</a>
+              <a href="https://ide.madeiracloud.com/register/" class="nav_register" id="mcRegister">Sign Up</a>
             </span>
 
             <script type="text/javascript">
             (function(){
               var m = document.cookie.match(/madeiracloud_ide_session_id=([^; ]+)/);
-              document.getElementById( m && m.length > 1 ? "loggedin" : "unloggedin" ).style.display = "block";
+              if ( m ) { document.getElementById("mcRegister").style.display = "none"; }
             })();
             </script>
           </div>

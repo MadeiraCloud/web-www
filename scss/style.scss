@@ -212,10 +212,6 @@ header {
   color       : #fff;
 }
 
-.nav_user span {
-  display : none;
-}
-
 .nav_ide {
   width      : 145px;
   text-align : center;
@@ -224,8 +220,8 @@ header {
 }
 
 .nav_register, .nav_login {
-  width      : 90px;
   height     : $headerHeight;
+  padding    : 0 1em;
   float      : right;
   background : #3781c9;
 
