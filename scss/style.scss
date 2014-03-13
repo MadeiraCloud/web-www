@@ -342,7 +342,7 @@ header {
   display : block;
 }
 
-.feature_desc_wrap, .feature_content {
+.feature_desc_wrap, .index_feature_content {
   height     : 95 + 30px;
   width      : 80%;
   max-width  : 980px;
@@ -371,7 +371,7 @@ header {
   line-height : 70px;
 }
 
-.feature_content {
+.index_feature_content {
   height : auto;
   margin-bottom : 0;
 
@@ -463,21 +463,21 @@ header {
 }
 
 @media screen and (max-width : 880px) {
-  .feature_content .btn_prev {
+  .index_feature_content .btn_prev {
     margin-left : -60px;
   }
 
-  .feature_content .btn_next {
+  .index_feature_content .btn_next {
     margin-right : -60px;
   }
 }
 
 @media screen and (max-width : 600px) {
-  .feature_desc_wrap, .feature_content {
+  .feature_desc_wrap, .index_feature_content {
     width : 90%;
   }
 
-  .feature_content {
+  .index_feature_content {
     width  : 90%;
     // height : 300px;
 
@@ -635,7 +635,7 @@ header {
     height   : 275px;
   }
 
-  .feature_content {
+  .index_feature_content {
     width : 80;
   }
 }
@@ -1432,16 +1432,15 @@ $social_img_height : 50px;
 
 .big_signup {
   color          : #fff;
-  background     : #3781c9;
-  border-top     : 1px solid #73a7d9;
-  border-bottom  : 1px solid #303030;
+  background     : #c16aa2;
+  border         : 1px solid #603c53;
+  box-shadow     : inset 0px 1px rgba(255,255,255,.3);
   font-size      : 22px;
-  // margin-left : 10px;
-  padding        : 15px 25px;
+  padding        : 10px 25px;
   border-radius  : 4px;
 
   &:hover {
-    background : lighten(#3781c9, 5%);
+    background : darken(#c16aa2, 5%);
     color : #fff;
   }
 }

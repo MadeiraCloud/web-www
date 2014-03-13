@@ -279,3 +279,52 @@ body {
     text-decoration: underline;
   }
 }
+
+// Feature pages
+.feature_banner {
+  height      : 330px;
+  line-height : 330px;
+  background  : #530fc2;
+  text-align  : center;
+  font-size   : 30px;
+  color       : #fff;
+}
+
+.feature_content {
+  background : #FFF;
+  color      : #667;
+
+  header {
+    text-align    : center;
+    font-size     : 27px;
+    font-weight   : bold;
+    height        : 1em;
+    margin-bottom : 85px;
+  }
+
+  article {
+    max-width      : 1080px;
+    width          : 90%;
+    margin         : auto;
+    padding-top    : 70px;
+    border-bottom  : 1px solid #ebebeb;
+    padding-bottom : 60px;
+  }
+
+  aside {
+    width      : 50%;
+    height     : 300px;
+    float      : right;
+    margin     : 0 0 0 5%;
+    background : silver;
+  }
+
+  article:nth-child(2n+1) aside {
+    float  : left;
+    margin : 0 5% 0 0;
+  }
+
+  article:last-child {
+    border-bottom : none;
+  }
+}
