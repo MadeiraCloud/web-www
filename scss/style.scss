@@ -1172,77 +1172,40 @@ $headerHeight : 43px;
 
 /* Vision */
 .vision {
-  background     : #3781c9;
-  padding-bottom : 40px;
-
-  @include box-shadow( 0 -35px 35px rgba(0,0,0,0.15) );
+  background     : #fff;
+  padding-top    : 80px;
+  padding-bottom : 100px;
 
   h1 {
-    color : #c7d5e2;
+    font-family : "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    font-size : 32px;
+    color     : #202224;
   }
 
-  blockquote {
-    color       : #fff;
-    font-family : "Helvetica Neue", "Helvetica", Arial, sans-serif;
-    font-style  : italic;
-    font-size   : 22px;
+  counter-reset:faq;
 
-    width     : 80%;
-    max-width : 1020px - 120 * 2;
+  article {
+    width     : 90%;
+    max-width : 1000px;
+    margin    : 0 auto 50px;
+    color     : #667;
+    font-size : 16px;
 
-    margin        : 0 auto;
-    margin-bottom : 42px;
-    position      : relative;
+    header {
+      font-size     : 24px;
+      color         : #444;
+      margin-bottom : 25px;
+      font-weight   : bold;
+    }
 
     &:before {
-      content      : " ";
-      display      : block;
-      width        : 40px;
-      height       : 32px;
-      position     : absolute;
-      margin-left  : -60px;
-      margin-top   : -10px;
-
-      background-position : 0 -250px;
-
-      @extend .sprite;
-    }
-
-    @media screen and (min-width: 1280px) {
-      & {
-        max-width : 100px * 10 + 24 * 11 - 2 * 10 - 4 * 24;
-      }
-    }
-
-    @media screen and (max-width: 770px) {
-      & {
-        width : 74%;
-      }
-    }
-
-    @media screen and (max-width: 580px) {
-      &:before {
-        margin-left : -45px;
-      }
-    }
-
-    @media screen and (max-width: 480px) {
-      & {
-        font-size : 18px;
-      }
-    }
-
-    @media screen and (max-width: 400px) {
-      & {
-        width : 86%;
-        font-size : 16px;
-      }
-
-      &:before {
-        float    : left;
-        position : static;
-        margin   : 0 4px 0 0;
-      }
+      float             : left;
+      font-size         : 120px;
+      counter-increment : faq;
+      content           : "Q"counter(faq);
+      font-family       : Georgia;
+      color             : #d5d4d5;
+      width             : 1.5em;
     }
   }
 }
