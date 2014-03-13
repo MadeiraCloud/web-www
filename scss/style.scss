@@ -106,21 +106,16 @@ header, footer {
 }
 
 /* Header */
-$headerHeight : 58px;
-
-header {
-  height : $headerHeight + 3px; /* nav has 3px border */
-}
+$headerHeight : 43px;
 
 .nav_wrap {
-  border-top : 4px solid #924775;
-  background : #111011;
+  padding-top : 20px;
 
   height      : $headerHeight;
   line-height : $headerHeight;
   width       : 100%;
 
-  _position : relative;
+  _position : absolute;
   position  : fixed;
   top       : 0;
   left      : 0;
@@ -129,26 +124,23 @@ header {
   overflow  : hidden;
   font-size : 14px;
 
-
   @media screen and (max-height:640px) {
     /* Make header not sticky for cellphones */
     & {
-      position : static;
+      position : absolute;
     }
   }
 }
 
 .nav_wrap nav {
-  color   : #ccc;
+  color   : #f3f3f3;
 
-  padding   : 0 80px;
-  max-width : 1180px - 80 * 2;
+  max-width : 1200px;
+  width     : 90%;
   height    : 100%;
   margin    : 0 auto;
 
-  background : image-url("logo.png") 80px center no-repeat;
-
-  _background-image : image-url("logo_ie6.png");
+  background : image-url("logo.png") left center no-repeat;
 
   @include retina() {
     background-image : image-url("logo@2x.png");
@@ -156,19 +148,18 @@ header {
   }
 
   .nav_home_lnk {
-    width    : image-width("logo.png");
-    height   : 100%;
-    float    : left;
+    width  : image-width("logo.png");
+    height : 100%;
+    float  : left;
   }
 }
 
 .nav_lnk {
   position     : relative;
-  height       : 58px;
   display      : inline-block;
   font-size    : 16px;
   float        : right;
-  margin-right : 55px;
+  margin-right : 40px;
 
   @include transition( color .2s linear );
 
@@ -204,65 +195,44 @@ header {
   left  : 0;
 }
 
-.nav_user {
-  float       : right;
-  height      : $headerHeight;
-  font-size   : 14px;
-  text-align  : center;
-  color       : #fff;
-}
-
-.nav_ide {
-  width      : 145px;
-  text-align : center;
-  float      : right;
-  height     : $headerHeight;
-}
-
-.nav_register, .nav_login {
-  height     : $headerHeight;
-  padding    : 0 1em;
-  float      : right;
-  background : #3781c9;
+.nav_register, .nav_login, .nav_ide {
+  height        : 38px;
+  line-height   : 38px;
+  padding       : 0 1em;
+  float         : right;
+  background    : #55109a;
+  border        : 1px solid #fff;
+  margin-right  : -1px;
+  border-radius : 4px 0 0 4px;
 
   &:hover {
-    background : darken(#3781c9, 5%);
+    background : darken(#55109a, 5%);
   }
 
   @include transition( background .2s linear );
 }
 
-.nav_login, .nav_ide {
-  background : #a55789;
+.nav_login {
+  background : #c16aa2;
+  border-radius : 0 4px 4px 0;
 
   &:hover {
-    background : darken(#a55789, 5%);
+    background : darken(#c16aa2, 5%);
   }
 }
 
-@media screen and (min-width: 1600px) {
-  .nav_wrap nav {
-    max-width : 100px * 10 + 11 * 24; /* Column width 100px, gutter width 24px */
-    padding   : 0 100px;
-  }
-
-  /* .nav_user {
-    margin-left : 2 * 100px + 2 * 24px - 180;
-  }*/
-}
+.nav_ide { border-radius : 4px; }
 
 @media screen and (max-width: 980px) {
-  .nav_wrap nav {
-    padding : 0 40px;
-    background-position : 40px center;
-  }
+  .nav_lnk { font-size : 14px; }
 }
 
-@media screen and (max-width: 880px) {
-  .nav_lnk {
-    font-size : 14px;
-    margin-right : 20px;
-  }
+@media screen and (max-width: 930px) {
+  .nav_lnk { font-size : 14px; margin-right : 24px; }
+}
+
+@media screen and (max-width: 840px) {
+  .nav_lnk { font-size : 12px; margin-right : 20px; }
 }
 
 @media screen and (max-width: 760px) {
@@ -274,11 +244,8 @@ header {
       width : ceil(image-width("logo.png") * 0.8);
     }
   }
-}
 
-@media screen and (max-width: 720px) {
-  /* Hide "Open IDE" and "Login" for small screen */
-  .nav_ide, .nav_login {
+  .nav_ide, .nav_login, .nav_register {
     display : none;
   }
 }
@@ -294,27 +261,25 @@ header {
 }
 
 @media screen and (max-width: 600px) {
-  .nav_wrap nav {
-    @include background-size( image-width("logo.png"), auto );
+  .nav_wrap {
+    position : absolute;
 
-    .nav_home_lnk {
-      width : ceil(image-width("logo.png"));
+    height : 100px;
+    nav { background-position : center top; }
+
+    nav .nav_home_lnk {
+      position: absolute;
+      left : 50%;
+      top  : 20px;
+      margin-left : 0 - ceil(image-width("logo.png") * 0.35);
+      height : ceil(image-height("logo.png") * 0.7);
     }
   }
-  .nav_lnk {
-    display : none;
-  }
-}
+  .nav_break {
+    padding-top : 32px;
+    text-align: center;
 
-@media screen and (max-width: 400px) {
-  .nav_wrap nav {
-    padding : 0 20px;
-    background-position : 20px center;
-    @include background-size( ceil(image-width("logo.png") * 0.8), auto );
-
-    .nav_home_lnk {
-      width : ceil(image-width("logo.png") * 0.8);
-    }
+    a { float : none; }
   }
 }
 

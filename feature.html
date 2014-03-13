@@ -16,33 +16,31 @@
   </head>
   <body>
 
-    <header>
-      <div class="nav_wrap">
-        <nav>
-          <div class="nav_user">
+    <div class="nav_wrap">
+      <nav>
+        <div class="nav_break">
+        <div class="nav_user">
+          <span id="mcRegister">
+            <a href="https://ide.madeiracloud.com/register/" class="nav_login">Sign Up</a>
+            <a href="https://ide.madeiracloud.com/login/" class="nav_register">Sign In</a>
+          </span>
+          <a href="https://ide.madeiracloud.com/" style="display:none;" class="nav_ide" id="mcIde">Launch IDE</a>
 
-            <span>
-              <a href="https://ide.madeiracloud.com/" class="nav_login">Launch IDE</a>
-              <a href="https://ide.madeiracloud.com/register/" class="nav_register" id="mcRegister">Sign Up</a>
-            </span>
+          <script type="text/javascript"> (function(){
+            var m = document.cookie.match(/session_id=([^; ]+)/);
+            if ( m ) { document.documentElement.className = "registered"; }
+          })(); </script>
+        </div>
 
-            <script type="text/javascript">
-            (function(){
-              var m = document.cookie.match(/madeiracloud_ide_session_id=([^; ]+)/);
-              if ( m ) { document.getElementById("mcRegister").style.display = "none"; }
-            })();
-            </script>
-          </div>
+        <a href="http://madeiracloud.wordpress.com/" class="nav_lnk">BLOG</a>
+        <a href="http://madeiracloud-document.readthedocs.org/en/latest/" target="_blank" class="nav_lnk">DOCUMENTATION</a>
+        <a href="/" class="nav_lnk selected">FEATURES</a>
+        <a href="/" class="nav_lnk">ABOUT</a>
+        </div>
 
-          <a href="/about" class="nav_lnk selected">ABOUT</a>
-          <!--<a href="http://madeiracloud.wordpress.com/" class="nav_lnk">BLOG</a>-->
-          <a href="http://madeiracloud-document.readthedocs.org/en/latest/" target="_blank" class="nav_lnk">DOCUMENTATION</a>
-          <a href="/" class="nav_lnk">HOME</a>
-
-          <a href="/" class="nav_home_lnk"></a>
-        </nav>
-      </div>
-    </header>
+        <a href="/" class="nav_home_lnk"></a>
+      </nav>
+    </div>
 
     <section class="feature_banner">
       FEATURES
