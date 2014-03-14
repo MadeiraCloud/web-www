@@ -20,22 +20,20 @@
       <nav>
         <div class="nav_break">
         <div class="nav_user">
-          <span id="mcRegister">
-            <a href="https://ide.madeiracloud.com/register/" class="nav_login">Sign Up</a>
-            <a href="https://ide.madeiracloud.com/login/" class="nav_register">Sign In</a>
-          </span>
-          <a href="https://ide.madeiracloud.com/" style="display:none;" class="nav_ide" id="mcIde">Launch IDE</a>
+          <a href="https://ide.madeiracloud.com/register/" target="_blank" class="nav_register">Sign Up</a>
+          <a href="https://ide.madeiracloud.com/login/" target="_blank" class="nav_login">Sign In</a>
+          <a href="https://ide.madeiracloud.com/" target="_blank" class="nav_ide" id="mcIde">Launch IDE</a>
 
           <script type="text/javascript"> (function(){
             var m = document.cookie.match(/session_id=([^; ]+)/);
-            if ( m ) { document.documentElement.className = "registered"; }
+            if ( m ) { document.body.className = "registered"; }
           })(); </script>
         </div>
 
         <a href="http://madeiracloud.wordpress.com/" class="nav_lnk">BLOG</a>
         <a href="http://madeiracloud-document.readthedocs.org/en/latest/" target="_blank" class="nav_lnk">DOCUMENTATION</a>
-        <a href="/" class="nav_lnk selected">FEATURES</a>
-        <a href="/" class="nav_lnk">ABOUT</a>
+        <a href="/feature" class="nav_lnk selected">FEATURES</a>
+        <a href="/about" class="nav_lnk">ABOUT</a>
         </div>
 
         <a href="/" class="nav_home_lnk"></a>

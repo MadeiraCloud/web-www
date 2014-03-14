@@ -24,94 +24,40 @@
   </head>
   <body>
 
-    <header>
-      <div class="nav_wrap">
-        <nav>
-          <div class="nav_user">
+    <div class="nav_wrap">
+      <nav>
+        <div class="nav_break">
+        <div class="nav_user">
+          <a href="https://ide.madeiracloud.com/register/" target="_blank" class="nav_register">Sign Up</a>
+          <a href="https://ide.madeiracloud.com/login/" target="_blank" class="nav_login">Sign In</a>
+          <a href="https://ide.madeiracloud.com/" target="_blank" class="nav_ide" id="mcIde">Launch IDE</a>
 
-            <span>
-              <a href="https://ide.madeiracloud.com/" class="nav_login">Launch IDE</a>
-              <a href="https://ide.madeiracloud.com/register/" class="nav_register" id="mcRegister">Sign Up</a>
-            </span>
+          <script type="text/javascript"> (function(){
+            var m = document.cookie.match(/session_id=([^; ]+)/);
+            if ( m ) { document.body.className = "registered"; }
+          })(); </script>
+        </div>
 
-            <script type="text/javascript">
-            (function(){
-              var m = document.cookie.match(/madeiracloud_ide_session_id=([^; ]+)/);
-              if ( m ) { document.getElementById("mcRegister").style.display = "none"; }
-            })();
-            </script>
-          </div>
+        <a href="http://madeiracloud.wordpress.com/" class="nav_lnk">BLOG</a>
+        <a href="http://madeiracloud-document.readthedocs.org/en/latest/" target="_blank" class="nav_lnk">DOCUMENTATION</a>
+        <a href="/feature" class="nav_lnk">FEATURES</a>
+        <a href="/about" class="nav_lnk">ABOUT</a>
+        </div>
 
-          <a href="/about" class="nav_lnk">ABOUT</a>
-          <!--<a href="http://madeiracloud.wordpress.com/" class="nav_lnk">BLOG</a>-->
-          <a href="http://madeiracloud-document.readthedocs.org/en/latest/" target="_blank" class="nav_lnk">DOCUMENTATION</a>
-          <a href="/" class="nav_lnk selected">HOME</a>
+        <a href="/" class="nav_home_lnk"></a>
+      </nav>
+    </div>
 
-          <a href="/" class="nav_home_lnk"></a>
-        </nav>
+    <section class="index_banner">
+      <div class="banner_wrap">
+        <h1>Visual Cloud Management</h1>
+        <p>Design, deploy and manage your cloud architecture in a natural, intuitive way.</p>
       </div>
-    </header>
-
-    <section class="features">
-      <img class="feature_bg" src="./asset/bg.jpg" alt="feature background">
-      <div class="feature_wrap ofh">
-        <div class="feature_desc_wrap" id="mcFeatureDescs">
-          <div class="feature_desc feature_desc_1 clearfix show">
-            <h3>Visual Cloud Management</h3>
-            <p>Powerful and simple tools to design, provision and manage your AWS cloud.</p>
-          </div>
-
-          <div class="feature_desc feature_desc_2 clearfix ">
-            <h3>Architecture Comes to Life</h3>
-            <p>Design network architecture directly into diagram with real configurations. </p>
-          </div>
-
-          <div class="feature_desc feature_desc_3 clearfix ">
-            <h3>Meet us at AWS re:Invent</h3>
-            <p>Booth #113. Don’t miss it! </p>
-          </div>
-
-        </div>
-
-        <div class="feature_signup tac">
-          <a href="https://ide.madeiracloud.com/register/" class="big_signup">Sign Up for Free</a>
-        </div>
-
-        <div class="feature_content" id="mcFeatures">
-          <span class="slider_btn btn_prev"></span>
-          <span class="slider_btn btn_next"></span>
-
-          <div class="content_wrap" id="mcFeatureContent">
-            <div class="feature feature_1 show">
-              <img src="./asset/feature_1.png" alt="feature 1">
-            </div>
-
-            <div class="feature feature_2">
-              <img class="feature_2_img" src="./asset/feature_2_right.png" alt="feature 2"/>
-              <div class="focus_bg"><img src="./asset/feature_2_left.png" alt="feature 2 background"/></div>
-              <div class="focus_control">
-                <span class="focus_hanlder"></span>
-              </div>
-            </div>
-
-            <div class="feature feature_3">
-              <img src="./asset/feature_3.png" alt="feature 3">
-            </div>
-          </div>
-
-          <div class="indicator" id="mcIndicator">
-            <span class="dot highlight mgl0"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-          </div>
-
-        </div>
+      <div class="tac">
+        <a href="https://ide.madeiracloud.com/register/" class="banner_btn banner_register" target="_blank">Sign Up For Free</a>
+        <a href="https://ide.madeiracloud.com/register/" class="banner_btn banner_ide" target="_blank">Launch IDE</a>
       </div>
-    </section>
-
-    <section class="features_ph">
-      <div class="feature_desc"></div>
-      <div class="feature_content"><div class="content_wrap"></div></div>
+      <div class="banner_img_wrap"> <div class="banner"></div> </div>
     </section>
 
     <section class="intro cover">
