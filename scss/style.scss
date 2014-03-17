@@ -200,7 +200,7 @@ $headerHeight : 43px;
   .nav_register, .nav_login, .banner_register {
     display : none;
   }
-  .nav_ide, .banner_ide { display : block; }
+  .nav_ide, .banner_ide { display : initial; }
 }
 
 .nav_register, .nav_login, .nav_ide {
