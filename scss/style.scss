@@ -521,10 +521,10 @@ $headerHeight : 43px;
 }
 
 @media (-webkit-min-device-pixel-ratio:2), (min--moz-device-pixel-ratio:2), (-o-min-device-pixel-ratio:2/1), (min-device-pixel-ratio: 2) {
-  .hiw_01 { background-image : image-url("hiw_01@2x.png"); }
-  .hiw_02 { background-image : image-url("hiw_02@2x.png"); }
-  .hiw_03 { background-image : image-url("hiw_03@2x.png"); }
-  .hiw_04 { background-image : image-url("hiw_04@2x.png"); }
+  .hiw_01 .hiw_img:before { background-image : image-url("hiw_01@2x.png"); }
+  .hiw_02 .hiw_img:before { background-image : image-url("hiw_02@2x.png"); }
+  .hiw_03 .hiw_img:before { background-image : image-url("hiw_03@2x.png"); }
+  .hiw_04 .hiw_img:before { background-image : image-url("hiw_04@2x.png"); }
 }
 
 
