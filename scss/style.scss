@@ -134,7 +134,6 @@ $headerHeight : 43px;
       padding-top    : 10px;
       padding-bottom : 10px;
     }
-    & { position : absolute !important; }
   }
 
   -webkit-transition: all 200ms ease-in;
@@ -354,12 +353,13 @@ $headerHeight : 43px;
   padding      : 0.5em 1em;
   color        : #FFF;
   font-size    : 28px;
-  background   : #c16aa2;
+  // background: #c16aa2;
+  background   : #09B864;
   border-radius: 4px;
   box-shadow   : 0 0 10px rgba(0, 0, 0, 0.4);
 
   &:hover {
-    background : darken(#c16aa2, 5%);
+    background : darken(#09B864, 5%);
     color : #fff;
   }
 }
@@ -1054,13 +1054,13 @@ $social_img_height : 50px;
 
 .big_signup {
   color          : #fff;
-  background     : #c16aa2;
+  background     : #09B864;
   font-size      : 22px;
   padding        : 10px 25px;
   border-radius  : 4px;
 
   &:hover {
-    background : darken(#c16aa2, 5%);
+    background : darken(#09B864, 5%);
     color : #fff;
   }
 }

@@ -319,11 +319,13 @@ body {
   }
 
   aside {
-    width      : 50%;
-    height     : 300px;
-    float      : right;
-    margin     : 0 0 0 5%;
-    background : silver;
+    width        : 50%;
+    height       : 300px;
+    float        : right;
+    margin       : 0 0 0 5%;
+    background   : silver;
+    border-radius: 4px;
+    overflow     : hidden;
   }
 
   article:nth-child(2n+1) aside {
