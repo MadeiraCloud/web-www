@@ -24,7 +24,7 @@
   </head>
   <body>
 
-    <div class="nav_wrap">
+    <div class="nav_wrap" id="mcHeader">
       <nav>
         <div class="nav_break">
           <div class="nav_user">
@@ -61,25 +61,54 @@
       <div class="banner_img_wrap"> <div class="banner"></div> </div>
     </section>
 
-    <section class="intro cover">
+    <section class="intro cover" data-top="background-color:rgb(111,77,120);" data-bottom-bottom="background-color:rgb(56,44,87);">
       <h1>HOW IT WORKS</h1>
-      <ul class="intro_wrap">
-        <li class="intro_block">
-          <div class="intro_img intro_img_design"></div>
-          <h2>Design</h2>
-          <p>Drag and drop real AWS resources to a canvas to quickly design your application architecture.</p>
-        </li>
-        <li class="intro_block">
-          <div class="intro_img intro_img_config"></div>
-          <h2>Configure</h2>
-          <p>Dig into detailed configurations of resources and security group rules. No need to remember commands to configure auto scaling group or other resources.</p>
-        </li>
-        <li class="intro_block last">
-          <div class="intro_img intro_img_launch"></div>
-          <h2>Launch</h2>
-          <p>Launch your design into real enviornment. AWS resources will be created according to your design and configuration with a single click.</p>
-        </li>
-      </ul>
+      <div class="intro_wrap">
+        <article class="hiw hiw_01">
+          <div class="hiw_content">
+            <h3>Design</h3>
+            <p>Design your application infrastructure and edit the servers' configuration and interconnections, with our visual IDE.</p>
+
+            <ul>
+              <li>Drag-n-Drop to Create a Diagram</li>
+              <li>Visually Manage Security Group Rules</li>
+              <li>Configure Instance State for Automation</li>
+            </ul>
+          </div>
+          <div class="hiw_img"></div>
+        </article>
+
+        <article class="hiw hiw_02 alt">
+          <div class="hiw_content">
+            <h3>Run</h3>
+            <p>One-Click to launch your design into a running app. We provision and configure the resources, bringing the system to the state you defined.</p>
+
+            <ul>
+              <li>Smart Validation to Ensure Best Practice</li>
+              <li>No numbers CLI or Clicking through Pages, Design is Implemented in One Click.</li>
+            </ul>
+          </div>
+          <div class="hiw_img"></div>
+        </article>
+
+        <article class="hiw hiw_03">
+          <div class="hiw_content">
+            <h3>Update</h3>
+            <p>You can edit your running apps at any time via the IDE: infrastructure update, settings tweaking, configuration editing, new code release, etc.</p>
+            <p>Once done, one click will automatically update your application from the previous state to the new one, safely.</p>
+          </div>
+          <div class="hiw_img"></div>
+        </article>
+
+        <article class="hiw hiw_04 alt">
+          <div class="hiw_content">
+            <h3>Ensure</h3>
+            <p class="emphasize">Performance pressure, code issue, server crash: your app is covered! </p>
+            <p>By doing autoscaling and auto-healing, we ensure your app to be always up and running, in the state you have defined. However, we will not do these recklessly. We keep the max transparency: notifying you for at step and taking no action until you approve it.</p>
+          </div>
+          <div class="hiw_img"></div>
+        </article>
+      </div>
     </section>
 
     <section class="services cover">
@@ -217,6 +246,7 @@
   ga('send', 'pageview');
 
 </script>
+    <script src="script/skrollr.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="' + "script/jquery.min.js" + '"><\/script>')</script>
     <script src="script/main.js?v=2"></script>
