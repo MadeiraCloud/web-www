@@ -41,7 +41,29 @@ $(function(){
 
   $(window).on("scroll", onWinScroll).on("resize", onWinResize);
 
-  if ($(window).width()>860) { skrollr.init(); }
+  if ($(window).width()>860) {
+    skrollr.init({
+      render : function( data ) {
+        var arr = [1,2,3];
+        for (var i in arr) {
+          var a = arr[i];
+          var target = $(".hiw_0"+a);
+          if (target.hasClass("lineshown")) {
+            continue;
+          }
+          if (target.hasClass("skrollable-between") || target.hasClass("skrollable-after")) {
+            var line = $("#hiw_line_0"+a)[0];
+            if (line) {
+              target.addClass("lineshown");
+              line.setAttribute("class", "show");
+            }
+          }
+        }
+      }
+    });
+  } else {
+    $(".hiw").toggleClass("lineshown", true);
+  }
 
   // Generate SVG line
   function calcLine( pos1, pos2 ) {
@@ -70,6 +92,9 @@ $(function(){
     path.setAttribute("stroke-width", "4");
     path.setAttribute("id", id);
     $("#hiw_lines")[0].appendChild( path );
+    var length = parseFloat(path.getTotalLength());
+    path.style.strokeDasharray  = length + " " + length;
+    path.style.strokeDashoffset = length;
   }
   function drawLine(){
 

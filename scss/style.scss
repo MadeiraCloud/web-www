@@ -37,6 +37,7 @@ html, body {
   padding    : 0;
   background : $mc2BgColor;
   border     : none;
+  overflow-x : hidden;
 }
 
 html,
@@ -410,6 +411,15 @@ $headerHeight : 43px;
   left     : 0;
   width    : 100%;
   height   : 100%;
+}
+
+path.show {
+  -webkit-transition : stroke-dashoffset .8s ease-in-out;
+     -moz-transition : stroke-dashoffset .8s ease-in-out;
+       -o-transition : stroke-dashoffset .8s ease-in-out;
+          transition : stroke-dashoffset .8s ease-in-out;
+
+  stroke-dashoffset : 0 !important;
 }
 
 .hiw {
