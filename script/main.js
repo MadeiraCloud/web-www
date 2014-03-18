@@ -41,5 +41,5 @@ $(function(){
 
   $(window).on("scroll", onWinScroll).on("resize", onWinResize);
 
-  skrollr.init();
+  if ($(window).width()>860) { skrollr.init(); }
 });

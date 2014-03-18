@@ -125,16 +125,14 @@ $headerHeight : 43px;
   background: rgba(#000,0);
 
 
-  @media screen and (max-height:760px) {
+  @media screen and (min-width:760px) {
     /* Make header not sticky for cellphones */
-    & { position : absolute !important; }
-  }
-
-  &.sticky {
-    position       : fixed;
-    background     : #111;
-    padding-top    : 10px;
-    padding-bottom : 10px;
+    &.sticky {
+      position       : fixed;
+      background     : #111;
+      padding-top    : 10px;
+      padding-bottom : 10px;
+    }
   }
 
   -webkit-transition: all 200ms ease-in;
@@ -485,6 +483,9 @@ $headerHeight : 43px;
   }
 }
 
+.hiw_03 { height : 500px; }
+.hiw_04 { height : 400px; }
+
 .hiw_01 h3 { background-position : left 0px; }
 .hiw_02 h3 { background-position : left -80px; }
 .hiw_03 h3 { background-position : left -160px; }
@@ -520,8 +521,6 @@ $headerHeight : 43px;
 }
 
 @media (-webkit-min-device-pixel-ratio:2), (min--moz-device-pixel-ratio:2), (-o-min-device-pixel-ratio:2/1), (min-device-pixel-ratio: 2) {
-
-
   .hiw_01 { background-image : image-url("hiw_01@2x.png"); }
   .hiw_02 { background-image : image-url("hiw_02@2x.png"); }
   .hiw_03 { background-image : image-url("hiw_03@2x.png"); }
@@ -532,6 +531,7 @@ $headerHeight : 43px;
 @media screen and (max-width : 880px) {
   .hiw, .hiw.alt {
     width  : 90%;
+    height : auto;
     margin : 0 auto 50px auto;
 
     .hiw_content {
@@ -550,8 +550,6 @@ $headerHeight : 43px;
       width    : auto;
     }
   }
-
-
 }
 
 
@@ -740,6 +738,17 @@ $headerHeight : 43px;
   }
 }
 
+@media screen and (max-width: 430px) {
+  .service_tags {
+    height : auto;
+    &:after {
+      display : block;
+      content : " ";
+      clear   : both;
+    }
+  }
+}
+
 .dashboard {
   height        : 292px + 32px;
   width         : 80%;
@@ -856,6 +865,20 @@ $headerHeight : 43px;
       color            : #d5d4d5;
       width            : 1.5em;
       margin           : 0 10px 20px 60px;
+    }
+  }
+}
+
+@media screen and (max-width : 580px) {
+  .faq {
+    article:before {
+      font-size   : 30px;
+      line-height : 1em;
+      margin      : 0;
+    }
+    article > div, article header {
+      margin-left  : 0;
+      margin-right : 0;
     }
   }
 }
