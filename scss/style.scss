@@ -130,10 +130,11 @@ $headerHeight : 43px;
     /* Make header not sticky for cellphones */
     &.sticky {
       position       : fixed;
-      background     : #111;
+      background     : rgba(29, 10, 27, 0.9);
       padding-top    : 10px;
       padding-bottom : 10px;
     }
+    & { position : absolute !important; }
   }
 
   -webkit-transition: all 200ms ease-in;
@@ -350,14 +351,12 @@ $headerHeight : 43px;
 }
 
 .banner_btn {
-  padding       : 0.5em 1em;
-  font-weight   : bold;
-  color         : #FFF;
-  font-size     : 28px;
-  background    : #c16aa2;
-  border-radius : 4px;
-  box-shadow    : inset 0px 1px #d497be;
-  border        : 1px solid #162530;
+  padding      : 0.5em 1em;
+  color        : #FFF;
+  font-size    : 28px;
+  background   : #c16aa2;
+  border-radius: 4px;
+  box-shadow   : 0 0 10px rgba(0, 0, 0, 0.4);
 
   &:hover {
     background : darken(#c16aa2, 5%);
@@ -441,7 +440,8 @@ path.show {
   }
 
   p {
-    margin : 0 0 0.5em 0;
+    margin: 0 0 0.5em 0;
+    color : #e4e4e4;
 
     &.emphasize {
       font-size   : 19px;
@@ -1055,8 +1055,6 @@ $social_img_height : 50px;
 .big_signup {
   color          : #fff;
   background     : #c16aa2;
-  border         : 1px solid #603c53;
-  box-shadow     : inset 0px 1px rgba(255,255,255,.3);
   font-size      : 22px;
   padding        : 10px 25px;
   border-radius  : 4px;
