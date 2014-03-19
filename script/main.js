@@ -171,4 +171,9 @@ $(function(){
   } else {
     lineShown = { hiw_line_01 : true, hiw_line_02 : true, hiw_line_03 : true };
   }
+
+  var ua = window.navigator.userAgent;
+  if ( ua.indexOf("Safari") > -1 && ua.indexOf("Chrome") == -1 ) {
+    $(".hiw_bg_gradient").hide();
+  }
 });
