@@ -432,7 +432,7 @@ path.show {
 path.dash {
   stroke-width:4;
   stroke-dasharray:20px 8px;
-  stroke:white;
+  stroke:#D6C2DA;
 }
 
 .hiw {
@@ -577,7 +577,7 @@ path.dash {
 .hiw_02 .hiw_img {
   max-width : image-width("hiw_02.png");
   &:before {
-    background-image : image-url("hiw_01.png");
+    background-image : image-url("hiw_02.png");
     padding-top      : percentage( image-height("hiw_01.png") / image-width("hiw_01.png") );
   }
 }

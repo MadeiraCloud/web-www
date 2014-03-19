@@ -581,7 +581,7 @@ path.show {
 path.dash {
   stroke-width: 4;
   stroke-dasharray: 20px 8px;
-  stroke: white; }
+  stroke: #D6C2DA; }
 
 .hiw {
   color: #bbc5d5;
@@ -728,7 +728,7 @@ path.dash {
 .hiw_02 .hiw_img {
   max-width: 648px; }
   .hiw_02 .hiw_img:before {
-    background-image: url('../asset/hiw_01.png?1395205929');
+    background-image: url('../asset/hiw_02.png?1395205929');
     padding-top: 77.31343%; }
 
 .hiw_03 .hiw_img {
