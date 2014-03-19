@@ -291,10 +291,10 @@ body {
   -webkit-box-shadow: inset 0 -5px 30px rgba(0,0,0,.1);
   -moz-box-shadow: inset 0 -5px 30px rgba(0,0,0,.1);
   box-shadow: inset 0 -5px 30px rgba(0,0,0,.1);
-  background-image: -webkit-linear-gradient(top, #7b4c8f, #444185);
-  background-image: -moz-linear-gradient(top, #7b4c8f, #444185);
-  background-image: -o-linear-gradient(top, #7b4c8f, #444185);
-  background-image: linear-gradient(to bottom, #7b4c8f, #444185);
+  background-image: -webkit-linear-gradient(top, #230853,#541C66);
+  background-image: -moz-linear-gradient(top, #230853,#541C66);
+  background-image: -o-linear-gradient(top, #230853,#541C66);
+  background-image: linear-gradient(to bottom, #230853,#541C66);
 }
 
 .feature_content {
@@ -326,7 +326,7 @@ body {
     background   : silver;
     border-radius: 4px;
     overflow     : hidden;
-    // border       : 1px solid #ccc;
+    box-shadow   : inset 0 0 1px rgba(0,0,0,.2);
   }
 
   article:nth-child(2n+1) aside {
