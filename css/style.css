@@ -300,11 +300,11 @@ header, footer {
     display: block; }
 
 .sprite, .dashboard_wrap .control, .social_post, .social_post:before, .network_wrap a {
-  background: url('../asset/sprite.png?1381548589') no-repeat;
-  _background-image: url('../asset/sprite_ie6.png?1381548583'); }
+  background: url('../asset/sprite.png?1395054144') no-repeat;
+  _background-image: url('../asset/sprite_ie6.png?1395054144'); }
   @media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2 / 1), (min-device-pixel-ratio: 2) {
     .sprite, .dashboard_wrap .control, .social_post, .social_post:before, .network_wrap a {
-      background-image: url('../asset/sprite@2x.png?1381548606');
+      background-image: url('../asset/sprite@2x.png?1395054144');
       -webkit-background-size: 400px, auto;
       -moz-background-size: 400px, auto;
       -o-background-size: 400px, auto;
@@ -317,8 +317,8 @@ header, footer {
 .nav_wrap {
   padding-top: 20px;
   padding-bottom: 20px;
-  height: 43px;
-  line-height: 43px;
+  height: 44px;
+  line-height: 44px;
   width: 100%;
   position: absolute;
   top: 0;
@@ -350,16 +350,16 @@ header, footer {
   width: 90%;
   height: 100%;
   margin: 0 auto;
-  background: url('../asset/logo.png?1381548537') left center no-repeat; }
+  background: url('../asset/logo.png?1395205799') left center no-repeat; }
   @media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2 / 1), (min-device-pixel-ratio: 2) {
     .nav_wrap nav {
-      background-image: url('../asset/logo@2x.png?1381548539');
-      -webkit-background-size: 209px, auto;
-      -moz-background-size: 209px, auto;
-      -o-background-size: 209px, auto;
-      background-size: 209px, auto; } }
+      background-image: url('../asset/logo@2x.png?1395205799');
+      -webkit-background-size: 191px, auto;
+      -moz-background-size: 191px, auto;
+      -o-background-size: 191px, auto;
+      background-size: 191px, auto; } }
   .nav_wrap nav .nav_home_lnk {
-    width: 209px;
+    width: 191px;
     height: 100%;
     float: left; }
 
@@ -446,20 +446,20 @@ header, footer {
     display: none; }
 
   .nav_wrap nav {
-    -webkit-background-size: 168px, auto;
-    -moz-background-size: 168px, auto;
-    -o-background-size: 168px, auto;
-    background-size: 168px, auto; }
+    -webkit-background-size: 153px, auto;
+    -moz-background-size: 153px, auto;
+    -o-background-size: 153px, auto;
+    background-size: 153px, auto; }
     .nav_wrap nav .nav_home_lnk {
-      width: 168px; } }
+      width: 153px; } }
 @media screen and (max-width: 670px) {
   .nav_wrap nav {
-    -webkit-background-size: 147px, auto;
-    -moz-background-size: 147px, auto;
-    -o-background-size: 147px, auto;
-    background-size: 147px, auto; }
+    -webkit-background-size: 134px, auto;
+    -moz-background-size: 134px, auto;
+    -o-background-size: 134px, auto;
+    background-size: 134px, auto; }
     .nav_wrap nav .nav_home_lnk {
-      width: 147px; } }
+      width: 134px; } }
 @media screen and (max-width: 600px) {
   .nav_wrap {
     position: absolute;
@@ -470,8 +470,8 @@ header, footer {
       position: absolute;
       left: 50%;
       top: 20px;
-      margin-left: -74px;
-      height: 31px; }
+      margin-left: -67px;
+      height: 29px; }
 
   .nav_break {
     padding-top: 32px;
@@ -490,15 +490,15 @@ header, footer {
   position: relative;
   z-index: 20;
   padding-top: 120px;
-  background: #342b5e url('../asset/index_bg.png?1394784365') center center repeat;
-  background: url('../asset/index_bg@2x.png?1394785361'), -moz-linear-gradient(top, #342b5e 0, #1f2034 100%);
-  background: url('../asset/index_bg@2x.png?1394785361'), -webkit-gradient(linear, left top, left bottom, color-stop(0, #342b5e), color-stop(100%, #1f2034));
+  background: #342b5e url('../asset/index_bg.png?1395054144') center center repeat;
+  background: url('../asset/index_bg@2x.png?1395054144'), -moz-linear-gradient(top, #342b5e 0, #1f2034 100%);
+  background: url('../asset/index_bg@2x.png?1395054144'), -webkit-gradient(linear, left top, left bottom, color-stop(0, #342b5e), color-stop(100%, #1f2034));
   /* Chrome,Safari4+ */
-  background: url('../asset/index_bg@2x.png?1394785361'), -webkit-linear-gradient(top, #342b5e 0, #1f2034 100%);
+  background: url('../asset/index_bg@2x.png?1395054144'), -webkit-linear-gradient(top, #342b5e 0, #1f2034 100%);
   /* Chrome10+,Safari5.1+ */
-  background: url('../asset/index_bg@2x.png?1394785361'), -o-linear-gradient(top, #342b5e 0, #1f2034 100%);
+  background: url('../asset/index_bg@2x.png?1395054144'), -o-linear-gradient(top, #342b5e 0, #1f2034 100%);
   /* Opera 11.10+ */
-  background: url('../asset/index_bg@2x.png?1394785361'), linear-gradient(to bottom, #342b5e 0%, #1f2034 100%);
+  background: url('../asset/index_bg@2x.png?1395054144'), linear-gradient(to bottom, #342b5e 0%, #1f2034 100%);
   /* W3C */
   background-size: 50px auto, auto auto; }
   .index_banner .banner_wrap {
@@ -535,7 +535,7 @@ header, footer {
 .banner {
   width: 100%;
   height: 0;
-  background: url('../asset/index_banner.png?1394786735');
+  background: url('../asset/index_banner.png?1395205798');
   padding-top: 58.10811%;
   background-size: 100% 100%; }
 
@@ -610,10 +610,10 @@ path.dash {
     padding-left: 20px;
     margin-top: 23px; }
   .hiw h3, .hiw li {
-    background: url('../asset/hiw_sprite.png?1395131086') left -319px no-repeat; }
+    background: url('../asset/hiw_sprite.png?1395131358') left -319px no-repeat; }
     @media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2 / 1), (min-device-pixel-ratio: 2) {
       .hiw h3, .hiw li {
-        background-image: url('../asset/hiw_sprite@2x.png?1395131086');
+        background-image: url('../asset/hiw_sprite@2x.png?1395131358');
         -webkit-background-size: 50px, auto;
         -moz-background-size: 50px, auto;
         -o-background-size: 50px, auto;
@@ -722,39 +722,39 @@ path.dash {
 .hiw_01 .hiw_img {
   max-width: 650px; }
   .hiw_01 .hiw_img:before {
-    background-image: url('../asset/hiw_01.png?1395131086');
+    background-image: url('../asset/hiw_01.png?1395205798');
     padding-top: 84.30769%; }
 
 .hiw_02 .hiw_img {
   max-width: 650px; }
   .hiw_02 .hiw_img:before {
-    background-image: url('../asset/hiw_01.png?1395131086');
+    background-image: url('../asset/hiw_01.png?1395205798');
     padding-top: 84.30769%; }
 
 .hiw_03 .hiw_img {
   max-width: 560px; }
   .hiw_03 .hiw_img:before {
-    background-image: url('../asset/hiw_03.png?1395132699');
+    background-image: url('../asset/hiw_03.png?1395138717');
     padding-top: 63.39286%; }
 
 .hiw_04 .hiw_img {
   max-width: 556px; }
   .hiw_04 .hiw_img:before {
-    background-image: url('../asset/hiw_04.png?1395132424');
+    background-image: url('../asset/hiw_04.png?1395138717');
     padding-top: 63.30935%; }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2 / 1), (min-device-pixel-ratio: 2) {
   .hiw_01 .hiw_img:before {
-    background-image: url('../asset/hiw_01@2x.png?1395131086'); }
+    background-image: url('../asset/hiw_01@2x.png?1395205798'); }
 
   .hiw_02 .hiw_img:before {
-    background-image: url('../asset/hiw_02@2x.png?1395131086'); }
+    background-image: url('../asset/hiw_02@2x.png?1395205798'); }
 
   .hiw_03 .hiw_img:before {
-    background-image: url('../asset/hiw_03@2x.png?1395132685'); }
+    background-image: url('../asset/hiw_03@2x.png?1395138717'); }
 
   .hiw_04 .hiw_img:before {
-    background-image: url('../asset/hiw_04@2x.png?1395132403'); } }
+    background-image: url('../asset/hiw_04@2x.png?1395138717'); } }
 @media screen and (max-width: 880px) {
   .hiw, .hiw.alt {
     width: 90%;
@@ -775,19 +775,19 @@ path.dash {
     display: none; } }
 /* Services */
 .services {
-  background: #1e1c2a url('../asset/services_bg.png?1381548571') left bottom repeat;
-  background-image: url('../asset/services_bg_m.png?1381548569'), -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #283138), color-stop(100%, #3a2542));
-  background-image: url('../asset/services_bg_m.png?1381548569'), -webkit-linear-gradient(top, #283138, #3a2542);
-  background-image: url('../asset/services_bg_m.png?1381548569'), -moz-linear-gradient(top, #283138, #3a2542);
-  background-image: url('../asset/services_bg_m.png?1381548569'), -o-linear-gradient(top, #283138, #3a2542);
-  background-image: url('../asset/services_bg_m.png?1381548569'), linear-gradient(top, #283138, #3a2542); }
+  background: #1e1c2a url('../asset/services_bg.png?1395054144') left bottom repeat;
+  background-image: url('../asset/services_bg_m.png?1395054144'), -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #283138), color-stop(100%, #3a2542));
+  background-image: url('../asset/services_bg_m.png?1395054144'), -webkit-linear-gradient(top, #283138, #3a2542);
+  background-image: url('../asset/services_bg_m.png?1395054144'), -moz-linear-gradient(top, #283138, #3a2542);
+  background-image: url('../asset/services_bg_m.png?1395054144'), -o-linear-gradient(top, #283138, #3a2542);
+  background-image: url('../asset/services_bg_m.png?1395054144'), linear-gradient(top, #283138, #3a2542); }
   @media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2 / 1), (min-device-pixel-ratio: 2) {
     .services {
-      background-image: url('../asset/services_bg_m@2x.png?1381548569'), -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #283138), color-stop(100%, #3a2542));
-      background-image: url('../asset/services_bg_m@2x.png?1381548569'), -webkit-linear-gradient(top, #283138, #3a2542);
-      background-image: url('../asset/services_bg_m@2x.png?1381548569'), -moz-linear-gradient(top, #283138, #3a2542);
-      background-image: url('../asset/services_bg_m@2x.png?1381548569'), -o-linear-gradient(top, #283138, #3a2542);
-      background-image: url('../asset/services_bg_m@2x.png?1381548569'), linear-gradient(top, #283138, #3a2542);
+      background-image: url('../asset/services_bg_m@2x.png?1395054144'), -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #283138), color-stop(100%, #3a2542));
+      background-image: url('../asset/services_bg_m@2x.png?1395054144'), -webkit-linear-gradient(top, #283138, #3a2542);
+      background-image: url('../asset/services_bg_m@2x.png?1395054144'), -moz-linear-gradient(top, #283138, #3a2542);
+      background-image: url('../asset/services_bg_m@2x.png?1395054144'), -o-linear-gradient(top, #283138, #3a2542);
+      background-image: url('../asset/services_bg_m@2x.png?1395054144'), linear-gradient(top, #283138, #3a2542);
       -webkit-background-size: 6px auto, cover;
       -moz-background-size: 6px auto, cover;
       -o-background-size: 6px auto, cover;
@@ -982,10 +982,10 @@ path.dash {
   .dashboard_wrap .content {
     background: #fff;
     height: 292px;
-    background: url('../asset/dashboard1012.png?1381548439') no-repeat; }
+    background: url('../asset/dashboard1012.png?1395054144') no-repeat; }
     @media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2 / 1), (min-device-pixel-ratio: 2) {
       .dashboard_wrap .content {
-        background-image: url('../asset/dashboard1012@2x.png?1381548482');
+        background-image: url('../asset/dashboard1012@2x.png?1395054144');
         -webkit-background-size: 1012px, auto;
         -moz-background-size: 1012px, auto;
         -o-background-size: 1012px, auto;
@@ -995,10 +995,10 @@ path.dash {
   .dashboard {
     max-width: 1280px; }
     .dashboard .content {
-      background: url('../asset/dashboard.png?1381548432') no-repeat; } }
+      background: url('../asset/dashboard.png?1395054144') no-repeat; } }
 @media (min-width: 1600px) and (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2 / 1), (min-device-pixel-ratio: 2) {
   .dashboard .content {
-    background-image: url('../asset/dashboard@2x.png?1381548472');
+    background-image: url('../asset/dashboard@2x.png?1395054144');
     -webkit-background-size: 1272px, auto;
     -moz-background-size: 1272px, auto;
     -o-background-size: 1272px, auto;
