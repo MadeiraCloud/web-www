@@ -41,31 +41,12 @@ $(function(){
 
   $(window).on("scroll", onWinScroll).on("resize", onWinResize);
 
-  if ($(window).width()>860) {
-    skrollr.init({
-      render : function( data ) {
-        var arr = [1,2,3];
-        for (var i in arr) {
-          var a = arr[i];
-          var target = $(".hiw_0"+a);
-          if (target.hasClass("lineshown")) {
-            continue;
-          }
-          if (target.hasClass("skrollable-between") || target.hasClass("skrollable-after")) {
-            var line = $("#hiw_line_0"+a)[0];
-            if (line) {
-              target.addClass("lineshown");
-              line.setAttribute("class", "show");
-            }
-          }
-        }
-      }
-    });
-  } else {
-    $(".hiw").toggleClass("lineshown", true);
-  }
-
   // Generate SVG line
+  var lineShown = {
+      hiw_line_01 : false
+    , hiw_line_02 : false
+    , hiw_line_03 : false
+  };
   function calcLine( pos1, pos2 ) {
     var d = "M" + pos1.left + " " + (pos1.top+50);
 
@@ -85,16 +66,33 @@ $(function(){
     return d;
   }
   function createLine( pos1, pos2, id ) {
+    var svg  = $("#hiw_lines")[0];
+    var d    = calcLine(pos1, pos2);
     var path = document.createElementNS('http://www.w3.org/2000/svg', "path");
-    path.setAttribute("d", calcLine(pos1, pos2));
-    path.setAttribute("stroke", "white");
-    path.setAttribute("fill", "none");
-    path.setAttribute("stroke-width", "4");
+
+    path.setAttribute("d", d);
     path.setAttribute("id", id);
-    $("#hiw_lines")[0].appendChild( path );
-    var length = parseFloat(path.getTotalLength());
+
+    if ( lineShown[id] ) {
+      path.setAttribute("class", "show");
+      dash.setAttribute("class", "dash");
+    }
+
+    var mask = document.createElementNS('http://www.w3.org/2000/svg', "mask");
+    mask.setAttribute("id", id);
+    mask.appendChild( path );
+
+    svg.appendChild( mask );
+    var length = parseFloat(path.getTotalLength()).toFixed(2);
     path.style.strokeDasharray  = length + " " + length;
     path.style.strokeDashoffset = length;
+
+    var dash = document.createElementNS('http://www.w3.org/2000/svg', "path");
+    dash.setAttribute("d", d);
+    dash.setAttribute("id", id + "_dash");
+    dash.setAttribute("class", "dash show");
+    dash.setAttribute("mask", "url(#" + id + ")");
+    svg.appendChild( dash );
   }
   function drawLine(){
 
@@ -123,4 +121,28 @@ $(function(){
     while( svg.firstChild ) { svg.removeChild( svg.firstChild ); }
     drawLine();
   });
+
+  if ($(window).width()>860) {
+    skrollr.init({
+      render : function( data ) {
+        var arr = [1,2,3];
+        for (var i in arr) {
+          var a = arr[i];
+          if ( lineShown["hiw_line_0"+a] ) { continue; }
+
+          var target = $(".hiw_0"+a);
+          if (target.hasClass("skrollable-between") || target.hasClass("skrollable-after")) {
+            var line = $("#hiw_line_0"+a)[0];
+            if (line) {
+              lineShown["hiw_line_0"+a] = true;
+              line.firstChild.setAttribute("class", "show");
+            }
+          }
+        }
+        console.log( data, $(".intro").offset() );
+      }
+    });
+  } else {
+    lineShown = { hiw_line_01 : true, hiw_line_02 : true, hiw_line_03 : true };
+  }
 });
