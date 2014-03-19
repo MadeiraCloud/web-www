@@ -16,35 +16,32 @@
   </head>
   <body>
 
-    <header>
-      <div class="nav_wrap">
-        <nav>
+    <div class="nav_wrap" style="background:#111;">
+      <nav>
+        <div class="nav_break">
           <div class="nav_user">
+            <a href="https://ide.madeiracloud.com/register/" target="_blank" class="nav_register">SIGN UP</a>
+            <a href="https://ide.madeiracloud.com/login/" target="_blank" class="nav_login">SIGN IN</a>
+            <a href="https://ide.madeiracloud.com/" target="_blank" class="nav_ide" id="mcIde">LAUNCH IDE</a>
 
-            <span>
-              <a href="https://ide.madeiracloud.com/" class="nav_login">Launch IDE</a>
-              <a href="https://ide.madeiracloud.com/register/" class="nav_register" id="mcRegister">Sign Up</a>
-            </span>
-
-            <script type="text/javascript">
-            (function(){
-              var m = document.cookie.match(/madeiracloud_ide_session_id=([^; ]+)/);
-              if ( m ) { document.getElementById("mcRegister").style.display = "none"; }
-            })();
-            </script>
+            <script type="text/javascript"> (function(){
+              var m = document.cookie.match(/session_id=([^; ]+)/);
+              if ( m ) { document.body.className = "registered"; }
+            })(); </script>
           </div>
 
           <a href="/about" class="nav_lnk">ABOUT</a>
-          <!-- <a href="http://madeiracloud.wordpress.com/" class="nav_lnk">BLOG</a> -->
+          <a href="http://madeiracloud.wordpress.com/" class="nav_lnk">BLOG</a>
           <a href="http://madeiracloud-document.readthedocs.org/en/latest/" target="_blank" class="nav_lnk">DOCUMENTATION</a>
-          <a href="/" class="nav_lnk">HOME</a>
+          <a href="/feature" class="nav_lnk">FEATURES</a>
 
-          <a href="/" class="nav_home_lnk"></a>
-        </nav>
-      </div>
-    </header>
+        </div>
 
-    <section class="about_content">
+        <a href="/" class="nav_home_lnk"></a>
+      </nav>
+    </div>
+
+    <section class="about_content" style="padding-top:120px;">
 
 <div class="header_like_wrap terms_content">
 <h2>Terms, Conditions and Privacy Policy</h2>
