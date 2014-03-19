@@ -91,13 +91,14 @@ body {
 }
 
 .header_like_wrap {
-  padding   : 0 80px;
-  max-width : 1180px - 80 * 2;
-  margin    : 0 auto;
+  padding     : 0 80px;
+  // max-width: 1180px - 80 * 2;
+  max-width   : 1200px;
+  margin      : 0 auto;
 
   @media screen and (min-width: 1600px) {
     & {
-      max-width : 1306px;
+      max-width : 1200px;
       padding   : 0 100px;
     }
   }
@@ -126,13 +127,13 @@ body {
   margin-left : -20px;
 
   .avatar {
-    width      : 298px;
-    height     : 298px;
-    float      : left;
-    margin     : 0 0 20px 20px;
-    overflow   : hidden;
-    border     : 1px solid #848484;
-    color      : #ccc;
+    width          : 268px;
+    height         : 268px;
+    float          : left;
+    margin         : 0 0 20px 20px;
+    overflow       : hidden;
+    border         : 1px solid #848484;
+    color          : #ccc;
 
     h3 {
       height      : 50px;

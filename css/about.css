@@ -47,11 +47,11 @@ body {
 
 .header_like_wrap {
   padding: 0 80px;
-  max-width: 1020px;
+  max-width: 1200px;
   margin: 0 auto; }
   @media screen and (min-width: 1600px) {
     .header_like_wrap {
-      max-width: 1306px;
+      max-width: 1200px;
       padding: 0 100px; } }
   @media screen and (max-width: 980px) {
     .header_like_wrap {
@@ -67,8 +67,8 @@ body {
 .team_wrap {
   margin-left: -20px; }
   .team_wrap .avatar {
-    width: 298px;
-    height: 298px;
+    width: 268px;
+    height: 268px;
     float: left;
     margin: 0 0 20px 20px;
     overflow: hidden;
@@ -118,42 +118,42 @@ body {
     .lt-ie9 .team_wrap .avatar:hover div {
       top: 0; }
   .team_wrap .peng {
-    background-image: url('../asset/avatar_peng.jpg?1395206944'); }
+    background-image: url('../asset/avatar_peng.jpg?1395212462'); }
   .team_wrap .tibo {
-    background-image: url('../asset/avatar_tibo.jpg?1395206944'); }
+    background-image: url('../asset/avatar_tibo.jpg?1395212462'); }
   .team_wrap .ada {
-    background-image: url('../asset/avatar_ada.jpg?1395206944'); }
+    background-image: url('../asset/avatar_ada.jpg?1395212462'); }
   .team_wrap .jimmy {
-    background-image: url('../asset/avatar_jimmy.jpg?1395206944'); }
+    background-image: url('../asset/avatar_jimmy.jpg?1395212462'); }
   .team_wrap .ken {
-    background-image: url('../asset/avatar_ken.jpg?1395206944'); }
+    background-image: url('../asset/avatar_ken.jpg?1395212462'); }
   .team_wrap .song {
-    background-image: url('../asset/avatar_song.jpg?1395206944'); }
+    background-image: url('../asset/avatar_song.jpg?1395212462'); }
   .team_wrap .tim {
-    background-image: url('../asset/avatar_tim.jpg?1395206944'); }
+    background-image: url('../asset/avatar_tim.jpg?1395212462'); }
   .team_wrap .michael {
-    background-image: url('../asset/avatar_michael.jpg?1395206944'); }
+    background-image: url('../asset/avatar_michael.jpg?1395212462'); }
   .team_wrap .morris {
-    background-image: url('../asset/avatar_morris.jpg?1395206944'); }
+    background-image: url('../asset/avatar_morris.jpg?1395212462'); }
   .team_wrap .paula {
-    background-image: url('../asset/avatar_paula.jpg?1395206944'); }
+    background-image: url('../asset/avatar_paula.jpg?1395212462'); }
   .team_wrap .kenshin {
-    background-image: url('../asset/avatar_kenshin.jpg?1395206944'); }
+    background-image: url('../asset/avatar_kenshin.jpg?1395212462'); }
   .team_wrap .angel {
-    background-image: url('../asset/avatar_angel.jpg?1395206944'); }
+    background-image: url('../asset/avatar_angel.jpg?1395212462'); }
   .team_wrap .xuwong {
-    background-image: url('../asset/avatar_xuwong.jpg?1395206944'); }
+    background-image: url('../asset/avatar_xuwong.jpg?1395212462'); }
   .team_wrap .cat {
-    background-image: url('../asset/avatar_cat.jpg?1395206944'); }
+    background-image: url('../asset/avatar_cat.jpg?1395212462'); }
 
 .sequoiacap {
   float: left;
   width: 300px;
   height: 48px;
-  background-image: url('../asset/sequoiacap.png?1381548541'); }
+  background-image: url('../asset/sequoiacap.png?1395054144'); }
   @media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2 / 1), (min-device-pixel-ratio: 2) {
     .sequoiacap {
-      background-image: url('../asset/sequoiacap@2x.png?1381548542');
+      background-image: url('../asset/sequoiacap@2x.png?1395054144');
       -webkit-background-size: 300px auto;
       -moz-background-size: 300px auto;
       -o-background-size: 300px auto;
@@ -180,29 +180,29 @@ body {
         color: #2c67a1;
         text-decoration: underline; }
   .media .awsblog {
-    background-image: url('../asset/press/aws.jpg?1383646877'); }
+    background-image: url('../asset/press/aws.jpg?1395054144'); }
   .media .gigaom {
-    background-image: url('../asset/press/gigaom.jpg?1381568074'); }
+    background-image: url('../asset/press/gigaom.jpg?1395054144'); }
   .media .tnw {
-    background-image: url('../asset/press/tnw.jpg?1381568074'); }
+    background-image: url('../asset/press/tnw.jpg?1395054144'); }
   .media .venture {
-    background-image: url('../asset/press/vb.jpg?1381568074'); }
+    background-image: url('../asset/press/vb.jpg?1395054144'); }
   .media .theregister {
-    background-image: url('../asset/press/reg.jpg?1383646877'); }
+    background-image: url('../asset/press/reg.jpg?1395054144'); }
   .media .cloudave {
-    background-image: url('../asset/press/cav.jpg?1381568074'); }
+    background-image: url('../asset/press/cav.jpg?1395054144'); }
   .media .cloudcom {
-    background-image: url('../asset/press/ccj.jpg?1381568074'); }
+    background-image: url('../asset/press/ccj.jpg?1395054144'); }
   .media .yourstory {
-    background-image: url('../asset/press/ysi.jpg?1381568074'); }
+    background-image: url('../asset/press/ysi.jpg?1395054144'); }
   .media .techinasia {
-    background-image: url('../asset/press/tia.jpg?1381568074'); }
+    background-image: url('../asset/press/tia.jpg?1395054144'); }
   .media .technode {
-    background-image: url('../asset/press/tn.jpg?1381568074'); }
+    background-image: url('../asset/press/tn.jpg?1395054144'); }
   .media .startup50 {
-    background-image: url('../asset/press/s50.jpg?1381568074'); }
+    background-image: url('../asset/press/s50.jpg?1395054144'); }
   .media .techcrunch {
-    background-image: url('../asset/press/tc.jpg?1381568074'); }
+    background-image: url('../asset/press/tc.jpg?1395054144'); }
 
 .terms_content {
   color: #555;
@@ -267,24 +267,24 @@ body {
   .feature_content article:last-child {
     border-bottom: none; }
   .feature_content article:nth-child(1) aside {
-    background-image: url('../asset/feature_1.png?1395200491'); }
+    background-image: url('../asset/feature_1.png?1395144203'); }
   .feature_content article:nth-child(2) aside {
-    background-image: url('../asset/feature_2.png?1395200491'); }
+    background-image: url('../asset/feature_2.png?1395144203'); }
   .feature_content article:nth-child(3) aside {
-    background-image: url('../asset/feature_3.png?1395200491'); }
+    background-image: url('../asset/feature_3.png?1395144203'); }
   .feature_content article:nth-child(4) aside {
-    background-image: url('../asset/feature_4.png?1395200491'); }
+    background-image: url('../asset/feature_4.png?1395144203'); }
   .feature_content article:nth-child(5) aside {
-    background-image: url('../asset/feature_5.png?1395200491'); }
+    background-image: url('../asset/feature_5.png?1395144203'); }
   .feature_content article:nth-child(6) aside {
-    background-image: url('../asset/feature_6.png?1395200491'); }
+    background-image: url('../asset/feature_6.png?1395144203'); }
   .feature_content article:nth-child(7) aside {
-    background-image: url('../asset/feature_7.png?1395200491'); }
+    background-image: url('../asset/feature_7.png?1395144203'); }
   .feature_content article:nth-child(8) aside {
-    background-image: url('../asset/feature_8.png?1395200491'); }
+    background-image: url('../asset/feature_8.png?1395144203'); }
   .feature_content article:nth-child(9) aside {
-    background-image: url('../asset/feature_9.png?1395200491'); }
+    background-image: url('../asset/feature_9.png?1395144203'); }
   .feature_content article:nth-child(10) aside {
-    background-image: url('../asset/feature_10.png?1395200491'); }
+    background-image: url('../asset/feature_10.png?1395144203'); }
   .feature_content article:nth-child(11) aside {
-    background-image: url('../asset/feature_11.png?1395200491'); }
+    background-image: url('../asset/feature_11.png?1395144203'); }
