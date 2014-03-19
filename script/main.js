@@ -69,28 +69,26 @@ $(function(){
     var svg  = $("#hiw_lines")[0];
     var d    = calcLine(pos1, pos2);
     var path = document.createElementNS('http://www.w3.org/2000/svg', "path");
+    var dash = document.createElementNS('http://www.w3.org/2000/svg', "path");
+    var mask = document.createElementNS('http://www.w3.org/2000/svg', "mask");
 
     path.setAttribute("d", d);
-    path.setAttribute("id", id);
 
     if ( lineShown[id] ) {
       path.setAttribute("class", "show");
       dash.setAttribute("class", "dash");
     }
 
-    var mask = document.createElementNS('http://www.w3.org/2000/svg', "mask");
     mask.setAttribute("id", id);
     mask.appendChild( path );
-
     svg.appendChild( mask );
+
     var length = parseFloat(path.getTotalLength()).toFixed(2);
     path.style.strokeDasharray  = length + " " + length;
     path.style.strokeDashoffset = length;
 
-    var dash = document.createElementNS('http://www.w3.org/2000/svg', "path");
     dash.setAttribute("d", d);
-    dash.setAttribute("id", id + "_dash");
-    dash.setAttribute("class", "dash show");
+    dash.setAttribute("class", "dash");
     dash.setAttribute("mask", "url(#" + id + ")");
     svg.appendChild( dash );
   }
@@ -116,30 +114,58 @@ $(function(){
     createLine( pos3, pos4, "hiw_line_03" );
   }
   drawLine();
-  $(window).on("resize", function(){
-    var svg = $("#hiw_lines")[0];
-    while( svg.firstChild ) { svg.removeChild( svg.firstChild ); }
-    drawLine();
-  });
 
   if ($(window).width()>860) {
+    var introOffset = $(".intro").offset();
+    var introHeight = $(".intro").outerHeight();
+    var viewportHeight = $(window).height();
+    $(window).on("resize", function(){
+      var svg = $("#hiw_lines")[0];
+      while( svg.firstChild ) { svg.removeChild( svg.firstChild ); }
+      drawLine();
+
+      var intro = $(".intro");
+      introOffset = intro.offset();
+      introHeight = intro.outerHeight();
+      viewportHeight = $(window).height();
+    });
+
+    function updateGradientBg(){
+      var scrollY   = window.scrollTop || window.scrollY;
+      var offset    = scrollY - introOffset.top;
+      var maxOffset = introHeight - viewportHeight;
+      if ( offset < 0 ) {
+        offset = 0;
+      } else if ( offset > maxOffset ) {
+        offset = maxOffset;
+      }
+
+      var transform = "translate(0," + offset + "px)";
+      $(".hiw_bg_gradient")
+        .css("-webkit-transform", transform)
+        .css("-ms-transform", transform)
+        .css("-moz-transform", transform)
+        .css("-o-transform", transform)
+        .css("transform", transform);
+    }
+    $(window).on("scroll", updateGradientBg);
+    updateGradientBg();
+
     skrollr.init({
       render : function( data ) {
-        var arr = [1,2,3];
+        var arr = [1,2,3,4];
         for (var i in arr) {
           var a = arr[i];
           if ( lineShown["hiw_line_0"+a] ) { continue; }
 
           var target = $(".hiw_0"+a);
           if (target.hasClass("skrollable-between") || target.hasClass("skrollable-after")) {
+            $(".hiw_0" + a).addClass("show");
+            lineShown["hiw_line_0"+a] = true;
             var line = $("#hiw_line_0"+a)[0];
-            if (line) {
-              lineShown["hiw_line_0"+a] = true;
-              line.firstChild.setAttribute("class", "show");
-            }
+            if (line) { line.firstChild.setAttribute("class", "show"); }
           }
         }
-        console.log( data, $(".intro").offset() );
       }
     });
   } else {
