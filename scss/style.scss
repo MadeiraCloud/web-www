@@ -365,7 +365,7 @@ $headerHeight : 44px;
 }
 
 .banner_img_wrap {
-  max-width  : ceil(image-width("index_banner.png") / 2);
+  max-width  : image-width("index_banner.png");
   margin     : 18px auto 0;
   width      : 90%;
   position   : relative;
@@ -379,6 +379,12 @@ $headerHeight : 44px;
   padding-top : percentage( image-height("index_banner.png") / image-width("index_banner.png") );
 
   background-size : 100% 100%;
+
+  @include retina() {
+    & {
+      background-image : image-url("index_banner@2x.png");
+    }
+  }
 }
 
 /* Intro */
