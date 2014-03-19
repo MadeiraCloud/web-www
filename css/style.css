@@ -731,11 +731,7 @@ path.dash {
 .hiw_02 .hiw_img {
   max-width: 668px; }
   .hiw_02 .hiw_img:before {
-<<<<<<< HEAD
-    background-image: url('../asset/hiw_02.png?1395213097');
-=======
     background-image: url('../asset/hiw_02.png?1395212463');
->>>>>>> [master] Add arn to footer
     padding-top: 77.31343%; }
 
 .hiw_03 .hiw_img {
@@ -755,11 +751,7 @@ path.dash {
     background-image: url('../asset/hiw_01@2x.png?1395212263'); }
 
   .hiw_02 .hiw_img:before {
-<<<<<<< HEAD
-    background-image: url('../asset/hiw_02@2x.png?1395213097'); }
-=======
     background-image: url('../asset/hiw_02@2x.png?1395212463'); }
->>>>>>> [master] Add arn to footer
 
   .hiw_03 .hiw_img:before {
     background-image: url('../asset/hiw_03@2x.png?1395138717'); }
@@ -1191,7 +1183,9 @@ footer {
       font-size: 14px; } }
 
 .arn {
-  margin-top: 10px; }
+  margin-top: 10px;
+  border: 1px solid #999;
+  border-radius: 4px; }
 
 .network_wrap {
   float: right; }
