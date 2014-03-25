@@ -331,33 +331,34 @@ $headerHeight : 44px;
   background-size : image-width("index_bg@2x.png") / 2 auto, auto auto;
 
   .banner_wrap {
-    text-align : center;
+    // text-align : center;
     color      : #DDD;
     font-size  : 30px;
-    width      : 90%;
-    margin     : 0 auto;
+    width      : 100%;
+    margin-left: 5%;
     text-shadow: 2px 2px 10px black;
+    font-family: "helvetica Neue", sans-serif;
 
     h1 {
       color      : #FFF;
-      font-size  : 1.6em;
+      font-size  : 1.2em;
       margin     : .6em auto;
       font-weight: bold;
-      width      : 60%;
-      span {
-        display: block;
-      }
     }
 
     p {
       font-size : 1em;
       margin : 0 0 1.5em 0;
+      span {
+        display: block;
+      }
     }
   }
 }
 
 .banner_btn_group {
-  text-align: center;
+  margin-left: 5%;
+  margin-top: 80px;
 }
 
 .banner_btn {
@@ -376,12 +377,12 @@ $headerHeight : 44px;
 }
 
 .banner_img_wrap {
-  max-width  : image-width("index_banner_2.png");
-  width: 90%;
-  position: relative;
-  top: 60px;
-  margin: 0 auto;
-  z-index: -1;
+  max-width   : image-width("index_banner_2.png");
+  width       : 90%;
+  position    : relative;
+  top         : -120px;
+  margin-left : 30%;
+  z-index     : -1;
   // max-width: 900px;
 }
 
@@ -393,11 +394,30 @@ $headerHeight : 44px;
 
   background-size : 100% 100%;
 
+  -webkit-transform: perspective(1600) rotateY(-25deg);
+
   @include retina() {
     & {
       background-image : image-url("index_banner_2@2x.png");
     }
   }
+}
+
+.banner_badge {
+  background-image: image-url("ensure_badge.png");
+  width           : image-width("ensure_badge.png");
+  height          : image-height("ensure_badge.png");
+  position        : absolute;
+  top: 600px;
+  left: 200px;
+  -webkit-transform: perspective(600) rotateY(30deg);
+  box-shadow: -5px 5px 20px rgba(0,0,0,.8);
+
+  // @include retina() {
+  //   & {
+  //     background-image : image-url("ensure_badge@2x.png");
+  //   }
+  // }
 }
 
 /* Intro */
