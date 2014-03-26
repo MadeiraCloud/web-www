@@ -470,10 +470,10 @@ $headerHeight : 44px;
   background-color   : rgba(9, 184, 100, 0.9);
   border-radius      : 50%;
   padding            : 10px;
-  box-shadow         : 0 0 20px rgba(9, 184, 100, 0.8);
-  -webkit-animation: ensure_glowing 2s ease-in-out 0s infinite alternate;
-  -o-animation     : ensure_glowing 2s ease-in-out 0s infinite alternate;
-  animation        : ensure_glowing 2s ease-in-out 0s infinite alternate;
+  box-shadow         : 0 0 20px rgba(0, 0, 0, 0.8);
+  // -webkit-animation: ensure_glowing 2s ease-in-out 0s infinite alternate;
+  // -o-animation     : ensure_glowing 2s ease-in-out 0s infinite alternate;
+  // animation        : ensure_glowing 2s ease-in-out 0s infinite alternate;
 
   // &:before {
   //   width            : image-width("ensure_icon_glow.png");
@@ -611,7 +611,7 @@ path.dash {
     }
   }
   ul {
-    margin-top : 90px;
+    margin-top : 60px;
   }
   li {
     font-size    : 14px;
@@ -681,7 +681,7 @@ path.dash {
 .hiw_content {
   padding-left  : 10%;
   margin-right  : 58.5%;
-  height        : 750px;
+  height        : 600px;
 
   @include box-sizing(border-box);
 }
@@ -692,7 +692,7 @@ path.dash {
   left     : 51%;
   width    : 61%;
 
-  opacity : 0.6;
+  opacity : 0.3;
 
   @include transform( translate(100px, 0) );
   @include transition( all 0.4s ease-in );
@@ -707,7 +707,8 @@ path.dash {
   }
 }
 
-.hiw_03 { height : 600px; }
+.hiw_02 { height : 480px; }
+.hiw_03 { height : 480px; }
 .hiw_04 { height : 400px; }
 
 .hiw_01 h3 { background-position : left 0px; }
@@ -726,11 +727,12 @@ path.dash {
   max-width : image-width("hiw_02.png");
   &:before {
     background-image : image-url("hiw_02.png");
-    padding-top      : percentage( image-height("hiw_01.png") / image-width("hiw_01.png") );
+    padding-top      : percentage( image-height("hiw_02.png") / image-width("hiw_02.png") );
   }
 }
 .hiw_03 .hiw_img {
   max-width : image-width("hiw_03.png");
+  margin-top: -50px;
   &:before {
     background-image : image-url("hiw_03.png");
     padding-top      : percentage( image-height("hiw_03.png") / image-width("hiw_03.png") );
