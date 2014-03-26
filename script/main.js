@@ -130,26 +130,26 @@ $(function(){
       viewportHeight = $(window).height();
     });
 
-    function updateGradientBg(){
-      var scrollY   = window.scrollTop || window.scrollY;
-      var offset    = scrollY - introOffset.top;
-      var maxOffset = introHeight - viewportHeight;
-      if ( offset < 0 ) {
-        offset = 0;
-      } else if ( offset > maxOffset ) {
-        offset = maxOffset;
-      }
+    // function updateGradientBg(){
+    //   var scrollY   = window.scrollTop || window.scrollY;
+    //   var offset    = scrollY - introOffset.top;
+    //   var maxOffset = introHeight - viewportHeight;
+    //   if ( offset < 0 ) {
+    //     offset = 0;
+    //   } else if ( offset > maxOffset ) {
+    //     offset = maxOffset;
+    //   }
 
-      var transform = "translate(0," + offset + "px)";
-      $(".hiw_bg_gradient")
-        .css("-webkit-transform", transform)
-        .css("-ms-transform", transform)
-        .css("-moz-transform", transform)
-        .css("-o-transform", transform)
-        .css("transform", transform);
-    }
-    $(window).on("scroll", updateGradientBg);
-    updateGradientBg();
+    //   var transform = "translate(0," + offset + "px)";
+    //   $(".hiw_bg_gradient")
+    //     .css("-webkit-transform", transform)
+    //     .css("-ms-transform", transform)
+    //     .css("-moz-transform", transform)
+    //     .css("-o-transform", transform)
+    //     .css("transform", transform);
+    // }
+    // $(window).on("scroll", updateGradientBg);
+    // updateGradientBg();
 
     skrollr.init({
       render : function( data ) {
@@ -172,8 +172,8 @@ $(function(){
     lineShown = { hiw_line_01 : true, hiw_line_02 : true, hiw_line_03 : true };
   }
 
-  var ua = window.navigator.userAgent;
-  if ( ua.indexOf("Safari") > -1 && ua.indexOf("Chrome") == -1 ) {
-    $(".hiw_bg_gradient").hide();
-  }
+  // var ua = window.navigator.userAgent;
+  // if ( ua.indexOf("Safari") > -1 && ua.indexOf("Chrome") == -1 ) {
+  //   $(".hiw_bg_gradient").hide();
+  // }
 });
