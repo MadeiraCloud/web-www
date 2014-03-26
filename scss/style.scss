@@ -400,7 +400,7 @@ $headerHeight : 44px;
 }
 
 .banner_img_wrap {
-  max-width   : image-width("index_banner_2.png");
+  max-width   : image-width("index_banner_2.jpeg");
   width: 90%;
   position: relative;
   top: 40px;
@@ -408,54 +408,43 @@ $headerHeight : 44px;
 }
 
 .banner {
-  width       : 100%;
-  height      : 0;
-  background  : image-url("index_banner_2.png");
-  padding-top : percentage( image-height("index_banner_2.png") / image-width("index_banner_2.png") );
+  width        : 100%;
+  height       : 0;
+  background   : image-url("index_banner_2.png");
+  padding-top  : percentage( image-height("index_banner_2.jpeg") / image-width("index_banner_2.jpeg") );
+  border-radius: 6px;
+  border       : 1px solid #222;
+  box-sizing   : border-box;
+  box-shadow      : 0 0 30px rgba(0,0,0,.4);
 
   background-size : 100% 100%;
 
   @include retina() {
     & {
-      background-image : image-url("index_banner_2@2x.png");
+      background-image : image-url("index_banner_2@2x.jpeg");
     }
   }
 }
 
 .banner_state {
-  background-image: image-url("state.png");
-  width           : image-width("state.png");
-  height          : image-height("state.png");
+  background-image: image-url("state.jpeg");
+  width           : image-width("state.jpeg");
+  height          : image-height("state.jpeg");
   position        : absolute;
   bottom          : -20px;
   right           : -20px;
-  // -webkit-animation: state_appear .5s ease-in 1s 1;
-  // -o-animation: state_appear .5s ease-in 1s 1;
-  // animation: state_appear .5s ease-in 1s 1;
+  border-radius   : 4px;
+  border          : 1px solid #222;
+  box-sizing      : border-box;
+  box-shadow      : 0 0 30px rgba(0,0,0,.4);
 
   @include retina() {
     & {
-      background-image : image-url("state@2x.png");
+      background-image : image-url("state@2x.jpeg");
       background-size : 100% 100%;
     }
   }
 }
-// @-webkit-keyframes state_appear {
-//   from { opacity:0; right: -40px; }
-//   to { opacity:1; right: -20px; }
-// }
-// @-o-keyframes state_appear {
-//   from { opacity:0; right: -40px; }
-//   to { opacity:1; right: -20px; }
-// }
-// @-moz-keyframes state_appear {
-//   from { opacity:0; right: -40px; }
-//   to { opacity:1; right: -20px; }
-// }
-// @keyframes state_appear {
-//   from { opacity:0; right: -40px; }
-//   to { opacity:1; right: -20px; }
-// }
 
 .ensure_icon {
   background-image   : image-url("ensure_icon.png");
@@ -464,36 +453,12 @@ $headerHeight : 44px;
   width              : 50px;
   height             : 50px;
   position           : absolute;
-  top                : -10px;
-  right              : -10px;
-  margin-left        : -25px;
+  top                : -25px;
+  right              : -25px;
   background-color   : rgba(9, 184, 100, 0.9);
   border-radius      : 50%;
   padding            : 10px;
   box-shadow         : 0 0 20px rgba(0, 0, 0, 0.8);
-  // -webkit-animation: ensure_glowing 2s ease-in-out 0s infinite alternate;
-  // -o-animation     : ensure_glowing 2s ease-in-out 0s infinite alternate;
-  // animation        : ensure_glowing 2s ease-in-out 0s infinite alternate;
-
-  // &:before {
-  //   width            : image-width("ensure_icon_glow.png");
-  //   height           : image-height("ensure_icon_glow.png");
-  //   opacity          : .8;
-  //   margin-left      : -35px;
-  //   margin-top       : -35px;
-  //   content          : "";
-  //   display          : inline-block;
-  //   -webkit-animation: ensure_glowing 1s linear 0s infinite;
-  //   -o-animation     : ensure_glowing 1s linear 0s infinite;
-  //   animation        : ensure_glowing 1s linear 0s infinite;
-
-  //   @include retina() {
-  //     & {
-  //       background-image: image-url("ensure_icon_glow@2x.png");
-  //       background-size: 120px auto;
-  //     }
-  //   }
-  // }
 
   @include retina() {
     & {
@@ -502,32 +467,6 @@ $headerHeight : 44px;
     }
   }
 }
-@-webkit-keyframes ensure_glowing {
-  from { box-shadow : 0 0 20px rgba(9, 184, 100, 1); }
-  to { box-shadow : 0 0 5px rgba(9, 184, 100, 0.8); }
-}
-
-@keyframes ensure_glowing {
-  from { box-shadow : 0 0 20px rgba(9, 184, 100, 1); }
-  to { box-shadow : 0 0 5px rgba(9, 184, 100, 0.8); }
-}
-
-// @-webkit-keyframes ensure_glowing {
-//   from { -webkit-transform: rotate(0deg); }
-//   to { -webkit-transform: rotate(359deg); }
-// }
-// @-o-keyframes ensure_glowing {
-//   from { -o-transform: rotate(0deg); }
-//   to { -o-transform: rotate(359deg); }
-// }
-// @-moz-keyframes ensure_glowing {
-//   from { -moz-transform: rotate(0deg); }
-//   to { -moz-transform: rotate(359deg); }
-// }
-// @keyframes ensure_glowing {
-//   from { transform: rotate(0deg); }
-//   to { transform: rotate(359deg); }
-// }
 
 /* Intro */
 .intro {
