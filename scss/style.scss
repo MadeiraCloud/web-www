@@ -421,7 +421,7 @@ $headerHeight : 44px;
 
   @include retina() {
     & {
-      background-image : image-url("index_banner_2@2x.jpeg");
+      background-image : image-url("index_banner_2@2x.jpg");
     }
   }
 }

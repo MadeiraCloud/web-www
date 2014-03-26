@@ -567,7 +567,7 @@ header, footer {
 .banner {
   width: 100%;
   height: 0;
-  background: url('../asset/index_banner_2.jpg?1395826592');
+  background: url('../asset/index_banner_2.jpg?1395827589');
   padding-top: 63.125%;
   border-radius: 6px;
   border: 1px solid #222;
@@ -576,7 +576,7 @@ header, footer {
   background-size: 100% 100%; }
   @media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2 / 1), (min-device-pixel-ratio: 2) {
     .banner {
-      background-image: url('../asset/index_banner_2@2x.jpeg?1395824780'); } }
+      background-image: url('../asset/index_banner_2@2x.jpg?1395827559'); } }
 
 .banner_state {
   background-image: url('../asset/state.jpeg?1395824043');
