@@ -337,13 +337,13 @@ $headerHeight : 44px;
   }
 
   .banner_wrap {
-    // text-align : center;
-    color      : #DDD;
-    font-size  : 30px;
-    width      : 100%;
-    margin-left: 5%;
-    text-shadow: 2px 2px 10px black;
-    font-family: "helvetica Neue", sans-serif;
+    text-align   : center;
+    color        : #DDD;
+    font-size    : 30px;
+    width        : 100%;
+    text-shadow  : 2px 2px 10px black;
+    font-family  : "helvetica Neue", sans-serif;
+    margin-bottom: 60px;
 
     h1 {
       color      : #FFF;
@@ -364,8 +364,10 @@ $headerHeight : 44px;
 }
 
 .banner_btn_group {
-  margin-left: 5%;
-  margin-top: 80px;
+  // margin-left: 5%;
+  // margin-top: 80px;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 .banner_btn {
@@ -385,12 +387,10 @@ $headerHeight : 44px;
 
 .banner_img_wrap {
   max-width   : image-width("index_banner_2.png");
-  width       : 70%;
-  position    : absolute;
-  top         : 250px;
-  z-index     : -1;
-  right       : 5%;
-  // max-width: 900px;
+  width: 90%;
+  position: relative;
+  top: 40px;
+  margin: 0 auto;
 }
 
 .banner {
@@ -408,20 +408,93 @@ $headerHeight : 44px;
   }
 }
 
-.banner_badge {
-  background-image: image-url("ensure_badge.png");
-  width           : image-width("ensure_badge.png");
-  height          : image-height("ensure_badge.png");
+.banner_state {
+  background-image: image-url("state.png");
+  width           : image-width("state.png");
+  height          : image-height("state.png");
   position        : absolute;
-  top: 600px;
-  left: 200px;
+  bottom          : -20px;
+  right           : -20px;
 
-  // @include retina() {
-  //   & {
-  //     background-image : image-url("ensure_badge@2x.png");
+  @include retina() {
+    & {
+      background-image : image-url("state@2x.png");
+      background-size : 100% 100%;
+    }
+  }
+}
+
+.ensure_icon {
+  background-image   : image-url("ensure_icon.png");
+  background-repeat  : no-repeat;
+  background-position: center;
+  width              : 50px;
+  height             : 50px;
+  position           : absolute;
+  top                : -10px;
+  right              : -10px;
+  margin-left        : -25px;
+  background-color   : rgba(9, 184, 100, 0.9);
+  border-radius      : 50%;
+  padding            : 10px;
+  box-shadow         : 0 0 20px rgba(9, 184, 100, 0.8);
+  -webkit-animation: ensure_glowing 2s ease-in-out 0s infinite alternate;
+  -o-animation     : ensure_glowing 2s ease-in-out 0s infinite alternate;
+  animation        : ensure_glowing 2s ease-in-out 0s infinite alternate;
+
+  // &:before {
+  //   width            : image-width("ensure_icon_glow.png");
+  //   height           : image-height("ensure_icon_glow.png");
+  //   opacity          : .8;
+  //   margin-left      : -35px;
+  //   margin-top       : -35px;
+  //   content          : "";
+  //   display          : inline-block;
+  //   -webkit-animation: ensure_glowing 1s linear 0s infinite;
+  //   -o-animation     : ensure_glowing 1s linear 0s infinite;
+  //   animation        : ensure_glowing 1s linear 0s infinite;
+
+  //   @include retina() {
+  //     & {
+  //       background-image: image-url("ensure_icon_glow@2x.png");
+  //       background-size: 120px auto;
+  //     }
   //   }
   // }
+
+  @include retina() {
+    & {
+      background-image: image-url("ensure_icon@2x.png");
+      background-size: 50px auto;
+    }
+  }
 }
+@-webkit-keyframes ensure_glowing {
+  from { box-shadow : 0 0 20px rgba(9, 184, 100, 1); }
+  to { box-shadow : 0 0 5px rgba(9, 184, 100, 0.8); }
+}
+
+@keyframes ensure_glowing {
+  from { box-shadow : 0 0 20px rgba(9, 184, 100, 1); }
+  to { box-shadow : 0 0 5px rgba(9, 184, 100, 0.8); }
+}
+
+// @-webkit-keyframes ensure_glowing {
+//   from { -webkit-transform: rotate(0deg); }
+//   to { -webkit-transform: rotate(359deg); }
+// }
+// @-o-keyframes ensure_glowing {
+//   from { -o-transform: rotate(0deg); }
+//   to { -o-transform: rotate(359deg); }
+// }
+// @-moz-keyframes ensure_glowing {
+//   from { -moz-transform: rotate(0deg); }
+//   to { -moz-transform: rotate(359deg); }
+// }
+// @keyframes ensure_glowing {
+//   from { transform: rotate(0deg); }
+//   to { transform: rotate(359deg); }
+// }
 
 /* Intro */
 .intro {

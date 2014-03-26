@@ -506,12 +506,13 @@ header, footer {
     .index_banner {
       padding: 120px 5% 0 5%; } }
   .index_banner .banner_wrap {
+    text-align: center;
     color: #DDD;
     font-size: 30px;
     width: 100%;
-    margin-left: 5%;
     text-shadow: 2px 2px 10px black;
-    font-family: "helvetica Neue", sans-serif; }
+    font-family: "helvetica Neue", sans-serif;
+    margin-bottom: 60px; }
     .index_banner .banner_wrap h1 {
       color: #FFF;
       font-size: 1.2em;
@@ -524,8 +525,8 @@ header, footer {
         display: block; }
 
 .banner_btn_group {
-  margin-left: 5%;
-  margin-top: 80px; }
+  text-align: center;
+  margin-bottom: 40px; }
 
 .banner_btn {
   padding: 0.5em 1em;
@@ -540,11 +541,10 @@ header, footer {
 
 .banner_img_wrap {
   max-width: 819px;
-  width: 70%;
-  position: absolute;
-  top: 250px;
-  z-index: -1;
-  right: 5%; }
+  width: 90%;
+  position: relative;
+  top: 40px;
+  margin: 0 auto; }
 
 .banner {
   width: 100%;
@@ -556,13 +556,53 @@ header, footer {
     .banner {
       background-image: url('../asset/index_banner_2@2x.png?1395752908'); } }
 
-.banner_badge {
-  background-image: url('../asset/ensure_badge.png?1395795070');
-  width: 333px;
-  height: 117px;
+.banner_state {
+  background-image: url('../asset/state.png?1395795070');
+  width: 310px;
+  height: 214px;
   position: absolute;
-  top: 600px;
-  left: 200px; }
+  bottom: -20px;
+  right: -20px; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2 / 1), (min-device-pixel-ratio: 2) {
+    .banner_state {
+      background-image: url('../asset/state@2x.png?1395795070');
+      background-size: 100% 100%; } }
+
+.ensure_icon {
+  background-image: url('../asset/ensure_icon.png?1395804611');
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  margin-left: -25px;
+  background-color: rgba(9, 184, 100, 0.9);
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 0 20px rgba(9, 184, 100, 0.8);
+  -webkit-animation: ensure_glowing 2s ease-in-out 0s infinite alternate;
+  -o-animation: ensure_glowing 2s ease-in-out 0s infinite alternate;
+  animation: ensure_glowing 2s ease-in-out 0s infinite alternate; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2 / 1), (min-device-pixel-ratio: 2) {
+    .ensure_icon {
+      background-image: url('../asset/ensure_icon@2x.png?1395804611');
+      background-size: 50px auto; } }
+
+@-webkit-keyframes ensure_glowing {
+  from {
+    box-shadow: 0 0 20px #09b864; }
+
+  to {
+    box-shadow: 0 0 5px rgba(9, 184, 100, 0.8); } }
+
+@keyframes ensure_glowing {
+  from {
+    box-shadow: 0 0 20px #09b864; }
+
+  to {
+    box-shadow: 0 0 5px rgba(9, 184, 100, 0.8); } }
 
 /* Intro */
 .intro {
