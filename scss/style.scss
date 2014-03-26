@@ -584,9 +584,10 @@ path.dash {
 }
 
 .hiw {
-  color     : #bbc5d5;
-  font-size : 16px;
-  position  : relative;
+  color    : #bbc5d5;
+  font-size: 16px;
+  position : relative;
+  z-index  : -1;
 
   h3 {
     font-size    : 26px;
@@ -781,6 +782,19 @@ path.dash {
   }
 }
 
+.hiw_faq {
+  font-size : 18px;
+  color     : #ccc;
+  margin-top: 50px;
+  z-index   : 99;
+  a {
+    color: #fff;
+    text-decoration: underline;
+  }
+  a:hover {
+    color: #eee;
+  }
+}
 
 /* Services */
 .services {

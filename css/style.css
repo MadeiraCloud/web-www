@@ -666,7 +666,8 @@ path.dash {
 .hiw {
   color: #bbc5d5;
   font-size: 16px;
-  position: relative; }
+  position: relative;
+  z-index: -1; }
   .hiw h3 {
     font-size: 26px;
     color: #FFF;
@@ -857,6 +858,17 @@ path.dash {
 
   #hiw_lines {
     display: none; } }
+.hiw_faq {
+  font-size: 18px;
+  color: #ccc;
+  margin-top: 50px;
+  z-index: 99; }
+  .hiw_faq a {
+    color: #fff;
+    text-decoration: underline; }
+  .hiw_faq a:hover {
+    color: #eee; }
+
 /* Services */
 .services {
   background: #1e1c2a url('../asset/services_bg.png?1395812551') left bottom repeat;
