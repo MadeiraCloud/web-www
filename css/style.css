@@ -322,7 +322,7 @@ header, footer {
   _background-image: url('../asset/sprite_ie6.png?1395824043'); }
   @media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2 / 1), (min-device-pixel-ratio: 2) {
     .sprite, .dashboard_wrap .control, .social_post, .social_post:before, .network_wrap a {
-      background-image: url('../asset/sprite@2x.png?1395824043');
+      background-image: url('../asset/sprite@2x.png?1395825801');
       -webkit-background-size: 400px, auto;
       -moz-background-size: 400px, auto;
       -o-background-size: 400px, auto;
@@ -567,7 +567,7 @@ header, footer {
 .banner {
   width: 100%;
   height: 0;
-  background: url('../asset/index_banner_2.jpeg?1395824043');
+  background: url('../asset/index_banner_2.jpg?1395826592');
   padding-top: 63.125%;
   border-radius: 6px;
   border: 1px solid #222;
@@ -576,7 +576,7 @@ header, footer {
   background-size: 100% 100%; }
   @media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2 / 1), (min-device-pixel-ratio: 2) {
     .banner {
-      background-image: url('../asset/index_banner_2@2x.jpeg?1395824043'); } }
+      background-image: url('../asset/index_banner_2@2x.jpeg?1395824780'); } }
 
 .banner_state {
   background-image: url('../asset/state.jpeg?1395824043');
@@ -595,7 +595,7 @@ header, footer {
       background-size: 100% 100%; } }
 
 .ensure_icon {
-  background-image: url('../asset/ensure_icon.png?1395824043');
+  background-image: url('../asset/ensure_icon.png?1395825727');
   background-repeat: no-repeat;
   background-position: center;
   width: 50px;
@@ -805,14 +805,14 @@ path.dash {
 .hiw_02 .hiw_img {
   max-width: 433px; }
   .hiw_02 .hiw_img:before {
-    background-image: url('../asset/hiw_02.png?1395824043');
+    background-image: url('../asset/hiw_02.png?1395825486');
     padding-top: 37.64434%; }
 
 .hiw_03 .hiw_img {
   max-width: 436px;
   margin-top: -50px; }
   .hiw_03 .hiw_img:before {
-    background-image: url('../asset/hiw_03.png?1395824043');
+    background-image: url('../asset/hiw_03.png?1395825545');
     padding-top: 75.68807%; }
 
 .hiw_04 .hiw_img {
@@ -826,10 +826,10 @@ path.dash {
     background-image: url('../asset/hiw_01@2x.png?1395824043'); }
 
   .hiw_02 .hiw_img:before {
-    background-image: url('../asset/hiw_02@2x.png?1395824043'); }
+    background-image: url('../asset/hiw_02@2x.png?1395825586'); }
 
   .hiw_03 .hiw_img:before {
-    background-image: url('../asset/hiw_03@2x.png?1395824043'); }
+    background-image: url('../asset/hiw_03@2x.png?1395825704'); }
 
   .hiw_04 .hiw_img:before {
     background-image: url('../asset/hiw_04@2x.png?1395824043'); } }
