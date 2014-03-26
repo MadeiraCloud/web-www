@@ -66,6 +66,20 @@ header, footer {
   text-align : center;
 }
 
+.fade-in-05 {
+    opacity:0;  
+    animation:fadeIn ease-in 1; 
+    animation-fill-mode:forwards;  
+    animation-duration:1s;
+    animation-delay: .5s;
+    -webkit-animation:fadeIn ease-in 1; 
+    -webkit-animation-fill-mode:forwards;  
+    -webkit-animation-duration:1s;
+    -webkit-animation-delay: .5s;
+}
+
+@-webkit-keyframes fadeIn { from { opacity:0;} to { opacity:1;} }
+
 .cover h1 {
   font-size     : 24px;
   color         : #808d99;
@@ -415,6 +429,9 @@ $headerHeight : 44px;
   position        : absolute;
   bottom          : -20px;
   right           : -20px;
+  // -webkit-animation: state_appear .5s ease-in 1s 1;
+  // -o-animation: state_appear .5s ease-in 1s 1;
+  // animation: state_appear .5s ease-in 1s 1;
 
   @include retina() {
     & {
@@ -423,6 +440,22 @@ $headerHeight : 44px;
     }
   }
 }
+// @-webkit-keyframes state_appear {
+//   from { opacity:0; right: -40px; }
+//   to { opacity:1; right: -20px; }
+// }
+// @-o-keyframes state_appear {
+//   from { opacity:0; right: -40px; }
+//   to { opacity:1; right: -20px; }
+// }
+// @-moz-keyframes state_appear {
+//   from { opacity:0; right: -40px; }
+//   to { opacity:1; right: -20px; }
+// }
+// @keyframes state_appear {
+//   from { opacity:0; right: -40px; }
+//   to { opacity:1; right: -20px; }
+// }
 
 .ensure_icon {
   background-image   : image-url("ensure_icon.png");
