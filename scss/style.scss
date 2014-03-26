@@ -470,7 +470,10 @@ $headerHeight : 44px;
 
 /* Intro */
 .intro {
-  background  : rgb(111,77,120);
+  background  : #6F4D78;
+
+  @include background-image(linear-gradient(#6F4D78, #6F4D78, #382C57));
+
   padding-top : 100px;
 
   padding-bottom : 80px;
