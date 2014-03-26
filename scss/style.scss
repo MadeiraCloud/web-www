@@ -332,6 +332,10 @@ $headerHeight : 44px;
 
   min-height: 600px;
 
+  @media screen and (min-width: 1480px){
+    padding: 120px 5% 0 5%;
+  }
+
   .banner_wrap {
     // text-align : center;
     color      : #DDD;
@@ -355,6 +359,7 @@ $headerHeight : 44px;
         display: block;
       }
     }
+
   }
 }
 

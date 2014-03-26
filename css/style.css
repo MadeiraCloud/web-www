@@ -502,6 +502,9 @@ header, footer {
   /* W3C */
   background-size: 50px auto, auto auto;
   min-height: 600px; }
+  @media screen and (min-width: 1480px) {
+    .index_banner {
+      padding: 120px 5% 0 5%; } }
   .index_banner .banner_wrap {
     color: #DDD;
     font-size: 30px;
