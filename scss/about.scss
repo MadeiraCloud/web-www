@@ -541,7 +541,7 @@ body {
 
     &:before {
       width         : percentage( image-width("feature_02b.png") / image-width("feature_02a.jpeg") );
-      background    : image-url("feature_01b.png");
+      background    : image-url("feature_02b.png");
       padding-bottom: percentage( image-height("feature_02b.png") / image-width("feature_02b.png") );
 
       position: absolute;
