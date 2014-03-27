@@ -611,3 +611,18 @@ body {
   }
 }
 
+
+.feature_content.dark {
+  background  : #6F4D78;
+  @include background-image(linear-gradient(#6F4D78, #382C57));
+
+  color: #f0f0f0;
+
+  .feature_item h4 {
+    color: #fff;
+  }
+
+  .feature_item p {
+    color: #fcfcfc;
+  }
+}

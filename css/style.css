@@ -1125,7 +1125,7 @@ path.dash {
       margin-bottom: 25px;
       font-weight: bold; }
     .faq article > div, .faq article header {
-      margin-left: 160px;
+      margin-left: 180px;
       margin-right: 80px; }
     .faq article li {
       list-style-type: circle;
@@ -1139,7 +1139,7 @@ path.dash {
       font-family: Georgia;
       color: #d5d4d5;
       width: 1.5em;
-      margin: 0 10px 20px 60px; }
+      margin: 0 30px 20px 60px; }
 
 @media screen and (max-width: 580px) {
   .faq article:before {

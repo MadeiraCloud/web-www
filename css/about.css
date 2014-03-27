@@ -420,3 +420,16 @@ body {
 .feature_dash .annotate li:nth-child(3) {
   top: 21%;
   left: 10%; }
+
+.feature_content.dark {
+  background: #6F4D78;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #6f4d78), color-stop(100%, #382c57));
+  background-image: -webkit-linear-gradient(#6f4d78, #382c57);
+  background-image: -moz-linear-gradient(#6f4d78, #382c57);
+  background-image: -o-linear-gradient(#6f4d78, #382c57);
+  background-image: linear-gradient(#6f4d78, #382c57);
+  color: #f0f0f0; }
+  .feature_content.dark .feature_item h4 {
+    color: #fff; }
+  .feature_content.dark .feature_item p {
+    color: #fcfcfc; }
