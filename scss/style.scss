@@ -142,7 +142,7 @@ header, footer {
 }
 
 /* Header */
-$headerHeight : 44px;
+$headerHeight : 52px;
 
 .nav_wrap {
   padding-top : 20px;
@@ -191,6 +191,7 @@ $headerHeight : 44px;
   margin    : 0 auto;
 
   background : image-url("logo.png") left center no-repeat;
+  @include background-size( image-width("logo.png"), auto );
 
   @include retina() {
     background-image : image-url("logo@2x.png");
@@ -255,14 +256,15 @@ $headerHeight : 44px;
 }
 
 .nav_register, .nav_login, .nav_ide {
-  height        : 38px;
-  line-height   : 38px;
-  padding       : 0 1em;
-  float         : right;
-  // background    : #55109a;
-  border        : 1px solid #fff;
-  margin-right  : -1px;
-  border-radius : 4px 0 0 4px;
+  height       : 38px;
+  line-height  : 38px;
+  padding      : 0 1em;
+  float        : right;
+  // background: #55109a;
+  border       : 1px solid #fff;
+  margin-right : -1px;
+  margin-top   : 6px;
+  border-radius: 4px 0 0 4px;
 
   &:hover {
     background : darken(#55109a, 5%);

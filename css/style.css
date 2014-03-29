@@ -352,8 +352,8 @@ header, footer {
 .nav_wrap {
   padding-top: 20px;
   padding-bottom: 20px;
-  height: 44px;
-  line-height: 44px;
+  height: 52px;
+  line-height: 52px;
   width: 100%;
   position: absolute;
   top: 0;
@@ -385,16 +385,20 @@ header, footer {
   width: 90%;
   height: 100%;
   margin: 0 auto;
-  background: url('../asset/logo.png?1395812496') left center no-repeat; }
+  background: url('../asset/logo.png?1396084994') left center no-repeat;
+  -webkit-background-size: 200px, auto;
+  -moz-background-size: 200px, auto;
+  -o-background-size: 200px, auto;
+  background-size: 200px, auto; }
   @media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2 / 1), (min-device-pixel-ratio: 2) {
     .nav_wrap nav {
-      background-image: url('../asset/logo@2x.png?1395812519');
-      -webkit-background-size: 191px, auto;
-      -moz-background-size: 191px, auto;
-      -o-background-size: 191px, auto;
-      background-size: 191px, auto; } }
+      background-image: url('../asset/logo@2x.png?1396084994');
+      -webkit-background-size: 200px, auto;
+      -moz-background-size: 200px, auto;
+      -o-background-size: 200px, auto;
+      background-size: 200px, auto; } }
   .nav_wrap nav .nav_home_lnk {
-    width: 191px;
+    width: 200px;
     height: 100%;
     float: left; }
 
@@ -448,6 +452,7 @@ header, footer {
   float: right;
   border: 1px solid #fff;
   margin-right: -1px;
+  margin-top: 6px;
   border-radius: 4px 0 0 4px;
   -webkit-transition: background 0.2s linear;
   -moz-transition: background 0.2s linear;
@@ -481,20 +486,20 @@ header, footer {
     display: none; }
 
   .nav_wrap nav {
-    -webkit-background-size: 153px, auto;
-    -moz-background-size: 153px, auto;
-    -o-background-size: 153px, auto;
-    background-size: 153px, auto; }
+    -webkit-background-size: 160px, auto;
+    -moz-background-size: 160px, auto;
+    -o-background-size: 160px, auto;
+    background-size: 160px, auto; }
     .nav_wrap nav .nav_home_lnk {
-      width: 153px; } }
+      width: 160px; } }
 @media screen and (max-width: 670px) {
   .nav_wrap nav {
-    -webkit-background-size: 134px, auto;
-    -moz-background-size: 134px, auto;
-    -o-background-size: 134px, auto;
-    background-size: 134px, auto; }
+    -webkit-background-size: 140px, auto;
+    -moz-background-size: 140px, auto;
+    -o-background-size: 140px, auto;
+    background-size: 140px, auto; }
     .nav_wrap nav .nav_home_lnk {
-      width: 134px; } }
+      width: 140px; } }
 @media screen and (max-width: 600px) {
   .nav_wrap {
     position: absolute;
@@ -505,8 +510,8 @@ header, footer {
       position: absolute;
       left: 50%;
       top: 20px;
-      margin-left: -67px;
-      height: 29px; }
+      margin-left: -70px;
+      height: 37px; }
 
   .nav_break {
     padding-top: 32px;
