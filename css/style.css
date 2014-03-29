@@ -531,14 +531,14 @@ header, footer {
   z-index: 20;
   padding-top: 120px;
   background: #342b5e url('../asset/index_bg.png?1395812541') center center repeat;
-  background: url('../asset/index_bg@2x.png?1395823609'), -moz-linear-gradient(top, #342b5e 0, #1f2034 100%);
-  background: url('../asset/index_bg@2x.png?1395823609'), -webkit-gradient(linear, left top, left bottom, color-stop(0, #342b5e), color-stop(100%, #1f2034));
+  background: url('../asset/index_bg@2x.png?1395823609'), -moz-linear-gradient(top, #140f29 0, #0e072c 100%);
+  background: url('../asset/index_bg@2x.png?1395823609'), -webkit-gradient(linear, left top, left bottom, color-stop(0, #140f29), color-stop(100%, #0e072c));
   /* Chrome,Safari4+ */
-  background: url('../asset/index_bg@2x.png?1395823609'), -webkit-linear-gradient(top, #342b5e 0, #1f2034 100%);
+  background: url('../asset/index_bg@2x.png?1395823609'), -webkit-linear-gradient(top, #140f29 0, #0e072c 100%);
   /* Chrome10+,Safari5.1+ */
-  background: url('../asset/index_bg@2x.png?1395823609'), -o-linear-gradient(top, #342b5e 0, #1f2034 100%);
+  background: url('../asset/index_bg@2x.png?1395823609'), -o-linear-gradient(top, #140f29 0, #0e072c 100%);
   /* Opera 11.10+ */
-  background: url('../asset/index_bg@2x.png?1395823609'), linear-gradient(to bottom, #342b5e 0%, #1f2034 100%);
+  background: url('../asset/index_bg@2x.png?1395823609'), linear-gradient(to bottom, #140f29 0%, #0e072c 100%);
   /* W3C */
   background-size: 50px auto, auto auto;
   min-height: 600px; }

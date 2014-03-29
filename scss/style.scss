@@ -361,11 +361,11 @@ $headerHeight : 52px;
 
   background : #342b5e image-url("index_bg.png") center center repeat;
 
-  background: image-url("index_bg@2x.png"), -moz-linear-gradient(top, #342b5e 0, #1f2034 100%);
-  background: image-url("index_bg@2x.png"), -webkit-gradient(linear, left top, left bottom, color-stop(0,#342b5e), color-stop(100%,#1f2034)); /* Chrome,Safari4+ */
-  background: image-url("index_bg@2x.png"), -webkit-linear-gradient(top, #342b5e 0,#1f2034 100%); /* Chrome10+,Safari5.1+ */
-  background: image-url("index_bg@2x.png"), -o-linear-gradient(top, #342b5e 0,#1f2034 100%); /* Opera 11.10+ */
-  background: image-url("index_bg@2x.png"), linear-gradient(to bottom, #342b5e 0,#1f2034 100%); /* W3C */
+  background: image-url("index_bg@2x.png"), -moz-linear-gradient(top, #140F29 0, #0E072C 100%);
+  background: image-url("index_bg@2x.png"), -webkit-gradient(linear, left top, left bottom, color-stop(0,#140F29), color-stop(100%,#0E072C)); /* Chrome,Safari4+ */
+  background: image-url("index_bg@2x.png"), -webkit-linear-gradient(top, #140F29 0,#0E072C 100%); /* Chrome10+,Safari5.1+ */
+  background: image-url("index_bg@2x.png"), -o-linear-gradient(top, #140F29 0,#0E072C 100%); /* Opera 11.10+ */
+  background: image-url("index_bg@2x.png"), linear-gradient(to bottom, #140F29 0,#0E072C 100%); /* W3C */
   background-size : image-width("index_bg@2x.png") / 2 auto, auto auto;
 
   min-height: 600px;
