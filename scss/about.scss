@@ -448,6 +448,15 @@ body {
       color    : #666;
       font-size: 1em;
       margin-left: 40px;
+
+      em {
+        background: rgb(68, 133, 250);
+        padding: 2px 4px;
+        border-radius: 5px;
+        color: #fff;
+        font-style: normal;
+      }
+
     }
 
     p:first-of-type {

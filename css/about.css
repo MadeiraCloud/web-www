@@ -337,6 +337,12 @@ body {
       color: #666;
       font-size: 1em;
       margin-left: 40px; }
+      .feature_text .feature_item p em {
+        background: #4485fa;
+        padding: 2px 4px;
+        border-radius: 5px;
+        color: #fff;
+        font-style: normal; }
     .feature_text .feature_item p:first-of-type {
       margin-top: 40px; }
 
