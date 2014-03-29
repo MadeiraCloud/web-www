@@ -463,6 +463,16 @@ body {
         margin-top: 40px;
       }
 
+    ul {
+      margin-left: 40px;
+
+      li {
+        list-style-type: circle;
+        list-style-position: inside;
+      }
+
+    }
+
   }
 }
 

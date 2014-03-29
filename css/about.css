@@ -345,6 +345,11 @@ body {
         font-style: normal; }
     .feature_text .feature_item p:first-of-type {
       margin-top: 40px; }
+    .feature_text .feature_item ul {
+      margin-left: 40px; }
+      .feature_text .feature_item ul li {
+        list-style-type: circle;
+        list-style-position: inside; }
 
 .feature_stack .feature_img {
   background: url('../asset/feature_01a.jpeg?1395917081');
