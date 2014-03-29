@@ -331,6 +331,23 @@ header, footer {
 .mgl0 {
   margin-left: 0 !important; }
 
+/* Redirect */
+.redirected .nav_wrap {
+  margin-top: 30px; }
+
+.redirected .re_bar {
+  display: block; }
+
+.re_bar {
+  display: none;
+  background-color: #3783e4;
+  color: #fff;
+  text-align: center;
+  height: 40px;
+  line-height: 40px; }
+  .re_bar a {
+    text-decoration: underline; }
+
 /* Header */
 .nav_wrap {
   padding-top: 20px;

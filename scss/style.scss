@@ -119,6 +119,28 @@ header, footer {
   margin-left : 0 !important;
 }
 
+/* Redirect */
+
+.redirected .nav_wrap {
+  margin-top: 30px;
+}
+
+.redirected .re_bar {
+  display: block;
+}
+
+.re_bar {
+  display: none;
+  background-color: rgb(55, 131, 228);
+  color: #fff;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  a {
+    text-decoration: underline;
+  }
+}
+
 /* Header */
 $headerHeight : 44px;
 
