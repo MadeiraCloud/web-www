@@ -9,6 +9,11 @@ $(function(){
   var docHeight      = 0;
   var docEl          = document.documentElement;
 
+  var currentURL = document.URL;
+  if (currentURL && currentURL.indexOf('/#redirect') !== -1) {
+    $('body').addClass('redirected');
+  }
+
   function onWinResize() {
     if ( resizeTO ) {
       clearTimeout( resizeTO);
