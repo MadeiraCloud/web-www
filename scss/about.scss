@@ -55,8 +55,8 @@ body {
   color       : #e0e0e0;
   font-size   : 18px;
 
-  background-color : #9e569f;
-  @include background-image( linear-gradient(top, #461A7E, #132250) );
+  background-color : #66398b;
+  // @include background-image( linear-gradient(top, #461A7E, #132250) );
   @include box-shadow( inset 0 -5px 30px rgba(0,0,0,.1) );
 
   @media screen and (max-width: 490px) {
@@ -286,17 +286,17 @@ body {
 .feature_banner {
   height      : 330px;
   line-height : 330px;
-  background  : #530fc2;
+  background  : #66398b;
   text-align  : center;
   font-size   : 30px;
   color       : #fff;
   -webkit-box-shadow: inset 0 -5px 30px rgba(0,0,0,.1);
   -moz-box-shadow: inset 0 -5px 30px rgba(0,0,0,.1);
   box-shadow: inset 0 -5px 30px rgba(0,0,0,.1);
-  background-image: -webkit-linear-gradient(top, #230853,#541C66);
-  background-image: -moz-linear-gradient(top, #230853,#541C66);
-  background-image: -o-linear-gradient(top, #230853,#541C66);
-  background-image: linear-gradient(to bottom, #230853,#541C66);
+  // background-image: -webkit-linear-gradient(top, #230853,#541C66);
+  // background-image: -moz-linear-gradient(top, #230853,#541C66);
+  // background-image: -o-linear-gradient(top, #230853,#541C66);
+  // background-image: linear-gradient(to bottom, #230853,#541C66);
 }
 
 .feature_content {

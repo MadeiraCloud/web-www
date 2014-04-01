@@ -142,7 +142,7 @@ header, footer {
 }
 
 /* Header */
-$headerHeight : 52px;
+$headerHeight : 60px;
 
 .nav_wrap {
   padding-top : 20px;
@@ -166,7 +166,7 @@ $headerHeight : 52px;
     /* Make header not sticky for cellphones */
     &.sticky {
       position       : fixed;
-      background     : rgba(29, 10, 27, 0.9);
+      background     : rgba(79, 34, 116, 0.9);
       padding-top    : 10px;
       padding-bottom : 10px;
     }
@@ -263,7 +263,7 @@ $headerHeight : 52px;
   // background: #55109a;
   border       : 1px solid #fff;
   margin-right : -1px;
-  margin-top   : 6px;
+  margin-top   : 10px;
   border-radius: 4px 0 0 4px;
 
   &:hover {
@@ -361,11 +361,11 @@ $headerHeight : 52px;
 
   background : #342b5e image-url("index_bg.png") center center repeat;
 
-  background: image-url("index_bg@2x.png"), -moz-linear-gradient(top, #140F29 0, #0E072C 100%);
-  background: image-url("index_bg@2x.png"), -webkit-gradient(linear, left top, left bottom, color-stop(0,#140F29), color-stop(100%,#0E072C)); /* Chrome,Safari4+ */
-  background: image-url("index_bg@2x.png"), -webkit-linear-gradient(top, #140F29 0,#0E072C 100%); /* Chrome10+,Safari5.1+ */
-  background: image-url("index_bg@2x.png"), -o-linear-gradient(top, #140F29 0,#0E072C 100%); /* Opera 11.10+ */
-  background: image-url("index_bg@2x.png"), linear-gradient(to bottom, #140F29 0,#0E072C 100%); /* W3C */
+  background: image-url("index_bg@2x.png"), -moz-linear-gradient(top, #66398b 0, #17042E 100%);
+  background: image-url("index_bg@2x.png"), -webkit-gradient(linear, left top, left bottom, color-stop(0,#66398b), color-stop(100%,#17042E)); /* Chrome,Safari4+ */
+  background: image-url("index_bg@2x.png"), -webkit-linear-gradient(top, #66398b 0,#17042E 100%); /* Chrome10+,Safari5.1+ */
+  background: image-url("index_bg@2x.png"), -o-linear-gradient(top, #66398b 0,#17042E 100%); /* Opera 11.10+ */
+  background: image-url("index_bg@2x.png"), linear-gradient(to bottom, #66398b 0,#17042E 100%); /* W3C */
   background-size : image-width("index_bg@2x.png") / 2 auto, auto auto;
 
   min-height: 600px;
