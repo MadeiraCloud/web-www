@@ -352,8 +352,8 @@ header, footer {
 .nav_wrap {
   padding-top: 20px;
   padding-bottom: 20px;
-  height: 60px;
-  line-height: 60px;
+  height: 70px;
+  line-height: 70px;
   width: 100%;
   position: absolute;
   top: 0;
@@ -385,20 +385,13 @@ header, footer {
   width: 90%;
   height: 100%;
   margin: 0 auto;
-  background: url('../asset/logo.png?1396328800') left center no-repeat;
-  -webkit-background-size: 200px, auto;
-  -moz-background-size: 200px, auto;
-  -o-background-size: 200px, auto;
-  background-size: 200px, auto; }
-  @media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2 / 1), (min-device-pixel-ratio: 2) {
-    .nav_wrap nav {
-      background-image: url('../asset/logo@2x.png?1396328800');
-      -webkit-background-size: 200px, auto;
-      -moz-background-size: 200px, auto;
-      -o-background-size: 200px, auto;
-      background-size: 200px, auto; } }
+  background: url('../asset/logo.svg?1396924223') left center no-repeat;
+  -webkit-background-size: 250px, auto;
+  -moz-background-size: 250px, auto;
+  -o-background-size: 250px, auto;
+  background-size: 250px, auto; }
   .nav_wrap nav .nav_home_lnk {
-    width: 200px;
+    width: 250px;
     height: 100%;
     float: left; }
 
@@ -427,7 +420,7 @@ header, footer {
   width: 0;
   height: 3px;
   background: #fff;
-  top: 40px;
+  top: 50px;
   -webkit-transition: all 0.15s ease-in-out;
   -moz-transition: all 0.15s ease-in-out;
   -o-transition: all 0.15s ease-in-out;
@@ -452,7 +445,7 @@ header, footer {
   float: right;
   border: 1px solid #fff;
   margin-right: -1px;
-  margin-top: 10px;
+  margin-top: 15px;
   border-radius: 4px 0 0 4px;
   -webkit-transition: background 0.2s linear;
   -moz-transition: background 0.2s linear;
@@ -486,20 +479,20 @@ header, footer {
     display: none; }
 
   .nav_wrap nav {
-    -webkit-background-size: 160px, auto;
-    -moz-background-size: 160px, auto;
-    -o-background-size: 160px, auto;
-    background-size: 160px, auto; }
+    -webkit-background-size: 200px, auto;
+    -moz-background-size: 200px, auto;
+    -o-background-size: 200px, auto;
+    background-size: 200px, auto; }
     .nav_wrap nav .nav_home_lnk {
-      width: 160px; } }
+      width: 200px; } }
 @media screen and (max-width: 670px) {
   .nav_wrap nav {
-    -webkit-background-size: 140px, auto;
-    -moz-background-size: 140px, auto;
-    -o-background-size: 140px, auto;
-    background-size: 140px, auto; }
+    -webkit-background-size: 175px, auto;
+    -moz-background-size: 175px, auto;
+    -o-background-size: 175px, auto;
+    background-size: 175px, auto; }
     .nav_wrap nav .nav_home_lnk {
-      width: 140px; } }
+      width: 175px; } }
 @media screen and (max-width: 600px) {
   .nav_wrap {
     position: absolute;
@@ -510,8 +503,8 @@ header, footer {
       position: absolute;
       left: 50%;
       top: 20px;
-      margin-left: -70px;
-      height: 40px; }
+      margin-left: -88px;
+      height: 175px; }
 
   .nav_break {
     padding-top: 32px;
@@ -589,7 +582,7 @@ header, footer {
 .banner {
   width: 100%;
   height: 0;
-  background: url('../asset/index_banner_2.jpg?1395896128');
+  background: url('../asset/index_banner_2.jpg?1397059799');
   padding-top: 63.125%;
   border-radius: 6px;
   border: 1px solid #222;
@@ -598,10 +591,10 @@ header, footer {
   background-size: 100% 100%; }
   @media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2 / 1), (min-device-pixel-ratio: 2) {
     .banner {
-      background-image: url('../asset/index_banner_2@2x.jpg?1395896128'); } }
+      background-image: url('../asset/index_banner_2@2x.jpg?1397059799'); } }
 
 .banner_state {
-  background-image: url('../asset/state.jpeg?1395823108');
+  background-image: url('../asset/state.jpeg?1397059799');
   width: 291px;
   height: 195px;
   position: absolute;
@@ -613,8 +606,16 @@ header, footer {
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.4); }
   @media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2 / 1), (min-device-pixel-ratio: 2) {
     .banner_state {
-      background-image: url('../asset/state@2x.jpeg?1395823105');
+      background-image: url('../asset/state@2x.jpeg?1397059799');
       background-size: 100% 100%; } }
+
+.banner_line {
+  background-image: url('../asset/line.png?1397059799');
+  width: 172px;
+  height: 146px;
+  position: absolute;
+  bottom: 166px;
+  right: 204px; }
 
 .ensure_icon {
   background-image: url('../asset/ensure_icon.png?1395896128');

@@ -116,10 +116,54 @@ body {
   }
 
   h2 {
-    color       : #555;
-    font-size   : 32px;
-    font-weight : normal;
+    color      : #555;
+    font-size  : 32px;
+    font-weight: normal;
+    margin-top : 60px;
   }
+  h2:first-child {
+    margin-top: 20px;
+  }
+}
+
+.bj_map,
+.sf_map {
+  display   : inline-block;
+  width     : 45%;
+  margin-top: 0;
+
+  &:after {
+    content      : "";
+    width        : 400px;
+    height       : 300px;
+    display      : block;
+    border-radius: 4px;
+    margin-top   : 10px;
+    border       : 1px solid #ccc;
+  }
+
+  h3 {
+    color: #999;
+  }
+
+  li {
+    list-style-type: square;
+    margin-left    : 16px;
+    color          : #666;
+    font-style     : italic;
+  }
+}
+
+.bj_map {
+  margin-right: 4%;
+}
+
+.bj_map:after {
+  background-image: image-url("bj_map.png");
+}
+
+.sf_map:after {
+    background-image: image-url("sf_map.png");
 }
 
 
@@ -499,8 +543,8 @@ body {
       padding-bottom: percentage( image-height("feature_01b.png") / image-width("feature_01b.png") );
 
       position: absolute;
-      top     : 58%;
-      left    : 53%;
+      top     : 57%;
+      left    : 46%;
 
     }
 
@@ -515,27 +559,27 @@ body {
 
     li:first-child {
       top: 28%;
-      left: 22%;
+      left: 15.5%;
     }
 
     li:nth-child(2) {
       top: 62%;
-      left: 50%;
+      left: 44%;
     }
 
     li:nth-child(3) {
-      top: 3%;
-      left: 31%;
+      top: 8%;
+      left: 24%;
     }
 
     li:nth-child(4) {
-      top: 3%;
-      left: 56%;
+      top: 8%;
+      left: 46%;
     }
 
     li:nth-child(5) {
-      top: 44%;
-      left: 76%;
+      top: 37%;
+      left: 78%;
     }
 
   }
@@ -564,7 +608,7 @@ body {
       padding-bottom: percentage( image-height("feature_02b.png") / image-width("feature_02b.png") );
 
       position: absolute;
-      top     : 11.5%;
+      top     : 9.5%;
       left    : -15%;
 
     }
@@ -585,11 +629,11 @@ body {
 
     li:nth-child(2) {
       top: 2%;
-      left: 18%;
+      left: 13%;
     }
 
     li:nth-child(3) {
-      top: 17%;
+      top: 20%;
       left: 2%;
     }
 
@@ -613,18 +657,18 @@ body {
   .annotate {
 
     li:first-child {
-      top: 12%;
-      left: 32%;
+      top: 11%;
+      left: 19%;
     }
 
     li:nth-child(2) {
-      top: 12%;
-      left: 54%;
+      top: 11%;
+      left: 33%;
     }
 
     li:nth-child(3) {
-      top: 21%;
-      left: 10%;
+      top: 18%;
+      left: 8%;
     }
 
   }
