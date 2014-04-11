@@ -454,13 +454,13 @@ $base_logo_width: 250px;
 
 .banner_state {
   background-image: image-url("state.png");
-  width           : image-width("state.png");
-  height          : image-height("state.png");
-  position        : absolute;
-  bottom          : -20px;
-  right           : -52px;
-  border-radius   : 4px;
-  box-sizing      : border-box;
+  width:            image-width("state.png");
+  height:           image-height("state.png");
+  position:         absolute;
+  bottom:           -46px;
+  right:            -116px;
+  border-radius:    4px;
+  box-sizing:       border-box;
 
   @include retina() {
     & {
@@ -472,11 +472,11 @@ $base_logo_width: 250px;
 
 .banner_line {
   background-image: image-url("line.png");
-  width           : image-width("line.png");
-  height          : image-height("line.png");
-  position        : absolute;
-  bottom          : -13px;
-  right           : -43px;
+  width:            image-width("line.png");
+  height:           image-height("line.png");
+  position:         absolute;
+  bottom:           16px;
+  right:            74px;
 }
 
 .ensure_icon {

@@ -78,7 +78,8 @@ body {
     border: 1px solid #ccc; }
   .bj_map h3,
   .sf_map h3 {
-    color: #999; }
+    color: #999;
+    margin-top: 0; }
   .bj_map li,
   .sf_map li {
     list-style-type: square;
@@ -443,11 +444,11 @@ body {
   left: 2%; }
 
 .feature_dash .feature_img {
-  background: url('../asset/feature_03.jpeg?1397059971');
+  background: url('../asset/feature_03.jpeg?1397097565');
   padding-bottom: 61.70732%; }
   @media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2 / 1), (min-device-pixel-ratio: 2) {
     .feature_dash .feature_img {
-      background-image: url('../asset/feature_03@2x.jpeg?1397059971');
+      background-image: url('../asset/feature_03@2x.jpeg?1397097565');
       background-size: 100% auto; } }
 .feature_dash .annotate li:first-child {
   top: 11%;
