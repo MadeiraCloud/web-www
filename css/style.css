@@ -599,7 +599,7 @@ header, footer {
   height: 204px;
   position: absolute;
   bottom: -20px;
-  right: -20px;
+  right: -52px;
   border-radius: 4px;
   box-sizing: border-box; }
   @media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2 / 1), (min-device-pixel-ratio: 2) {
@@ -613,7 +613,7 @@ header, footer {
   height: 330px;
   position: absolute;
   bottom: -13px;
-  right: -11px; }
+  right: -43px; }
 
 .ensure_icon {
   background-image: url('../asset/ensure_icon.png?1395896128');
