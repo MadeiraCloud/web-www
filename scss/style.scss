@@ -453,20 +453,18 @@ $base_logo_width: 250px;
 }
 
 .banner_state {
-  background-image: image-url("state.jpeg");
-  width           : image-width("state.jpeg");
-  height          : image-height("state.jpeg");
+  background-image: image-url("state.png");
+  width           : image-width("state.png");
+  height          : image-height("state.png");
   position        : absolute;
   bottom          : -20px;
   right           : -20px;
   border-radius   : 4px;
-  border          : 1px solid #222;
   box-sizing      : border-box;
-  box-shadow      : 0 0 30px rgba(0,0,0,.4);
 
   @include retina() {
     & {
-      background-image : image-url("state@2x.jpeg");
+      background-image : image-url("state@2x.png");
       background-size : 100% 100%;
     }
   }
@@ -477,8 +475,8 @@ $base_logo_width: 250px;
   width           : image-width("line.png");
   height          : image-height("line.png");
   position        : absolute;
-  bottom          : 166px;
-  right           : 204px;
+  bottom          : -13px;
+  right           : -11px;
 }
 
 .ensure_icon {
