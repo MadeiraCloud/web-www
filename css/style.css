@@ -1390,3 +1390,43 @@ footer {
       width: 100%;
       text-align: center;
       float: none; } }
+
+/* 500 */
+#logo-link {
+  background: url("../asset/logo.svg") center no-repeat;
+  background-size: 240px auto;
+  height: 80px;
+  width: 240px;
+  margin: 0 auto;
+  display: block;
+  text-indent: -9999px; }
+
+#body-500 {
+  background-color: #252631;
+  height: 0;
+  padding: 200px 0; }
+
+#body-500 h1 {
+  background: #66398b;
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  top: 0;
+  border-top: 4px solid #9C6DC0;
+  border-bottom: 1px solid #181818;
+  padding: 5px 0 9px 0;
+  margin: 0; }
+
+.service-down-wrapper {
+  margin: 0 auto;
+  width: 600px;
+  text-align: center; }
+
+.service-down-message h4 {
+  font-size: 24px;
+  color: #ccc; }
+
+.service-down-message p {
+  margin-top: 20px;
+  color: #999;
+  font-size: 16px; }
