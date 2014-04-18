@@ -1134,14 +1134,14 @@ path.dash {
     max-width: 1000px;
     margin: 0 auto 50px;
     color: #667;
-    font-size: 14px;
-    line-height: 18px; }
+    font-size: 17px;
+    line-height: 24px; }
     .faq article a {
       color: #4495d3; }
       .faq article a:hover {
         text-decoration: underline; }
     .faq article header {
-      font-size: 18px;
+      font-size: 22px;
       color: #444;
       margin-bottom: 25px;
       font-weight: bold; }
