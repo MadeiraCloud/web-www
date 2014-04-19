@@ -1440,3 +1440,11 @@ footer {
   color: #999;
   font-size: 16px;
 }
+
+.service-down-message a {
+  color: #148BE6;
+}
+
+.service-down-message a:hover {
+  text-decoration: underline;
+}
