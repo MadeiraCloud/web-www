@@ -40,10 +40,6 @@ html, body {
   overflow-x : hidden;
 }
 
-body {
-  overflow : hidden;
-}
-
 html,
 button,
 input,
@@ -1130,6 +1126,10 @@ $social_img_height : 50px;
 
   @media screen and (max-width: 430px) {
     padding : 25px 0;
+  }
+
+  .redirected & {
+  padding : $socialPaddingTop - 22 0;
   }
 }
 
