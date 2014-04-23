@@ -296,16 +296,21 @@ $base_logo_width: 250px;
 }
 
 @media screen and (max-width: 980px) {
-  .nav_lnk { font-size : 14px; }
+  .nav_lnk { font-size : 12px; margin-right : 10px; }
+
+  .nav_wrap nav {
+    @include background-size( ceil($base_logo_width * 0.8), auto );
+  }
+
 }
 
-@media screen and (max-width: 930px) {
-  .nav_lnk { font-size : 14px; margin-right : 24px; }
-}
+// @media screen and (max-width: 930px) {
+//   .nav_lnk { font-size : 14px; margin-right : 24px; }
+// }
 
-@media screen and (max-width: 840px) {
-  .nav_lnk { font-size : 12px; margin-right : 20px; }
-}
+// @media screen and (max-width: 840px) {
+//   .nav_lnk { font-size : 12px; margin-right : 20px; }
+// }
 
 @media screen and (max-width: 760px) {
   .nav_wrap nav {
@@ -461,30 +466,55 @@ $base_logo_width: 250px;
 }
 
 .banner_state {
-  background-image: image-url("state.png");
-  width:            image-width("state.png");
-  height:           image-height("state.png");
-  position:         absolute;
-  bottom:           -46px;
-  right:            -116px;
-  border-radius:    4px;
-  box-sizing:       border-box;
+  width:    100%;
+  height:   100%;
+  top:      0;
+  left:     0;
+  position: absolute;
 
+  &:before {
+    content:           "";
+    display:           inline-block;
+    width:             percentage( image-width("state.png") / image-width("index_banner_2.jpg") );
+    height:            0;
+    background-image:  image-url("state.png");
+    background-size:   100% auto;
+    background-repeat: no-repeat;
+    border-radius:     4px;
+    padding-top:       percentage( image-height("state.png") / image-width("state.png") );
+
+    position: absolute;
+    right:    -14%;
+    bottom:   -75%;
+  }
   @include retina() {
-    & {
-      background-image : image-url("state@2x.png");
-      background-size : 100% 100%;
+    &:before {
+      background-image: image-url("state@2x.png");
     }
   }
 }
 
 .banner_line {
-  background-image: image-url("line.png");
-  width:            image-width("line.png");
-  height:           image-height("line.png");
-  position:         absolute;
-  bottom:           16px;
-  right:            74px;
+  width:    100%;
+  height:   100%;
+  top:      0;
+  left:     0;
+  position: absolute;
+  
+  &:before {
+      content:           "";
+      display:           inline-block;
+      width:             percentage( image-width("line.png") / image-width("index_banner_2.jpg") );
+      background-image: image-url("line.png");
+      padding-top:       percentage( image-height("line.png") / image-width("line.png") );
+      background-size:   100% auto;
+      background-repeat: no-repeat;
+      height:           0;
+
+      position:         absolute;
+      bottom: -103%;
+      right: 9%;
+      }
 }
 
 .ensure_icon {
