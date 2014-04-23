@@ -290,6 +290,11 @@ $base_logo_width: 250px;
 
 .nav_ide { border-radius : 4px; }
 
+@media screen and (max-width: 1025px) {
+  /* Hide "Open IDE" and "Login" for small screen */
+  .nav_user { display : none; }
+}
+
 @media screen and (max-width: 980px) {
   .nav_lnk { font-size : 14px; }
 }
@@ -303,8 +308,6 @@ $base_logo_width: 250px;
 }
 
 @media screen and (max-width: 760px) {
-  /* Hide "Open IDE" and "Login" for small screen */
-  .nav_user { display : none; }
   .nav_wrap nav {
     @include background-size( ceil($base_logo_width * 0.8), auto );
 
@@ -329,21 +332,22 @@ $base_logo_width: 250px;
     position : absolute;
 
     height : 100px;
-    nav { background-position : center top; }
+    nav { background-position : center -33px; }
 
     nav .nav_home_lnk {
       position: absolute;
       left : 50%;
-      top  : 20px;
+      top  : 18px;
       margin-left : 0 - ceil($base_logo_width * 0.35);
-      height : ceil($base_logo_width * 0.7);
+      height : 50px;
     }
   }
   .nav_break {
-    padding-top : 32px;
-    text-align: center;
+    padding-top : 50px;
+    text-align  : center;
+    line-height : 30px;
 
-    a { float : none; }
+    a { float : none; margin : 0 10px; }
   }
 }
 
