@@ -302,8 +302,30 @@ body {
   .technode { background-image : image-url("press/tn.jpg");}
   .startup50 { background-image : image-url("press/s50.jpg");}
   .techcrunch { background-image : image-url("press/tc.jpg");}
-  .cloudacademy { background-image : image-url("press/cloud_academy.jpg"); }
-  .awspartner   { background-image : image-url("press/aws_partner.jpg"); }
+}
+
+.partner {
+  &:after {
+    content : " ";
+    clear   : both;
+  }
+  li {
+    width         : 200px;
+    height        : 100px;
+    float         : left;
+    background    : #f6f6f6 center no-repeat;
+    margin-right  : 30px;
+    margin-bottom : 20px;
+
+    a {
+      display : block;
+      width   : 100%;
+      height  : 100%;
+    }
+  }
+  .cloudacademy { background-image : image-url("press/academy.png"); }
+  .awspartner   { background-image : image-url("press/apn.png"); }
+  .datapipe     { background-image : image-url("press/datapipe.png"); }
 }
 
 
