@@ -304,6 +304,52 @@ body {
   .techcrunch { background-image : image-url("press/tc.jpg");}
 }
 
+.partner {
+  &:after {
+    content : " ";
+    clear   : both;
+  }
+  li {
+    width         : 290px;
+    height        : 140px;
+    float         : left;
+    background    : #fff;
+    margin-right  : 30px;
+    margin-bottom : 20px;
+    text-align    : center;
+    color         : #676767;
+    font-size     : 14px;
+    border-radius : 4px;
+    font-weight   : bold;
+    position      : relative;
+    border: 2px solid #d6d6d6;
+
+    &:hover {
+      background   : #fff;
+      border-color : #9661C2;
+    }
+
+    a {
+      position : absolute;
+      left     : 0;
+      top      : 0;
+      display  : block;
+      width    : 100%;
+      height   : 100%;
+    }
+
+    div {
+      height              : 80%;
+      background-position : center center;
+      background-repeat   : no-repeat;
+    }
+  }
+
+  .cloudacademy { background-image : image-url("press/academy.png"); }
+  .awspartner   { background-image : image-url("press/apn.png"); }
+  .newvem       { background-image : image-url("press/newvem.png"); }
+}
+
 
 .terms_content {
   color : #555;
