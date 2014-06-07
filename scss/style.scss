@@ -1517,3 +1517,24 @@ footer {
 .service-down-message a:hover {
   text-decoration: underline;
 }
+
+@media (min-width: 1px) {
+  body {
+    font-family: Lato, Helvetica, Arial, sans-serif;
+  }
+
+  .locale-en {
+    font-family: Lato, Helvetica, Arial, sans-serif;
+  }
+
+  .locale-zh {
+    font-family: Lato, Helvetica, Arial, sans-serif;
+  }
+
+  .locale-zh button,
+  .locale-zh input,
+  .locale-zh select,
+  .locale-zh textarea {
+    font-family: Lato, Helvetica, Arial, sans-serif;
+  }
+}
