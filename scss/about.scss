@@ -44,6 +44,9 @@ body {
   background : #f6f6f6;
   min-height : 100%;
   padding    : 1px 0 100px 0;
+  p{
+     font-size: 18px;
+  }
 }
 
 .about_nav {
@@ -346,6 +349,7 @@ body {
   .cloudacademy { background-image : image-url("press/academy.png"); }
   .awspartner   { background-image : image-url("press/apn.png"); }
   .newvem       { background-image : image-url("press/newvem.png"); }
+  .mongodb      { background-image : image-url("press/mongodb.png"); }
 }
 
 

@@ -44,103 +44,111 @@
     </div>
 
     <section class="feature_banner">
-      F.A.Q
+        VisualOps FAQ’s
     </section>
 
     <section class="faq">
       <article>
         <header>What is VisualOps?</header>
         <div>
-          <p>VisualOps is a visual DevOps automation tool. It automates the tasks of resource provisioning, code deployment, configuration managent, to ensure your cloud application always runs in the desired state.</p>
+            <p>
+                VisualOps is a visual DevOps automation tool. It automates the
+                tasks of: resource provisioning, code deployment and configuration
+                management, to ensure your cloud application always runs in the
+                desired state.
+            </p>
           <p>
-          VisualOps is created with a goal of both "easy to understand" and "total control". We believe these two factors are important for any size of users to adopt a technology, whether this means individual project, startup, ISV, enterprise and everywhere in between. VisualOps is appropriate for managing small setups with a handful of instances as well as complicated environments with many thousands.
+              VisualOps is created with the goal of being "easy to understand"
+              alongside giving you "total control". We believe these two factors are
+              important for any level of user to adopt a technology, whether you are
+              running an individual project, startup, ISV, enterprise or anything in
+              between. VisualOps is ideal for managing small setups with a handful
+              of instances as well as highly complex environments with thousands.
           </p>
         </div>
       </article>
       <article>
-        <header>How VisualOps works?</header>
+        <header>How does VisualOps work?</header>
         <div>
             <ul>
-              <li>drag-n-drop components to build your AWS infrastructure;</li>
-              <li>clicks instances to setup the software configuration (package, file, code, etc.);</li>
-              <li>single click to deploy, within minutes the app is ready to use!</li>
-              <li><strong>VisualOps continuously ensures the app always runs in the defined states, by repeatedly verifying the instance configuration and fixing any drift!</strong></li>
+              <li>Drag-n-drop components to build your AWS infrastructure;</li>
+              <li>Click onto instances to setup the software configuration (package, file, code, etc.);</li>
+              <li>One click deployment. Within minutes the app is ready to use.</li>
+              <li><strong>VisualOps ensures the app always runs in the defined states, by continually verifying the instance configuration and fixing any drift.</strong></li>
             </ul>
         </div>
       </article>
       <article>
-        <header>What are the use cases?</header>
+        <header>What are the uses?</header>
         <div>
-          <p>You can use VisualOps in the following scenarios:</p>
+          <p>You can currently use VisualOps for the following activities:</p>
           <ul>
-            <li><strong>Template-based provisioning:</strong> fast and repeatable Dev/QA, Demo environment setup</li>
-            <li><strong>Continuous Deployment:</strong> launch your stack into running app, VisualOps deploys your code and upgrades it once there is a newer version</li>
-            <li><strong>App Ensure</strong>: design, launch, relax; VisualOps will ensure your app is always up &amp; running, in the state you defined</li>
+            <li><strong>Template-Based Provisioning:</strong> fast and repeatable Dev/QA, Demo environment setup</li>
+            <li><strong>Continuous Deployment:</strong> launch your stack into running app, VisualOps deploys your code and automatically upgrades it once there is a newer version</li>
+            <li><strong>App Ensure</strong>: design, launch and relax. VisualOps will ensure your app is always up &amp; running, in the state you defined</li>
           </ul>
         </div>
       </article>
      <article>
         <header>What is the main difference between <a href="http://www.visualops.io" target="_blank">VisualOps</a> and other DevOps tools?</header>
         <div>
-          <p>Compared with the traditional DevOps solutions, VisualOps removes the pain of：</p>
+          <p>Compared with the traditional DevOps solutions, VisualOps avoids problems like:</p>
           <ul>
-            <li>learning a new complex tool/DSL;</li>
-            <li>writing the recipes manually;</li>
-            <li>hosting and operating a configuration manager master server, like Puppet or Chef, for example;</li>
-            <li>integrating with the other services, like CloudFormation;</li>
-            <li>
-            <strong>VisualOps gives you a clear view of how your system is setup, as well as the details of how each instance is configured</strong>.</li>
+            <li>Needing to learn a new and complex tool/DSL;</li>
+            <li>Having to write the recipes manually;</li>
+            <li>Hosting and operating a configuration manager master server, like Puppet or Chef, for example;</li>
+            <li>Needing to integrate with the other services, like CloudFormation;</li>
+            <li><strong>VisualOps gives you a clear view of how your system is setup, as well as offeringin depth detail into how each instance is configured</strong>.</li>
           </ul>
         </div>
       </article>
       <article>
         <header>What is the main difference between <a href="http://www.visualops.io" target="_blank">VisualOps</a> and <a href="http://aws.amazon.com/cloudformation/" target="_blank">CloudFormation</a>?</header>
         <div>
-          <p>In terms of templating your AWS infrastructure with fast and repeatable deployment, VisualOps shares the same goal as CloudFormation. In this regard, despite the visual part, you can use VisualOps as you use CloudFormation. However, the difference is that VisualOps doesn't only manage the lifecyle of the infrastructure (provision, update, destroy, etc.), it also continuously manages the application running on top of it. If some state drift occurs, VisualOps will spot the issue, fix it and bring the system back to the desired state.</p>
+          <p>In terms of templating your AWS infrastructure with fast and repeatable deployment, VisualOps does shares a similar goal to CloudFormation. In this regard, despite the visual part, you can use VisualOps as you use CloudFormation. However, the key difference is that VisualOps doesn't merely manage the lifecyle of the infrastructure (provision, update, destroy, etc.). It continuously manages the application running on top of it. If some state drift occurs, VisualOps will spot the issue, fix it and return the system to the desired state.</p>
         </div>
       </article>
       <article>
         <header>What is the main difference between <a href="http://www.visualops.io" target="_blank">VisualOps</a> and <a href="http://aws.amazon.com/opsworks/" target="_blank">OpsWorks</a>?</header>
         <div>
-          <p>"AWS OpsWorks is an application management service that makes it easy for DevOps users to model and manage the entire application" <a href="http://aws.amazon.com/opsworks/" target="_blank">[1]</a>. OpsWorks is tightly coupled with <a href="http://www.getchef.com/" target="_blank">Chef</a>, which is a significant advantage/disadvantage at the same time. Compared with OpsWorks/Chef's bottom-up approach, VisualOps takes a different route: focus on the infrastructure level first, use the visual <a href="https://ide.visualops.io" target="_blank">IDE</a> to design the architecture; then drill down into the servers to configure and connect them. We believe this is the right approach of the DevOps toolchain: <strong>system architecture first, then server details</strong>.</p>
+          <p>OpsWorks is tightly entwined with <a href="http://www.getchef.com/" target="_blank">Chef</a>, which can be a disadvantage. Compared with OpsWorks/Chef's bottom-up approach, VisualOps takes a different route. Focus on the infrastructure level first, use the visual <a href="https://ide.visualops.io" target="_blank">IDE</a> to design the architecture, then drill down into the servers to configure and connect them. We believe this is the correct approach of the DevOps toolchain: <strong>system architecture first, then server details</strong>.</p>
         </div>
       </article>
       <article>
-        <header>How much does it cost?</header>
+        <header>How much will it cost?</header>
         <div>
-          <p>It is free right now. We will release the price plan soon, which will keep the design feature for free, and charge by the number of managed apps/resources.</p>
-          <p>So, all apps launched before the price plan will be free forever!</p>
+          <p>Actually VisualOps is currently FREE to use.</p>
+          <p>We will keep you informed about when we will be releasing the price plan. However we will be keeping the design feature as free, and then will price by the number of managed apps/resources.</p>
         </div>
       </article>
       <article>
         <header>How about the security?</header>
         <div>
-          <p>We continue to put enormous efforts to harden our security.
+          <p>We continue to put enormous efforts to twoughen up our security.
             <li><p>Everything is encrypted
-            We encrypt all data at every step of the way: all data (both your browser and the agent) transmitted via 256-bit Comodo SSL, and stored encrypted in our database. Even in the log files, your sensitive information, such as username, email address, are logged in the encrypted format.</p></li>
-            <li><p>Strict security process
-            Staffs are not allowed to decrypt any user data without the explicit permission from the user (mostly for support case), and they do not have the ability to decrypt any data, unless a permission from our security officer.</p></li>
+            We encrypt all data at every step of the way: all data (both your browser and the agent) transmitted via 256-bit Comodo SSL, and stored encrypted in our database. Even in the log files your sensitive information, such as username, email address, are logged in the encrypted format.</p></li>
+            <li><p>Abiding by strict seurit processes. Our team members never decrypt any user data without permission or a request being explicitly given from the user (mostly for support cases). Furthermore no-one has the ability to decrypt any data, unless given a permission from our security officer also.</p></li>
             <li><p>Verified by AWS
-            We are an official technical partner for Amazon Web Services. Also, we are hosted on AWS as well, which achieved ISO 27001 certification, PCI DSS Level 1 compliance, and SAS70 Type II.</p></li>
+            We are an official technical partner for Amazon Web Services. We are hosted on AWS as well, which achieved ISO 27001 certification, PCI DSS Level 1 compliance, and SAS70 Type II.</p></li>
           </ul>
         </div>
       </article>
       <article>
-        <header>Which AWS services do you currently support? What about the others (say RDS)?</header>
+        <header>Which AWS services do you currently support?</header>
         <div>
-          <p>Right now, EC2, EBS, ELB, AutoScaling and VPC are supported. Take a look at <a href="https://trello.com/b/wQdmsmp0/visualops-idea" target="_blank">our roadmap</a> for other services support. Of course, your vote/comment will help us a lot to prioritize our work.</p>
+          <p>Right now, EC2, EBS, ELB, AutoScaling and VPC are supported. Take a look at <a href="https://trello.com/b/wQdmsmp0/visualops-idea" target="_blank">our roadmap</a> for other services support. Of course, your feedback, reviews and comments will help us greatly in prioritizing our work.</p>
         </div>
       </article>
       <article>
         <header>Do you support EC2-Classic and Default VPC?</header>
         <div>
-          <p>No, we support custom VPC only. See <a href="http://visualops.wordpress.com/2014/02/18/vpc-always-forget-about-the-rest/" target="_blank">our blog article</a> about it.</p>
+          <p>We currently on support custom VPC. See <a href="http://visualops.wordpress.com/2014/02/18/vpc-always-forget-about-the-rest/" target="_blank">our blog article</a> about it.</p>
         </div>
       </article>
       <article>
         <header>Can I upload my CloudFormation scripts and have them visualized in the IDE?</header>
         <div>
-          <p>We support the CloudFormation export feature, not import yet. <a href="https://trello.com/c/Ro23G4sR/62-cloudformation-import" target="_blank">We'll do</a></p>
+          <p>We currently support the CloudFormation export feature, <a href="https://trello.com/c/Ro23G4sR/62-cloudformation-import" target="_blank">and hope to support the import feature in the near future. </a></p>
         </div>
       </article>
     </section>
