@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>VisualOps - Ensure your app always runs as you designed</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="css/style.css?v=5">
+    <link rel="stylesheet" href="css/about.css?v=4">
+    <!--[if lt IE 9]><script>for(var a=['section','article','nav','header','footer','aside','blockquote'],i=a.length-1;i>=0;--i){document.createElement(a[i]);}</script><![endif]-->
+  </head>
+  <body>
+
+    <div class="nav_wrap">
+      <nav>
+        <div class="nav_break">
+          <div class="nav_user">
+            <a href="https://ide.visualops.io/register/" target="_blank" class="nav_register">SIGN UP</a>
+            <a href="https://ide.visualops.io/login/" target="_blank" class="nav_login">SIGN IN</a>
+            <a href="https://ide.visualops.io/" target="_blank" class="nav_ide" id="mcIde">LAUNCH IDE</a>
+
+            <script type="text/javascript"> (function(){
+              var m = document.cookie.match(/has_session=([^; ]+)/);
+              if ( m ) { document.body.className = "registered"; }
+            })(); </script>
+          </div>
+
+          <a href="/about" class="nav_lnk">ABOUT</a>
+          <a href="https://medium.com/@visualops/latest" target="_blank" class="nav_lnk">BLOG</a>
+          <a href="http://docs.visualops.io" target="_blank" class="nav_lnk">DOCUMENTATION</a>
+          <a href="/faq" class="nav_lnk selected">FAQ</a>
+          <a href="http://store.visualops.io/" class="nav_lnk">INSTANT APPS<div class="store_new">New</div></a>
+          <a href="/feature" class="nav_lnk">FEATURES</a>
+
+        </div>
+
+        <a href="/" class="nav_home_lnk"></a>
+      </nav>
+    </div>
+
+    <section class="feature_banner">
+        VisualOps FAQ’s
+    </section>
+
+    <section class="faq">
+      <article>
+        <header>What is VisualOps?</header>
+        <div>
+            <p>
+                VisualOps is a visual DevOps automation tool. It automates the
+                tasks of: resource provisioning, code deployment and configuration
+                management, to ensure your cloud application always runs in the
+                desired state.
+            </p>
+          <p>
+              VisualOps is created with the goal of being "easy to understand"
+              alongside giving you "total control". We believe these two factors are
+              important for any level of user to adopt a technology, whether you are
+              running an individual project, startup, ISV, enterprise or anything in
+              between. VisualOps is ideal for managing small setups with a handful
+              of instances as well as highly complex environments with thousands.
+          </p>
+        </div>
+      </article>
+      <article>
+        <header>How does VisualOps work?</header>
+        <div>
+            <ul>
+              <li>Drag-n-drop components to build your AWS infrastructure;</li>
+              <li>Click onto instances to setup the software configuration (package, file, code, etc.);</li>
+              <li>One click deployment. Within minutes the app is ready to use.</li>
+              <li><strong>VisualOps ensures the app always runs in the defined states, by continually verifying the instance configuration and fixing any drift.</strong></li>
+            </ul>
+        </div>
+      </article>
+      <article>
+        <header>What are the uses?</header>
+        <div>
+          <p>You can currently use VisualOps for the following activities:</p>
+          <ul>
+            <li><strong>Template-Based Provisioning:</strong> fast and repeatable Dev/QA, Demo environment setup</li>
+            <li><strong>Continuous Deployment:</strong> launch your stack into running app, VisualOps deploys your code and automatically upgrades it once there is a newer version</li>
+            <li><strong>App Ensure</strong>: design, launch and relax. VisualOps will ensure your app is always up &amp; running, in the state you defined</li>
+          </ul>
+        </div>
+      </article>
+     <article>
+        <header>What is the main difference between <a href="http://www.visualops.io" target="_blank">VisualOps</a> and other DevOps tools?</header>
+        <div>
+          <p>Compared with the traditional DevOps solutions, VisualOps avoids problems like:</p>
+          <ul>
+            <li>Needing to learn a new and complex tool/DSL;</li>
+            <li>Having to write the recipes manually;</li>
+            <li>Hosting and operating a configuration manager master server, like Puppet or Chef, for example;</li>
+            <li>Needing to integrate with the other services, like CloudFormation;</li>
+            <li><strong>VisualOps gives you a clear view of how your system is setup, as well as offering in depth detail into how each instance is configured</strong>.</li>
+          </ul>
+        </div>
+      </article>
+      <article>
+        <header>What is the main difference between <a href="http://www.visualops.io" target="_blank">VisualOps</a> and <a href="http://aws.amazon.com/cloudformation/" target="_blank">CloudFormation</a>?</header>
+        <div>
+          <p>In terms of templating your AWS infrastructure with fast and repeatable deployment, VisualOps does shares a similar goal to CloudFormation. In this regard, despite the visual part, you can use VisualOps as you use CloudFormation. However, the key difference is that VisualOps doesn't merely manage the lifecyle of the infrastructure (provision, update, destroy, etc.). It continuously manages the application running on top of it. If some state drift occurs, VisualOps will spot the issue, fix it and return the system to the desired state.</p>
+        </div>
+      </article>
+      <article>
+        <header>What is the main difference between <a href="http://www.visualops.io" target="_blank">VisualOps</a> and <a href="http://aws.amazon.com/opsworks/" target="_blank">OpsWorks</a>?</header>
+        <div>
+          <p>OpsWorks is tightly entwined with <a href="http://www.getchef.com/" target="_blank">Chef</a>, which can be a disadvantage. Compared with OpsWorks/Chef's bottom-up approach, VisualOps takes a different route. Focus on the infrastructure level first, use the visual <a href="https://ide.visualops.io" target="_blank">IDE</a> to design the architecture, then drill down into the servers to configure and connect them. We believe this is the correct approach of the DevOps toolchain: <strong>system architecture first, then server details</strong>.</p>
+        </div>
+      </article>
+      <article>
+        <header>How much will it cost?</header>
+        <div>
+          <p>Actually VisualOps is currently FREE to use.</p>
+          <p>We will keep you informed about when we will be releasing the price plan. However we will be keeping the design feature as free, and then will price by the number of managed apps/resources.</p>
+        </div>
+      </article>
+      <article>
+        <header>How about the security?</header>
+        <div>
+          <p>We continue to put enormous efforts to toughen up our security.
+            <li><p>Everything is encrypted
+            We encrypt all data at every step of the way: all data (both your browser and the agent) transmitted via 256-bit Comodo SSL, and stored encrypted in our database. Even in the log files your sensitive information, such as username, email address, are logged in the encrypted format.</p></li>
+            <li><p>Abiding by strict security processes. Our team members never decrypt any user data without permission or a request being explicitly given from the user (mostly for support cases). Furthermore no-one has the ability to decrypt any data, unless given a permission from our security officer also.</p></li>
+            <li><p>Verified by AWS
+            We are an official technical partner for Amazon Web Services. We are hosted on AWS as well, which achieved ISO 27001 certification, PCI DSS Level 1 compliance, and SAS70 Type II.</p></li>
+          </ul>
+        </div>
+      </article>
+      <article>
+        <header>Which AWS services do you currently support?</header>
+        <div>
+          <p>Right now, EC2, EBS, ELB, AutoScaling and VPC are supported. Take a look at <a href="https://trello.com/b/wQdmsmp0/visualops-idea" target="_blank">our roadmap</a> for other services support. Of course, your feedback, reviews and comments will help us greatly in prioritizing our work.</p>
+        </div>
+      </article>
+      <article>
+        <header>Do you support EC2-Classic and Default VPC?</header>
+        <div>
+          <p>We currently on support custom VPC. See <a href="http://visualops.wordpress.com/2014/02/18/vpc-always-forget-about-the-rest/" target="_blank">our blog article</a> about it.</p>
+        </div>
+      </article>
+      <article>
+        <header>Can I upload my CloudFormation scripts and have them visualized in the IDE?</header>
+        <div>
+          <p>We currently support the CloudFormation export feature, <a href="https://trello.com/c/Ro23G4sR/62-cloudformation-import" target="_blank">and hope to support the import feature in the near future. </a></p>
+        </div>
+      </article>
+    </section>
+
+    <section class="signup_footer cover">
+      <span>Interested?</span>
+      <a href="https://ide.visualops.io/register/" target="_blank" class="big_signup">Sign Up for Free Now</a>
+    </section>
+
+    <footer class="cover">
+      <div class="footer_wrap">
+        <ul class="network_wrap">
+          <li><a href="https://github.com/MadeiraCloud" title="MadeiraCloud on Github" class="network github" target="_blank">Github</a></li>
+          <li><a href="http://www.twitter.com/madeiracloud" title="Follow Us on Twitter" class="network twitter" target="_blank">Twitter</a></li>
+          <li><a href="https://www.facebook.com/madeiracloud" title="Like us on Facebook" class="network facebook" target="_blank">Facebook</a></li>
+          <li><a href="https://plus.google.com/u/0/109295117031738876065/posts" title="Add us to a Circle on Google+" class="network gplus" target="_blank">Google+</a></li>
+          <li><a href="http://vimeo.com/madeiracloud" title="Watch our Videos on Vimeo" class="network vimeo" target="_blank">Vimeo</a></li>
+          <li><a href="http://www.linkedin.com/company/madeiracloud" class="network linkedin" target="_blank">LinkedIn</a></li>
+        </ul>
+
+        <div>
+          © MadeiraCloud 2014 &nbsp;&nbsp;|&nbsp;&nbsp;<a href="/terms-conditions-privacy-policy">Terms, Conditions and Privacy Policy</a><br>795 Folsom St, San Francisco, CA, USA.
+        </div>
+        <div class="arn"><a href="/partners"></a></div>
+      </div>
+    </footer>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-42793662-4', 'visualops.io');
+  ga('send', 'pageview');
+
+</script>
+  </body>
+</html>
