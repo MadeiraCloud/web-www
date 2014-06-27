@@ -68,19 +68,22 @@ function buildOnce(){
 }
 
 buildOnce();
-
 watch.createMonitor(path.resolve(__dirname, sourceDir), function (monitor) {
     monitor.on("created", function (f) {
         console.log('[New File]'.green.inverse," ↓".red);
         compile(path.basename(f));
     });
     monitor.on("changed", function (f) {
-        console.log("[Change]".blue.reverse+" → ".green,path.resolve(__dirname,sourceDir,f).yellow);
+        console.log("[Changed]".blue.inverse+" → ".green,path.resolve(__dirname,sourceDir,f).yellow);
         compile(path.basename(f));
     });
     monitor.on("removed", function (f) {
         var buildedFile = path.resolve(__dirname, buildDir, f.replace('.ejs','.html'));
-        fs.unlinkSync(buildedFile);
+        try{
+            fs.unlinkSync(buildedFile);
+        }catch(e){
+            console.log("[Error]".red,e.toString().red);
+        }
     });
     //monitor.stop();
 });
