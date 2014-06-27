@@ -40,10 +40,13 @@ body {
   position   : relative;
 }
 
-.about_content {
+.about_content,.team_content {
   background : #f6f6f6;
   min-height : 100%;
   padding    : 1px 0 100px 0;
+  p{
+     font-size: 18px;
+  }
 }
 
 .about_nav {
@@ -55,7 +58,7 @@ body {
   color       : #e0e0e0;
   font-size   : 18px;
 
-  background-color : #66398b;
+  background-color : #383975;
   // @include background-image( linear-gradient(top, #461A7E, #132250) );
   @include box-shadow( inset 0 -5px 30px rgba(0,0,0,.1) );
 
@@ -167,6 +170,11 @@ body {
     background-image: image-url("sf_map.png");
 }
 
+
+.about_wrap {
+  color: #666;
+  max-width: 800px;
+}
 
 .team_wrap {
   margin-left : -20px;
@@ -300,6 +308,7 @@ body {
   .technode { background-image : image-url("press/tn.jpg");}
   .startup50 { background-image : image-url("press/s50.jpg");}
   .techcrunch { background-image : image-url("press/tc.jpg");}
+  .devops { background-image : image-url("press/devops.png"); background-size: 180px auto;}
 }
 
 .partner {
@@ -308,7 +317,7 @@ body {
     clear   : both;
   }
   li {
-    width         : 290px;
+    width         : 266px;
     height        : 140px;
     float         : left;
     background    : #fff;
@@ -346,6 +355,7 @@ body {
   .cloudacademy { background-image : image-url("press/academy.png"); }
   .awspartner   { background-image : image-url("press/apn.png"); }
   .newvem       { background-image : image-url("press/newvem.png"); }
+  .mongodb      { background-image : image-url("press/mongodb.png"); }
 }
 
 
@@ -377,7 +387,7 @@ body {
 .feature_banner {
   height      : 330px;
   line-height : 330px;
-  background  : #66398b;
+  background  : #383975;
   text-align  : center;
   font-size   : 30px;
   color       : #fff;
