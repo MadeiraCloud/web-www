@@ -13,7 +13,7 @@ var watch = require("watch");
 var app = express();
 var ejs = require('ejs');
 var sourceDir = "source";
-var buildDir = "build";
+var buildDir = "";
 var colors = require('colors');
 
 // all environments
@@ -25,7 +25,6 @@ app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.methodOverride());
 app.use(app.router);
-app.use(express.static(path.join(__dirname, 'build')));
 app.use(express.static(path.join(__dirname, '')));
 
 // development only
