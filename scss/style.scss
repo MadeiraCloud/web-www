@@ -45,7 +45,7 @@ button,
 input,
 select,
 textarea {
-    font-family : Lato, Helvetica, Arial, sans-serif;
+  font-family  : "Helvetica Neue", "Helvetica", Arial, sans-serif;
 }
 
 ul, li {
@@ -389,14 +389,13 @@ $base_logo_width: 250px;
   z-index     : 20;
   padding-top : 120px;
 
-  background : #342b5e image-url("index_bg.png") center center repeat;
+  background : #342b5e;
+  background-image: -o-linear-gradient(-60deg, #363C76 0%, #453C76 100%);
+  background-image: -moz-linear-gradient(-60deg, #363C76 0%, #453C76 100%);
+  background-image: -ms-linear-gradient(-60deg, #363C76 0%, #453C76 100%);
+  background-image: linear-gradient(-150deg, #363C76 0%, #453C76 100%);
 
-  background: image-url("index_bg@2x.png"), -moz-linear-gradient(top, #383975 0, #17042E 100%);
-  background: image-url("index_bg@2x.png"), -webkit-gradient(linear, left top, left bottom, color-stop(0,#383975), color-stop(100%,#17042E)); /* Chrome,Safari4+ */
-  background: image-url("index_bg@2x.png"), -webkit-linear-gradient(top, #383975 0,#17042E 100%); /* Chrome10+,Safari5.1+ */
-  background: image-url("index_bg@2x.png"), -o-linear-gradient(top, #383975 0,#17042E 100%); /* Opera 11.10+ */
-  background: image-url("index_bg@2x.png"), linear-gradient(to bottom, #383975 0,#17042E 100%); /* W3C */
-  background-size : image-width("index_bg@2x.png") / 2 auto, auto auto;
+  background-size : cover;
 
   min-height: 600px;
 
@@ -409,8 +408,6 @@ $base_logo_width: 250px;
     color        : #DDD;
     font-size    : 30px;
     width        : 100%;
-    text-shadow  : 2px 2px 10px black;
-    font-family  : "Helvetica Neue", "Helvetica", Arial, sans-serif;
     margin-bottom: 60px;
 
     h1 {
@@ -829,263 +826,6 @@ path.dash {
     color: #eee;
   }
 }
-
-/* Services */
-.services {
-  background : #1e1c2a image-url("services_bg.png") left bottom repeat;
-
-  @include background-image( image-url("services_bg_m.png"), linear-gradient(top, #283138, #3a2542) );
-
-  @include retina() {
-    @include background-image( image-url("services_bg_m@2x.png"), linear-gradient(top, #283138, #3a2542) );
-
-    @include background-size( image-width("services_bg_m.png") auto, cover );
-  }
-
-  h1 {
-    color : #adbcca;
-    margin-bottom : 30px;
-  }
-}
-
-.service_tags {
-  height   : 260px;
-  position : relative;
-  width    : 80%;
-  margin   : 0 auto;
-
-  .tag {
-    position      : absolute;
-    border-radius : 4px;
-    color         : #fff;
-    text-shadow   : 0 -1px 1px rgba(0,0,0,0.3);
-    text-align    : center;
-    font-size     : 14px;
-    opacity       : 1;
-    overflow      : hidden;
-
-    @include box-shadow( 0 4px 8px rgba(0,0,0,.3) );
-
-    @include transition( all .4s ease-in-out );
-    @include transition-property( opacity, transform );
-    @include scale(1, 1);
-  }
-
-  .green {
-    background  : #3fb34f;
-    top         : 88px;
-    left        : 5%;
-    width       : 66px;
-    height      : 37px;
-    line-height : 37px;
-    margin-left : ceil( -66px / 2);
-    margin-top  : ceil( -37px / 2 );
-  }
-
-  .orange {
-    background  : #f59331;
-    left        : 20%;
-    top         : 15px;
-    width       : 165px;
-    height      : 40px;
-    line-height : 40px;
-
-    margin-left : ceil( -165px / 2 );
-    margin-top  : ceil( -40px / 2 );
-
-    @include transition-duration( .5s );
-  }
-
-  .purple {
-    background  : #65318f;
-    left        : 31%;
-    top         : 174px;
-    width       : 128px;
-    height      : 50px;
-    line-height : 50px;
-
-    margin-left : ceil( -128px / 2 );
-    margin-top  : ceil( -50px / 2 );
-
-    font-size : 24px;
-
-    @include transition-duration( .44s );
-  }
-
-  .lightblue {
-    background : #00afec;
-
-    left        : 56%;
-    top         : 84px;
-    width       : 176px;
-    height      : 55px;
-    line-height : 55px;
-
-    margin-left : ceil( -176px / 2 );
-    margin-top  : ceil( -55px / 2 );
-
-    font-size : 24px;
-
-    @include transition-duration( .3s );
-  }
-
-  .red {
-    background : #f06d54;
-
-    left        : 70%;
-    top         : 158px;
-    width       : 116px;
-    height      : 32px;
-    line-height : 32px;
-
-    margin-left : ceil( -116px / 2 );
-    margin-top  : ceil( -32px / 2 );
-
-    @include transition-duration( .6s );
-  }
-
-  .blue {
-    background : #1d85ea;
-
-    left        : 76%;
-    top         : 21px;
-    width       : 66px;
-    height      : 29px;
-    line-height : 29px;
-
-    margin-left : ceil( -66px / 2 );
-    margin-top  : ceil( -29px / 2 );
-
-    font-size : 12px;
-    @include transition-duration( .45s );
-  }
-
-  .gray {
-    background : #66686d;
-
-    left        : 88%;
-    top         : 95px;
-    width       : 146px;
-    height      : 29px;
-    line-height : 29px;
-
-    margin-left : ceil( -146px / 2 );
-    margin-top  : ceil( -29px / 2 );
-
-    font-size : 12px;
-
-    @include transition-duration( .35s );
-  }
-}
-
-:not(.lt-ie9) .hide {
-  .tag {
-    opacity : 0.3;
-    @include scale(0, 0);
-  }
-}
-
-@media screen and (max-width: 840px) {
-  .service_tags {
-
-    .green  { left : 3%; }
-    .orange { left : 19%; }
-    .purple { left : 31%; }
-    .lightblue { left : 41%; }
-    .red    { left : 70%; }
-    .blue   { left : 75%; }
-    .gray   { left : 83%; }
-  }
-}
-
-@media screen and (max-width: 580px) {
-  .service_tags {
-    .tag {
-      position : static;
-      display  : block;
-      float    : left;
-      margin   : 0 20px 20px 0;
-
-      @include translate( 0, 0 );
-    }
-    .blue {
-      height      : 32px;
-      line-height : 32px;
-    }
-  }
-}
-
-@media screen and (max-width: 430px) {
-  .service_tags {
-    height : auto;
-    &:after {
-      display : block;
-      content : " ";
-      clear   : both;
-    }
-  }
-}
-
-.dashboard {
-  height        : 292px + 32px;
-  width         : 80%;
-  max-width     : 1020px;
-  margin        : 0 auto;
-  background    : #fff;
-  border-radius : 8px 8px 0 0;
-  padding       : 2px 2px 0 2px;
-}
-
-.dashboard_wrap {
-  background    : #bebebe;
-  height        : 100%;
-  border-radius : 6px 6px 0 0;
-  padding       : 0 4px;
-
-  .control {
-    height : 32px;
-    @extend .sprite;
-
-    background-position : 4px -300px;
-  }
-
-  .content {
-    background : #fff;
-    height : 292px;
-
-    background : image-url("dashboard1012.png") no-repeat;
-
-    @include retina() {
-      background-image : image-url("dashboard1012@2x.png");
-      @include background-size( image-width("dashboard1012.png"), auto );
-    }
-  }
-}
-
-@media screen and (min-width: 1600px) {
-  .dashboard {
-    max-width : 1280px;
-
-    .content {
-      background : image-url("dashboard.png") no-repeat;
-    }
-  }
-}
-
-@media (min-width: 1600px) and (-webkit-min-device-pixel-ratio:2), (min--moz-device-pixel-ratio:2), (-o-min-device-pixel-ratio:2/1), (min-device-pixel-ratio: 2) {
-  .dashboard .content {
-    background-image : image-url("dashboard@2x.png");
-    @include background-size( image-width("dashboard.png"), auto );
-  }
-}
-
-@media screen and (max-width : 600px) {
-  .dashboard {
-    display : none;
-  }
-}
-
-
 
 /* FAQ */
 .faq {
@@ -1520,21 +1260,21 @@ footer {
 
 @media (min-width: 1px) {
   body {
-    font-family: Lato, Helvetica, Arial, sans-serif;
+    font-family  : "Helvetica Neue", "Helvetica", Arial, sans-serif;
   }
 
   .locale-en {
-    font-family: Lato, Helvetica, Arial, sans-serif;
+    font-family  : "Helvetica Neue", "Helvetica", Arial, sans-serif;
   }
 
   .locale-zh {
-    font-family: Lato, Helvetica, Arial, sans-serif;
+    font-family  : "Helvetica Neue", "Helvetica", Arial, sans-serif;
   }
 
   .locale-zh button,
   .locale-zh input,
   .locale-zh select,
   .locale-zh textarea {
-    font-family: Lato, Helvetica, Arial, sans-serif;
+    font-family  : "Helvetica Neue", "Helvetica", Arial, sans-serif;
   }
 }
