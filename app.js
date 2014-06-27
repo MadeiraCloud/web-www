@@ -14,6 +14,7 @@ var app = express();
 var ejs = require('ejs');
 var sourceDir = "source";
 var buildDir = "build";
+var colors = require('colors');
 
 // all environments
 app.set('port', process.env.PORT || 4000);
@@ -34,27 +35,30 @@ if ('development' == app.get('env')) {
 
 
 var fileList = fs.readdirSync(path.join(__dirname, sourceDir));
+
+// Build Files
 function compile (from){
     var fileName = from.split(".");
     fileName.pop();
     var to = fileName.join('.') + ".html";
     var source = path.resolve(__dirname, sourceDir, from);
     var dist =  path.resolve(__dirname, buildDir, to);
-    console.log("[compile]", source, "\n\t==>",dist);
+    console.log("[compile]".inverse, source.yellow, " ==> ",path.basename(dist).blue);
     try{
         ejs.renderFile(source, function(err, result){
             if(err){
-                console.log(err);
+                console.log(err.toString().red);
                 return false;
             }
             fs.writeFileSync(dist, result);
         });
 
     }catch(e){
-        console.log('.', e.toString());
+        console.log('[Error]'.red.inverse,e.toString().red);
     }
 }
 
+// Build All file at start
 function buildOnce(){
     fileList.forEach(function(e){
         if(e.split(".").pop() == 'html'){
@@ -67,10 +71,11 @@ buildOnce();
 
 watch.createMonitor(path.resolve(__dirname, sourceDir), function (monitor) {
     monitor.on("created", function (f) {
-       compile(f)
+        console.log('[New File]'.green.inverse," ↓".red);
+        compile(path.basename(f));
     });
     monitor.on("changed", function (f) {
-        console.log("[Change] File change detected, ready to compile ->",path.resolve(__dirname,sourceDir,f));
+        console.log("[Change]".blue.reverse+" → ".green,path.resolve(__dirname,sourceDir,f).yellow);
         compile(path.basename(f));
     });
     monitor.on("removed", function (f) {
