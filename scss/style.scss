@@ -170,7 +170,7 @@ $headerHeight : 70px;
     /* Make header not sticky for cellphones */
     &.sticky {
       position       : fixed;
-      background     : rgba(79, 34, 116, 0.9);
+      background     : rgba(56, 57, 117, 0.9);
       padding-top    : 10px;
       padding-bottom : 10px;
     }
@@ -212,7 +212,6 @@ $base_logo_width: 250px;
 }
 
 .nav_wrap .store_new {
-  width: 20px;
   right: -22px;
   top: 11px;
   margin-top: 0;
@@ -289,7 +288,8 @@ $base_logo_width: 250px;
   border-radius: 4px 0 0 4px;
 
   &:hover {
-    background : darken(#55109a, 5%);
+    background : #fff;
+    color: #383975;
   }
 
   @include transition( background .2s linear );
@@ -299,9 +299,9 @@ $base_logo_width: 250px;
   // background : #c16aa2;
   border-radius : 0 4px 4px 0;
 
-  &:hover {
-    background : darken(#c16aa2, 5%);
-  }
+//  &:hover {
+//    background : darken(#c16aa2, 5%);
+//  }
 }
 
 .nav_ide { border-radius : 4px; }
@@ -562,9 +562,9 @@ $base_logo_width: 250px;
 
 /* Intro */
 .intro {
-  background  : #6F4D78;
+  background  : #28293A;
 
-  @include background-image(linear-gradient(#6F4D78, #382C57));
+//  @include background-image(linear-gradient(#6F4D78, #382C57));
 
   padding-top : 100px;
 

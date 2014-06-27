@@ -171,6 +171,11 @@ body {
 }
 
 
+.about_wrap {
+  color: #666;
+  max-width: 800px;
+}
+
 .team_wrap {
   margin-left : -20px;
 
@@ -311,7 +316,7 @@ body {
     clear   : both;
   }
   li {
-    width         : 290px;
+    width         : 266px;
     height        : 140px;
     float         : left;
     background    : #fff;
