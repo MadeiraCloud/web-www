@@ -45,7 +45,7 @@ function compile (from){
     var dist =  path.resolve(__dirname, buildDir, to);
     console.log("[compile]".inverse, source.yellow, " ==> ",path.basename(dist).blue);
     try{
-        ejs.renderFile(source, function(err, result){
+        ejs.renderFile(source, {file: fileName}, function(err, result){
             if(err){
                 console.log(err.toString().red);
                 return false;
@@ -59,7 +59,7 @@ function compile (from){
 }
 
 // Build All file at start
-function buildOnce(){
+function buildAll(){
     fileList.forEach(function(e){
         if(e.split(".").pop() == 'html'){
             compile(e);
@@ -67,15 +67,25 @@ function buildOnce(){
     })
 }
 
-buildOnce();
+buildAll();
 watch.createMonitor(path.resolve(__dirname, sourceDir), function (monitor) {
     monitor.on("created", function (f) {
-        console.log('[New File]'.green.inverse," ↓".red);
-        compile(path.basename(f));
+        if(f[0] == "_"){
+            console.log("[New Partial]".green.inverse," Render All ....".inverse);
+            buildAll();
+        }else{
+            console.log('[New File]'.green.inverse," ↓".red);
+            compile(path.basename(f));
+        }
     });
     monitor.on("changed", function (f) {
-        console.log("[Changed]".blue.inverse+" → ".green,path.resolve(__dirname,sourceDir,f).yellow);
-        compile(path.basename(f));
+        if (path.basename(f)[0] == "_"){
+            console.log("[Change Partial]".blue.inverse," Render All ....".inverse);
+            buildAll();
+        }else{
+            console.log("[Changed]".blue.inverse+" → ".green,path.resolve(__dirname,sourceDir,f).yellow);
+            compile(path.basename(f));
+        }
     });
     monitor.on("removed", function (f) {
         var buildedFile = path.resolve(__dirname, buildDir, f.replace('.ejs','.html'));
