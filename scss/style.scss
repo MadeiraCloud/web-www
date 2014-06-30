@@ -431,6 +431,9 @@ div.banner_wrap:before {
     }
     .circle.active{
       background: #ffffff;
+      span{
+        color: #ffffff;
+      }
     }
     .circle:after{
       content: " ";
@@ -443,6 +446,16 @@ div.banner_wrap:before {
       width: 250px;
       background: #ffffff;
       cursor: none;
+    }
+    .circle span{
+      position: absolute;
+      top: 15px;
+      left: -70px;
+      width: 150px;
+      text-align: center;
+      color: #cccccc;
+      font-weight: 100;
+      font-size: 14px;
     }
     .circle:last-child:after{
       display: none;
@@ -590,7 +603,7 @@ ul.slider_content{
   // margin-left: 5%;
   // margin-top: 80px;
   text-align: center;
-  padding-bottom: 40px;
+  padding-bottom: 75px;
 }
 
 .banner_btn_group {
@@ -600,16 +613,20 @@ ul.slider_content{
 }
 
 .banner_btn {
-  padding      : 0.5em 1em;
+  padding      : 0.8em 1.6em;
   color        : #FFF;
   font-size    : 28px;
   // background: #c16aa2;
-  background   : #09B864;
+  background   : #32bc00;
   border-radius: 4px;
-  box-shadow   : 0 0 10px rgba(0, 0, 0, 0.4);
-
+  font-weight: 300;
+  -webkit-transition: background 0.3s;
+  -moz-transition: background 0.3s;
+  -ms-transition: background 0.3s;
+  -o-transition: background 0.3s;
+  transition: background 0.3s;
   &:hover {
-    background : darken(#09B864, 5%);
+    background : darken(#32bc00, 5%);
     color : #fff;
   }
 }
@@ -1118,14 +1135,19 @@ $social_img_height : 50px;
 
 .big_signup {
   color          : #fff;
-  background     : #09B864;
+  background     : #32bc00;
   font-size      : 22px;
   padding        : 10px 25px;
   border-radius  : 4px;
 
   &:hover {
-    background : darken(#09B864, 5%);
+    background : darken(#32bc00, 5%);
     color : #fff;
+    -webkit-transition: background 0.3s;
+    -moz-transition: background 0.3s;
+    -ms-transition: background 0.3s;
+    -o-transition: background 0.3s;
+    transition: background 0.3s;
   }
 }
 
