@@ -1137,17 +1137,17 @@ $social_img_height : 50px;
   color          : #fff;
   background     : #32bc00;
   font-size      : 22px;
-  padding        : 10px 25px;
+  padding        : 15px 25px;
   border-radius  : 4px;
+  -webkit-transition: background 0.3s;
+  -moz-transition: background 0.3s;
+  -ms-transition: background 0.3s;
+  -o-transition: background 0.3s;
+  transition: background 0.3s;
 
   &:hover {
     background : darken(#32bc00, 5%);
     color : #fff;
-    -webkit-transition: background 0.3s;
-    -moz-transition: background 0.3s;
-    -ms-transition: background 0.3s;
-    -o-transition: background 0.3s;
-    transition: background 0.3s;
   }
 }
 
