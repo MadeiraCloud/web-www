@@ -505,6 +505,7 @@ ul.slider_content{
   list-style: none;
   max-width: 1200px;
   width: 90%;
+  height: 100%;
   margin: 0 auto;
   position: relative;
   li{
@@ -581,7 +582,7 @@ ul.slider_content{
   position: relative;
   a{
     position: absolute;
-    top: 195px;
+    top: -195px;
     background: #DDDDDD;
     height: 50px;
     width: 50px;
