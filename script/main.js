@@ -1,28 +1,84 @@
-$(function(){
-  var currentURL = document.URL;
+$(function () {
+    "use strict";
+    var currentURL = document.URL;
 
-  if (currentURL && currentURL.indexOf('/#redirect') !== -1) {
-    $('body').addClass('redirected');
-  }
+    if (currentURL && currentURL.indexOf('/#redirect') !== -1) {
+        $('body').addClass('redirected');
+    }
 
-  function onWinScroll() {
-    $("#mcHeader").toggleClass("sticky", scrollY > 0)
-  }
+    function onWinScroll() {
+        $("#mcHeader").toggleClass("sticky", scrollY > 0)
+    }
 
-  $(window).on("scroll", onWinScroll);
+    $(window).on("scroll", onWinScroll);
 
-  if ($(window).width()>860) {
-    skrollr.init();
-  }
-  slider = function(options){
-      selector = options.selector;
-      $slider = $(selector);
-      $li = $slider.find('li');
-      $currentLi = $slider.find("li.active");
-      index = $currentLi.index();
-      $li.eq(index).addClass('fadeOut');
-      window.setTimeout(function(){
-          $li.eq(index).removeClass('active')
-      },options.timeout);
-  }
+    if ($(window).width() > 860) {
+        skrollr.init();
+    }
+
+
+    var slider = function (options) {
+        var selector = options.selector;
+        var timeout = options.timeout || 300;
+        var $slider = $(selector);
+        var $li = $slider.find('li');
+        $li.eq(0).addClass('active');
+        var index , count, next, previous, slideInterval, slideTimeout;
+
+        function getStatus(){
+            index = $slider.find("li.active").index() || 0;
+            count = $slider.find('li').size();
+            next = (index == count -1) ? 0 : index +1;
+            previous = (index == 0)? (count -1) : (index -1);
+        }
+
+        function slideTo(eq){
+            eq = eq || next;
+            $li.eq(index).addClass('processing');
+            $li.eq(eq).addClass('processing');
+            slideTimeout = window.setTimeout(function(){
+                $li.eq(index).removeClass('processing').removeClass('active');
+                $li.eq(eq).removeClass('processing').addClass('active');
+                getStatus();
+                $('.slider_pagination a').removeClass('active').eq(index).addClass('active');
+                console.log(count-1, index, next, previous);
+            },timeout);
+        }
+
+        function slideNext(){
+            slideInterval = window.setInterval(function(){
+                getStatus();
+                slideTo()
+            }, timeout*5)
+        }
+
+        slideNext();
+
+        $('.slider_pagination a').click(function(e){
+            e.preventDefault();
+            window.clearInterval(slideInterval);
+            var targetIndex = $(e.currentTarget).index();
+            slideTo(targetIndex);
+            slideNext();
+            return false;
+        });
+
+        $('.slider_navigation a').click(function(e){
+            e.preventDefault();
+            window.clearInterval(slideInterval);
+            var target = $(e.currentTarget);
+            if(target.hasClass('left')){
+                slideTo(previous);
+            }
+            if(target.hasClass('right')){
+                slideTo(next);
+            }
+            slideNext();
+            return false;
+        })
+    };
+    slider({
+        selector: ".slider_content",
+        timeout: 1000
+    });
 });
