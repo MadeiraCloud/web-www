@@ -16,7 +16,6 @@ $(function () {
         skrollr.init();
     }
 
-
     var slider = function (options) {
         var selector = options.selector;
         var timeout = options.timeout || 300;
@@ -33,14 +32,19 @@ $(function () {
         }
 
         function slideTo(eq){
-            eq = eq || next;
+            eq = $.isNumeric( eq )? eq : next;
+            $('.slider_pagination a').removeClass('active').eq(eq).addClass('active');
             $li.eq(index).addClass('processing');
             $li.eq(eq).addClass('processing');
+            if(index < eq){
+                $li.eq(index).addClass('reverse');
+                $li.eq(eq).addClass('reverse');
+            }
             slideTimeout = window.setTimeout(function(){
+                $li.removeClass('reverse');
                 $li.eq(index).removeClass('processing').removeClass('active');
                 $li.eq(eq).removeClass('processing').addClass('active');
                 getStatus();
-                $('.slider_pagination a').removeClass('active').eq(index).addClass('active');
                 console.log(count-1, index, next, previous);
             },timeout);
         }
@@ -49,7 +53,7 @@ $(function () {
             slideInterval = window.setInterval(function(){
                 getStatus();
                 slideTo()
-            }, timeout*5)
+            }, timeout*4)
         }
 
         slideNext();
@@ -59,7 +63,7 @@ $(function () {
             window.clearInterval(slideInterval);
             var targetIndex = $(e.currentTarget).index();
             slideTo(targetIndex);
-            slideNext();
+            setTimeout(slideNext, 3000);
             return false;
         });
 
@@ -67,13 +71,14 @@ $(function () {
             e.preventDefault();
             window.clearInterval(slideInterval);
             var target = $(e.currentTarget);
+            getStatus();
             if(target.hasClass('left')){
                 slideTo(previous);
             }
             if(target.hasClass('right')){
                 slideTo(next);
             }
-            slideNext();
+            setTimeout(slideNext, 3000);
             return false;
         })
     };
