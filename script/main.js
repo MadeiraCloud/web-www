@@ -97,10 +97,12 @@ $(function () {
 
     function resetAnimation(){
         $("svg").fadeOut(500, function(){
-            $("#slide-3>#state,#slide-1>#diagram").removeAttr("transform").removeAttr("style");
+            $("#slide-1").find("g#diagram").removeAttr("transform").removeAttr('style');
+            $("#slide-1,#slide-2,#slide-3").removeAttr("style").removeAttr("transform").hide();
             $("#frame").removeAttr("style");
-            $("svg").removeAttr("style").hide();
-            $('svg').fadeIn(500, function(){
+            $(".gears svg").removeAttr("style");
+            $(".svg-control .circle").removeClass('active').eq(0).addClass("active");
+            $('#slide-1,#slide-2,#slide-3').fadeIn(500, function(){
                 startAnimation();
             })
         });
@@ -108,20 +110,19 @@ $(function () {
 
     function startAnimation(){
         window.setTimeout(function(){
-            $('#slide-1').find('g#diagram').stop().animate({'margin-left': 1}, {
+            $('#slide-1').find('g#diagram').stop().animate({'top': 1}, {
                 easing: "linear",
                 duration: 1000,
                 step: function(value){
                     var val = value;
-                    if(val <= 0){return false}
-                    console.log(val);
+                    console.log(value);
                     $(this).attr('transform',"scale("+(val*0.84+1)+")translate(-"+(240*val)+","+(val*53)+")");
                 }});
             window.setTimeout(function(){
                 $(".svg-control .circle").removeClass('active').eq(1).addClass("active");
                 $("#slide-2").stop().animate({opacity: 1}, {duration: 1000});
                 $("#slide-1").stop().animate({opacity: 0}, {duration: 1000});
-            },1300);
+            },1200);
             window.setTimeout(function(){
                 $("#slide-3 > g").attr('transform','scale(2.45)translate(-198,-10)');
                 $("#slide-3").stop().animate({opacity: 0.5}, {duration: 1000});
@@ -142,13 +143,13 @@ $(function () {
             },6000);
             window.setTimeout(function(){
                 $("#frame").stop().animate({opacity: 1},{duration: 1000});
-            },8000);
+            },7500);
             window.setTimeout(function(){
                 $(".gears svg").stop().animate({opacity: 1},{duration: 1000});
-            },8500);
+            },8000);
             window.setTimeout(function(){
                 $(".replay").fadeIn(1000);
-            },12000)
+            },10000)
         },3000);
     }
 
