@@ -470,15 +470,16 @@ div.banner_wrap:before {
       display: none;
     }
     .replay{
-      display:  block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background: #32bc00;
-      height: 80%;
-      z-index: 100;
-      cursor: pointer;
+      text-align: center;
+      font-size : 12px;
+      display   : block;
+      position  : absolute;
+      top       : 60px;
+      left      : 0;
+      width     : 100%;
+      height    : 80%;
+      z-index   : 100;
+      cursor    : pointer;
     }
   }
   .slider-control:after{
