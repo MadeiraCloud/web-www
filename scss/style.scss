@@ -527,6 +527,38 @@ div.banner_wrap:before {
   }
 }
 
+.gears{
+  display: block;
+  position: absolute;
+  height: 300px;
+  left: 0;
+  width: 100%;
+  svg#gears-1{
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    margin-top: -73px;
+    left: 50%;
+    margin-left: -72px;
+    path{
+      fill: #f1f1f1!important;
+    }
+  }
+  svg#gears-2{
+    width: 72px;
+    height: 72px;
+    top: 50%;
+    left: 50%;
+    margin-left: 0;
+    path{
+      opacity: 0.8;
+      fill: #C58DF1!important;
+    }
+  }
+}
+
+
+
 .slider_wrap{
   display: block;
   background: #ffffff;

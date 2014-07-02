@@ -93,7 +93,7 @@ $(function () {
         $('#slide-1').find('g#diagram').animate({'margin-left': 1}, {
             duration: 1000,
             step: function(value){
-                var val = value; 
+                var val = value;
                 $(this).attr('transform',"scale("+(val*0.84+1)+")translate(-"+(240*val)+","+(val*53)+")");
             }});
         window.setTimeout(function(){
@@ -115,8 +115,12 @@ $(function () {
             });
         },6000);
         window.setTimeout(function(){
-            $("#frame").animate({opacity: 1},{duration: 1000})
-        },8000)
+            $("#frame").animate({opacity: 1},{duration: 1000});
+
+        },8000);
+        window.setTimeout(function(){
+            $(".gears svg").animate({opacity: 1},{duration: 1000});
+        },8500);
     },3000);
 
 });
