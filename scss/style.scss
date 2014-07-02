@@ -435,13 +435,17 @@ div.banner_wrap:before {
       -moz-border-radius: 50%;
       border-radius: 50%;
       margin:0 125px;
-      border: 1px solid #ffffff;
+      border: 1px solid #fff;
       cursor: pointer;
+      -webkit-transition: all .2s;
+      -o-transition: all .2s;
+      transition: all .2s;
     }
     .circle.active{
-      background: #ffffff;
+      background: #fff;
       span{
-        color: #ffffff;
+        color: #fff;
+        font-size: 16px;
       }
     }
     .circle:after{
@@ -453,7 +457,7 @@ div.banner_wrap:before {
       top: 4px;
       height: 2px;
       width: 250px;
-      background: #ffffff;
+      background: #fff;
       cursor: none;
     }
     .circle span{
@@ -462,24 +466,38 @@ div.banner_wrap:before {
       left: -70px;
       width: 150px;
       text-align: center;
-      color: #cccccc;
+      color: #aaa;
       font-weight: 100;
       font-size: 14px;
+      -webkit-transition: all .2s;
+      -o-transition: all .2s;
+      transition: all .2s;
     }
     .circle:last-child:after{
       display: none;
     }
     .replay{
-      text-align: center;
-      font-size : 12px;
-      display   : block;
-      position  : absolute;
-      top       : 60px;
-      left      : 0;
-      width     : 100%;
-      height    : 80%;
-      z-index   : 100;
-      cursor    : pointer;
+      text-align  : center;
+      font-size   : 12px;
+      display     : block;
+      position    : absolute;
+      top         : 80px;
+      left        : 50%;
+      margin-left : -40px;
+      width       : 80px;
+      height      : 20px;
+      line-height : 20px;
+      z-index     : 100;
+      cursor      : pointer;
+      display     : none;
+
+      color         : #342b5e;
+      background    : rgba(255,255,255,.6);
+      border-radius : 10px;
+
+      &:hover {
+        background: #fff;
+      }
     }
   }
   .slider-control:after{
