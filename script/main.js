@@ -91,26 +91,28 @@ $(function () {
 
     window.setTimeout(function(){
         $('#slide-1').find('g#diagram').animate({'margin-left': 1}, {
-            duration: 3000,
-            easing: "linear",
+            duration: 1000,
             step: function(value){
-                var val = value;
+                var val = value; 
                 $(this).attr('transform',"scale("+(val*0.84+1)+")translate(-"+(240*val)+","+(val*53)+")");
             }});
         window.setTimeout(function(){
             $("#slide-2").animate({opacity: 1}, {duration: 1000});
             $("#slide-1").animate({opacity: 0}, {duration: 1000});
-        },3000);
+        },1000);
         window.setTimeout(function(){
             $("#slide-3 > g").attr('transform','scale(2.45)translate(-198,-10)');
+            $("#slide-3").animate({opacity: 0.5}, {duration: 1000});
+            $("#slide-2").animate({opacity: 0}, {duration: 1000});
+        }, 5000);
+        window.setTimeout(function(){
             $("#slide-3").animate({opacity: 1}, {
-                duration: 3000,
+                duration: 2000,
                 step: function(value){
-                    var val = 1- value;
+                    var val = (1- value)*2;
                     $('#slide-3 > g').attr('transform', 'scale('+(1+1.45*val)+')translate(-'+(198*val)+',-'+(val*10)+')');
                 }
             });
-            $("#slide-2").animate({opacity: 0}, {duration: 1000});
         },6000);
         window.setTimeout(function(){
             $("#frame").animate({opacity: 1},{duration: 1000})
