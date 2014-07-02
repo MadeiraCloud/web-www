@@ -524,6 +524,11 @@ div.banner_wrap:before {
     width: 100%;
     top: 15%;
     left: 0;
+
+    @media screen and (max-width: 900px) {
+      font-size: 24px;
+    }
+
     h1 {
       color      : #FFF;
       font-size  : 1.4em;
@@ -674,7 +679,7 @@ ul.slider_content{
     text-align: center;
     margin: 0 auto;
     margin-top: 50px;
-    width: 1000px;
+    width: 80%;
     line-height: 30px;
   }
   p.quote_owner{
@@ -785,6 +790,10 @@ ul.slider_content{
   left: 0;
   width: 100%;
   top: 30%;
+
+  @media screen and (max-width: 900px) {
+    top: 35%;
+  }
 }
 
 .banner_btn_group {
