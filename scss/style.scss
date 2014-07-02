@@ -9,27 +9,27 @@
   }
 }
 
-@font-face {
-  font-family : 'Lato';
-  font-weight : 400;
+// @font-face {
+//   font-family : 'Lato';
+//   font-weight : 400;
 
-  src: url('../asset/lato-reg.eot');
-  src: url('../asset/lato-reg.eot?#iefix') format('embedded-opentype'),
-       url('../asset/lato-reg.woff') format('woff'),
-       url('../asset/lato-reg.ttf') format('truetype'),
-       url('../asset/lato-reg.svg#latoregular') format('svg');
-}
+//   src: url('../asset/lato-reg.eot');
+//   src: url('../asset/lato-reg.eot?#iefix') format('embedded-opentype'),
+//        url('../asset/lato-reg.woff') format('woff'),
+//        url('../asset/lato-reg.ttf') format('truetype'),
+//        url('../asset/lato-reg.svg#latoregular') format('svg');
+// }
 
-@font-face {
-  font-family : 'Lato';
-  font-weight : bold;
+// @font-face {
+//   font-family : 'Lato';
+//   font-weight : bold;
 
-  src: url('../asset/lato-bold.eot');
-  src: url('../asset/lato-bold.eot?#iefix') format('embedded-opentype'),
-       url('../asset/lato-bold.woff') format('woff'),
-       url('../asset/lato-bold.ttf') format('truetype'),
-       url('../asset/lato-bold.svg#latoregular') format('svg');
-}
+//   src: url('../asset/lato-bold.eot');
+//   src: url('../asset/lato-bold.eot?#iefix') format('embedded-opentype'),
+//        url('../asset/lato-bold.woff') format('woff'),
+//        url('../asset/lato-bold.ttf') format('truetype'),
+//        url('../asset/lato-bold.svg#latoregular') format('svg');
+// }
 
 $mc2BgColor : #111011;
 html, body {
@@ -313,7 +313,7 @@ $base_logo_width: 250px;
 }
 
 @media screen and (max-width: 980px) {
-  .nav_lnk { font-size : 12px; margin-right : 10px; }
+  .nav_lnk { font-size : 14px; margin-right : 10px; }
 
   .nav_wrap nav {
     @include background-size( ceil($base_logo_width * 0.8), auto );
@@ -361,6 +361,11 @@ $base_logo_width: 250px;
       top  : 18px;
       margin-left : 0 - ceil($base_logo_width * 0.35);
       height : 50px;
+    }
+
+    .nav_lnk.selected:after,
+    .nav_lnk:hover:after {
+      top: 26px;
     }
   }
   .nav_break {
@@ -703,7 +708,8 @@ ul.slider_content{
 
         @include retina() {
           & {
-              background : #eee image-url("slider_arrow@2x.png") 19px center no-repeat;
+              background      : #eee image-url("slider_arrow@2x.png") 19px center no-repeat;
+              background-size : image-width("slider_arrow.png") auto;
             }
         }
 
@@ -714,7 +720,8 @@ ul.slider_content{
 
         @include retina() {
           &:hover {
-            background : #fff image-url("slider_arrow_hover@2x.png") 19px center no-repeat;
+            background      : #fff image-url("slider_arrow_hover@2x.png") 19px center no-repeat;
+            background-size : image-width("slider_arrow.png") auto;
           }
       }
   }
