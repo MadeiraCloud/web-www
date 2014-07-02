@@ -49,7 +49,7 @@ $(function () {
             window.slideInterval = window.setInterval(function(){
                 getStatus();
                 slideTo()
-            }, timeout*4)
+            }, timeout*6)
         }
 
         slideNext();
@@ -86,7 +86,7 @@ $(function () {
     };
     slider({
         selector: ".slider_content",
-        timeout: 800
+        timeout: 500
     });
 
     $(".index_banner").height($(window).height()-120);
@@ -104,7 +104,6 @@ $(function () {
                 startAnimation();
             })
         });
-
     }
 
     function startAnimation(){
