@@ -9,27 +9,37 @@
   }
 }
 
-// @font-face {
-//   font-family : 'Lato';
-//   font-weight : 400;
+@font-face {
+  font-family : 'Lato';
+  font-weight : 400;
 
-//   src: url('../asset/lato-reg.eot');
-//   src: url('../asset/lato-reg.eot?#iefix') format('embedded-opentype'),
-//        url('../asset/lato-reg.woff') format('woff'),
-//        url('../asset/lato-reg.ttf') format('truetype'),
-//        url('../asset/lato-reg.svg#latoregular') format('svg');
-// }
+  src: url('../asset/lato-reg.eot');
+  src: url('../asset/lato-reg.eot?#iefix') format('embedded-opentype'),
+       url('../asset/lato-reg.woff') format('woff'),
+       url('../asset/lato-reg.ttf') format('truetype'),
+       url('../asset/lato-reg.svg#latoregular') format('svg');
+}
 
-// @font-face {
-//   font-family : 'Lato';
-//   font-weight : bold;
+@font-face {
+  font-family : 'Lato';
+  font-weight : bold;
 
-//   src: url('../asset/lato-bold.eot');
-//   src: url('../asset/lato-bold.eot?#iefix') format('embedded-opentype'),
-//        url('../asset/lato-bold.woff') format('woff'),
-//        url('../asset/lato-bold.ttf') format('truetype'),
-//        url('../asset/lato-bold.svg#latoregular') format('svg');
-// }
+  src: url('../asset/lato-bold.eot');
+  src: url('../asset/lato-bold.eot?#iefix') format('embedded-opentype'),
+       url('../asset/lato-bold.woff') format('woff'),
+       url('../asset/lato-bold.ttf') format('truetype'),
+       url('../asset/lato-bold.svg#latoregular') format('svg');
+}
+
+@font-face {
+  font-family : 'Lato';
+  font-weight : 300;
+
+  src: url('../asset/lato-light.eot');
+  src: url('../asset/lato-light.eot?#iefix') format('embedded-opentype'),
+       url('../asset/lato-light.woff') format('woff'),
+       url('../asset/lato-light.ttf') format('truetype')
+}
 
 $mc2BgColor : #111011;
 html, body {
@@ -45,7 +55,7 @@ button,
 input,
 select,
 textarea {
-  font-family  : "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  font-family  : Lato, "Helvetica Neue", "Helvetica", Arial, sans-serif;
 }
 
 ul, li {
@@ -509,7 +519,7 @@ div.banner_wrap:before {
     text-align   : center;
     color        : #DDD;
     font-size    : 30px;
-    font-family  : "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    font-family  : Lato, "Helvetica Neue", "Helvetica", Arial, sans-serif;
     position: absolute;
     width: 100%;
     top: 15%;
@@ -1550,21 +1560,21 @@ footer {
 
 @media (min-width: 1px) {
   body {
-    font-family  : "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    font-family  : Lato, "Helvetica Neue", "Helvetica", Arial, sans-serif;
   }
 
   .locale-en {
-    font-family  : "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    font-family  : Lato, "Helvetica Neue", "Helvetica", Arial, sans-serif;
   }
 
   .locale-zh {
-    font-family  : "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    font-family  : Lato, "Helvetica Neue", "Helvetica", Arial, sans-serif;
   }
 
   .locale-zh button,
   .locale-zh input,
   .locale-zh select,
   .locale-zh textarea {
-    font-family  : "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    font-family  : Lato, "Helvetica Neue", "Helvetica", Arial, sans-serif;
   }
 }
