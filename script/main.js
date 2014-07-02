@@ -110,40 +110,46 @@ $(function () {
 
     function startAnimation(){
         window.setTimeout(function(){
-            $('#slide-1').find('g#diagram').animate({'margin-left': 1}, {
+            $('#slide-1').find('g#diagram').stop().animate({'margin-left': 1}, {
+                easing: "linear",
                 duration: 1000,
                 step: function(value){
                     var val = value;
+                    if(val <= 0){return false}
+                    console.log(val);
                     $(this).attr('transform',"scale("+(val*0.84+1)+")translate(-"+(240*val)+","+(val*53)+")");
                 }});
             window.setTimeout(function(){
                 $(".svg-control .circle").removeClass('active').eq(1).addClass("active");
-                $("#slide-2").animate({opacity: 1}, {duration: 1000});
-                $("#slide-1").animate({opacity: 0}, {duration: 1000});
+                $("#slide-2").stop().animate({opacity: 1}, {duration: 1000});
+                $("#slide-1").stop().animate({opacity: 0}, {duration: 1000});
             },1000);
             window.setTimeout(function(){
                 $("#slide-3 > g").attr('transform','scale(2.45)translate(-198,-10)');
-                $("#slide-3").animate({opacity: 0.5}, {duration: 1000});
-                $("#slide-2").animate({opacity: 0}, {duration: 1000});
+                $("#slide-3").stop().animate({opacity: 0.5}, {duration: 1000});
+                $("#slide-2").stop().animate({opacity: 0}, {duration: 1000});
             }, 5000);
             window.setTimeout(function(){
                 $(".svg-control .circle").removeClass('active').eq(2).addClass("active");
-                $("#slide-3").animate({opacity: 1}, {
-                    duration: 2000,
+                $("#slide-3").stop().animate({opacity: 1}, {
+                    duration: 1500,
+                    easing: "linear",
                     step: function(value){
                         var val = (1- value)*2;
+                        //console.log(val);
+                        if(val>1){return false}
                         $('#slide-3 > g').attr('transform', 'scale('+(1+1.45*val)+')translate(-'+(198*val)+',-'+(val*10)+')');
                     }
                 });
             },6000);
             window.setTimeout(function(){
-                $("#frame").animate({opacity: 1},{duration: 1000});
+                $("#frame").stop().animate({opacity: 1},{duration: 1000});
             },8000);
             window.setTimeout(function(){
-                $(".gears svg").animate({opacity: 1},{duration: 1000});
+                $(".gears svg").stop().animate({opacity: 1},{duration: 1000});
             },8500);
             window.setTimeout(function(){
-                $(".replay").animate({opacity: 1},{duration: 1000});
+                $(".replay").fadeIn(1000);
             },12000)
         },3000);
     }
@@ -152,7 +158,7 @@ $(function () {
 
     $(".replay").click(function(){
         resetAnimation();
-        $(this).animate({opacity: 1},{duration: 500});
+        $(this).fadeOut(1000);
     })
 
 });
