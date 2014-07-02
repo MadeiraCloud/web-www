@@ -1,5 +1,4 @@
 $(function () {
-    "use strict";
     var currentURL = document.URL;
 
     if (currentURL && currentURL.indexOf('/#redirect') !== -1) {
@@ -102,7 +101,7 @@ $(function () {
             $("#frame").removeAttr("style");
             $("svg").removeAttr("style").hide();
             $('svg').fadeIn(500, function(){
-                startAnimation()
+                startAnimation();
             })
         });
 
@@ -123,7 +122,7 @@ $(function () {
                 $(".svg-control .circle").removeClass('active').eq(1).addClass("active");
                 $("#slide-2").stop().animate({opacity: 1}, {duration: 1000});
                 $("#slide-1").stop().animate({opacity: 0}, {duration: 1000});
-            },1000);
+            },1300);
             window.setTimeout(function(){
                 $("#slide-3 > g").attr('transform','scale(2.45)translate(-198,-10)');
                 $("#slide-3").stop().animate({opacity: 0.5}, {duration: 1000});
