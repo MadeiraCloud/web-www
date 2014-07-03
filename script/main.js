@@ -115,7 +115,6 @@ $(function () {
                 duration: 1000,
                 step: function(value){
                     var val = value;
-                    console.log(value);
                     $(this).attr('transform',"scale("+(val*0.84+1)+")translate(-"+(240*val)+","+(val*53)+")");
                 }});
             window.setTimeout(function(){
@@ -135,7 +134,6 @@ $(function () {
                     easing: "linear",
                     step: function(value){
                         var val = (1- value)*2;
-                        //console.log(val);
                         if(val>1){return false}
                         $('#slide-3 > g').attr('transform', 'scale('+(1+1.45*val)+')translate(-'+(198*val)+',-'+(val*10)+')');
                     }
