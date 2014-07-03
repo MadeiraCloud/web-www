@@ -579,6 +579,9 @@ $base_logo_width: 250px;
   }
   #frame{
     opacity: 0;
+    text{
+      font-family: inherit;
+    }
   }
 }
 
