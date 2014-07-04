@@ -1002,22 +1002,7 @@ path.dash {
   }
 }
 
-#host-1 {
-  transform: translate(212px,0);
-  opacity: 1;
-  animation: drop 1s ease-in-out;
-}
 
-@keyframes drop {
-  from {
-    transform: translate(212px, -50px);
-    opacity: 0;
-  }
-  to {
-    transform: translate(212px,0);
-    opacity: 1;
-  }
-}
 .hiw {
   color    : #bbc5d5;
   font-size: 16px;
