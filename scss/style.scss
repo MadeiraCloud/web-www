@@ -1417,7 +1417,7 @@ footer {
 
 .network_wrap {
   float : right;
-  width: 370px;
+  width: 425px;
 
   li {
     width       : 50px;
@@ -1490,10 +1490,19 @@ footer {
 
   .github   { background-position : -100px -250px; }
   .twitter  { background-position : -150px -250px; }
-  .facebook { background-position : -200px -250px; }
   .gplus    { background-position : -250px -250px; }
   .vimeo    { background-position : -300px -250px; }
   .linkedin { background-position : -350px -250px; }
+  .facebook {
+    background: url("../asset/facebook.png") no-repeat;
+    _background-image: url("../asset/facebook.png") no-repeat;
+    background-size: 50px;
+  }
+  .youtube {
+    background: url("../asset/youtube.png") no-repeat;
+    _background-image: url("../asset/youtube.png") no-repeat;
+    background-size: 50px;
+  }
 }
 
 
