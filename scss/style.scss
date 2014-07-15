@@ -1375,6 +1375,7 @@ footer {
   width       : 90%;
   margin      : 0 auto;
   line-height : 24px;
+  text-align: center;
 
   a {
     color : #3781c9;
@@ -1394,18 +1395,32 @@ footer {
   border: 1px solid #999;
   border-radius: 4px;
   background-image : image-url("arn-dark.png");
-  @include background-size( image-width("arn-dark.png")/2, image-height("arn-dark.png")/2 );
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
   width: 276px;
-  height: 85px;
-  margin: 5px auto;
-
-  @media screen and (max-width: 1000px) and (min-width: 821px) {
-    float: right;
-    margin-top: 20px;
+  height: 123px;
+  display: inline-block;
+  @media screen and (max-width: 1700px) and (min-width: 1441px) {
+    width: 200px;
+    height: 97px;
+  }
+  @media screen and (max-width: 1440px) and (min-width: 1281px) {
+    width: 150px;
+    height: 73px;
+    margin: 0;
+  }
+    @media screen and (max-width: 1280px) and (min-width: 821px) {
+      margin: 5px;
+      width: 200px;
+      height: 97px;
   }
 
    @media screen and (max-width: 820px) {
-    margin: 20px auto;
+    margin: 10px auto;
    }
 
    a {
@@ -1414,7 +1429,50 @@ footer {
      display : block;
    }
 }
+.reinvent-sponsoring{
+  display: inline-block;
+  line-height: 0;
+  border: 1px solid #999999;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  margin: 0 5px;
+  overflow: hidden;
+  width: 276px;
+  height: 123px;
+  background: url("/asset/reinvent-sponsoring.jpg") no-repeat center;
+  background-size: 100% ;
+  @media screen and (max-width: 1700px) and (min-width: 1441px) {
+    width: 200px;
+    height: 97px;
+  }
+  @media screen and (max-width: 1440px) and (min-width: 1281px) {
+    width: 150px;
+    height: 73px;
+    margin: 0;
+  }
+  @media screen and (max-width: 1280px) and (min-width: 821px) {
+    margin: 5px;
+    width: 200px;
+    height: 97px;
+  }
 
+  @media screen and (max-width: 820px) {
+    margin: 10px auto;
+  }
+  img{
+    max-width: 100%;
+  }
+}
+
+.footer_partners{
+  @media screen and (max-width: 1280px) and (min-width: 821px) {
+    float: right;
+  }
+}
+.copyright{
+  text-align: left;
+}
 .network_wrap {
   float : right;
   width: 425px;
