@@ -615,7 +615,19 @@ $base_logo_width: 250px;
   }
 }
 
-
+.solutions{
+  ul.solutions-list{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+    li{
+      font-size: 26px;
+      color: #cccccc;
+      height: 40px;
+    }
+  }
+}
 
 .slider_wrap{
   display: block;
