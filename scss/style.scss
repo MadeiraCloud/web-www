@@ -655,7 +655,7 @@ $base_logo_width: 250px;
     img{
       display: block;
       max-width: 100%;
-      height: 250px;
+      max-height: 250px;
       margin: 0 auto;
     }
     h3{
@@ -680,6 +680,20 @@ $base_logo_width: 250px;
       }
     }
 
+  }
+  @media screen and (max-width: 500px) {
+    .solution:nth-child(even) .pull-right{
+      display: none;
+    }
+    .solution:nth-child(odd) .pull-left{
+      display: none;
+    }
+    .solution:nth-child(even) .pull-left{
+      width: 100%;
+    }
+    .solution:nth-child(odd) .pull-right{
+      width: 100%;
+    }
   }
   section.solution:after{
     clear: both;
