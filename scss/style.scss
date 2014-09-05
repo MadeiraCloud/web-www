@@ -627,7 +627,7 @@ $base_logo_width: 250px;
   section.solution{
     clear: both;
     width: 90%;
-    max-width: 1200px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 0;
     border-bottom: 1px solid #DDDDDD;
@@ -640,16 +640,18 @@ $base_logo_width: 250px;
     }
     p{
       font-size: 16px;
+      margin: 0;
     }
     p.description{
       font-size: 16px;
-      //color: #999999;
+      color: #888888;
+      margin-bottom: 20px;
     }
     img{
       display: block;
       max-width: 100%;
       background: #cccccc;
-      max-height: 370px;
+      max-height: 250px;
     }
     h3{
       font-size: 20px;
