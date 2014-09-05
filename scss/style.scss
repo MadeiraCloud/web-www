@@ -616,6 +616,7 @@ $base_logo_width: 250px;
 }
 
 .solutions{
+  background: #ffffff;
   ul.solutions-list{
     width: 90%;
     max-width: 1200px;
@@ -623,16 +624,45 @@ $base_logo_width: 250px;
     padding: 40px 0;
     li{
       font-size: 26px;
-      color: #cccccc;
+      color: #666;
       height: 40px;
     }
   }
-  section{
+  section.solution{
+    clear: both;
     width: 90%;
     max-width: 1200px;
-    margin: 20px auto;
-    color: #cccccc;
+    margin: 0 auto;
+    padding: 20px 0;
+    border-bottom: 1px solid #DDDDDD;
+    color: #666666;
+    .pull-left{
+      width: 50%;
+    }
+    .pull-right{
+      width: 50%;
+    }
+    .pull-right, .pull-right{
+      img{
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        background: #cccccc;
+      }
+    }
   }
+  section.solution:after{
+    clear: both;
+    display: block;
+    content: "";
+  }
+}
+
+.pull-left{
+  float: left;
+}
+.pull-right{
+  float: right;
 }
 
 .slider_wrap{
