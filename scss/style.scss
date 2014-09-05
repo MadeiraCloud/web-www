@@ -627,11 +627,11 @@ $base_logo_width: 250px;
   section.solution{
     clear: both;
     width: 90%;
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0;
     border-bottom: 1px solid #DDDDDD;
-    color: #666666;
+    color: #888;
     .pull-left{
       width: 50%;
     }
@@ -643,19 +643,19 @@ $base_logo_width: 250px;
       margin: 0;
     }
     p.description{
-      font-size: 16px;
-      color: #888888;
+      font-size: 18px;
+      color: #666;
       margin-bottom: 20px;
     }
     img{
       display: block;
       max-width: 100%;
-      background: #cccccc;
-      max-height: 250px;
+      height: 250px;
     }
     h3{
-      font-size: 20px;
+      font-size: 23px;
       margin-top: 40px;
+      color: #666666;
     }
   }
   section.solution:after{
