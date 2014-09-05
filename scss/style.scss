@@ -663,11 +663,11 @@ $base_logo_width: 250px;
       font-size: 23px;
       margin-top: 40px;
       color: #666666;
+      padding-left: 30px;
     }
-    .pull-right,.pull-left{
-      &>div{
+    .solution-text{
         margin-bottom: 15px;
-      }
+        padding-left: 30px;
     }
     ul.so-desc-list{
       li{
