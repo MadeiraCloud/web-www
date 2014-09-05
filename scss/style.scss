@@ -617,23 +617,19 @@ $base_logo_width: 250px;
 
 .solutions{
   background: #ffffff;
-  ul.solutions-list{
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 0;
-    li{
-      font-size: 26px;
-      color: #666;
-      height: 40px;
-    }
+  h2{
+    margin: 0;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 30px;
+    color: #666;
   }
   section.solution{
     clear: both;
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px 0;
+    padding: 0;
     border-bottom: 1px solid #DDDDDD;
     color: #666666;
     .pull-left{
@@ -642,13 +638,14 @@ $base_logo_width: 250px;
     .pull-right{
       width: 50%;
     }
-    .pull-right, .pull-right{
-      img{
-        display: block;
-        width: 100%;
-        max-width: 100%;
-        background: #cccccc;
-      }
+    img{
+      display: block;
+      max-width: 100%;
+      background: #cccccc;
+      max-height: 350px;
+    }
+    h3{
+      font-size: 20px;
     }
   }
   section.solution:after{
