@@ -638,14 +638,22 @@ $base_logo_width: 250px;
     .pull-right{
       width: 50%;
     }
+    p{
+      font-size: 16px;
+    }
+    p.description{
+      font-size: 16px;
+      //color: #999999;
+    }
     img{
       display: block;
       max-width: 100%;
       background: #cccccc;
-      max-height: 350px;
+      max-height: 370px;
     }
     h3{
       font-size: 20px;
+      margin-top: 40px;
     }
   }
   section.solution:after{
