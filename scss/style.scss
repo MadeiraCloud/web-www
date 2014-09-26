@@ -376,11 +376,10 @@ $base_logo_width: 250px;
     }
   }
   &.main-line{
-    background: #FFF;
-    font-size: 19px;
-    color: #878CAF;
-    padding: 20px;
-    padding-top: 14px;
+    background  : #FFF;
+    font-size   : 19px;
+    color       : #75789D;
+    padding     : 14px 20px 20px 20px;
   }
   .cost-points-tag{
     display: block;
@@ -441,38 +440,40 @@ $base_logo_width: 250px;
     }
   }
   .free-points{
-    color: #55A2EA;
+    color: #4A90E2;
     span{
       font-size: 20px;
       font-weight: 500;
     }
   }
-  .point-costs{
-    color: #96A9C1;
-    height: 55px;
-    width: 260px;
-    margin: 0 auto;
-    margin-top: -10px;
-    line-height: 45px;
-    vertical-align: top;
-    -webkit-border-radius: 33px;
-    -moz-border-radius: 33px;
-    border-radius: 33px;
-    border: 2px solid #55A2EA;
-    span.pro-cost-value{
-      line-height: 15px;
-      margin: 10px 0 0 10px;
-      width: 100px;
-      display: inline-block;
-      font-size: 13px;
-      color: #55A2EA;
+  .point-costs {
+    color          : #727880;
+    height         : 55px;
+    width          : 260px;
+    margin         : 0 auto;
+    margin-top     : -10px;
+    line-height    : 45px;
+    vertical-align : top;
+
+    border-radius : 33px;
+    border        : 2px solid #4A90E2;
+
+    span.pro-cost-value {
+      line-height : 15px;
+      margin      : 10px 0 0 10px;
+      width       : 100px;
+      display     : inline-block;
+      font-size   : 13px;
+      color       : #4A90E2;
+
       span{
-        display: block;
-        font-size: 20px;
-        font-weight: 500;
+          display     : block;
+          font-size   : 20px;
+          font-weight : 500;
+
         i{
-          font-size: 13px;
-          font-style: normal;
+          font-size  : 13px;
+          font-style : normal;
         }
       }
     }
@@ -481,15 +482,18 @@ $base_logo_width: 250px;
     font-size: 13px;
   }
 }
-.btn-large{
-  display: inline-block;
-  line-height: 1.2em;
-  margin: 30px auto;
-  padding: 10px 80px;
-  font-size: 25px;
+.banner_btn.btn-pricing{
+  display     : inline-block;
+  line-height : 1.2em;
+  margin      : 30px auto;
+  padding     : 10px 80px;
+  font-size   : 25px;
+  font-weight : 400;
+
   span{
-    display: block;
-    font-size: 13px;
+    display     : block;
+    font-size   : 13px;
+    font-weight : 100;
   }
 }
 .enterprise-package{
@@ -505,54 +509,68 @@ $base_logo_width: 250px;
   }
 }
 .btn-contact-us{
-  display: block;
-  float: right;
-  font-size: 18px;
-  background: #468EE5;
-  &:hover{
-    background: #0A73DA;
+  display       : block;
+  float         : right;
+  font-size     : 18px;
+  background    : #468EE5;
+  padding       : 10px 40px;
+  line-height   : 30px;
+  height        : 38px;
+  border-radius : 4px;
+  color         : #fff;
+
+  &:hover {
+    background : #0A73DA;
+    color      : #fff;
   }
 }
 
-section.price-faqs{
-  background: #f2f2f6;
-  padding-top: 40px;
-  .faq-content{
-    margin: 0 auto;
-    width: 80%;
-    max-width: 1200px;
+section.price-faqs {
+
+  background : #f2f2f6;
+  padding    : 40px;
+
+  h3 {
+    font-size     : 30px;
+    text-align    : center;
+    font-weight   : 100;
+    color         : #878CAF;
+    margin-bottom : 0;
   }
-  h3{
-    font-size: 30px;
-    text-align: center;
-    font-weight: 100;
-    color: #878CAF;
-    margin-bottom: 0;
+
+  .faq-content {
+    margin         : 0 auto;
+    width          : 75%;
+    max-width      : 960px;
+    letter-spacing : 1.2;
   }
-  .price-faq-col{
-    display: block;
-    box-sizing: border-box;
-    width: 50%;
-    float: left;
-    padding: 50px;
-    h4{
-      font-size: 18px;
-      color: #79798b;
+
+    h4 {
+      font-size : 20px;
+      color     : #4B4B5F;
+      margin-top: 60px;
     }
-    p{
-      color: #878CAF;
-      font-weight: 100;
-      line-height: 25px;
-      a{
-        height: 20px;
-        text-decoration: underline;
+
+    p {
+      color       : #383942;
+      font-weight : 100;
+      line-height : 25px;
+
+      a {
+        color           : #468EE5;
+        height          : 20px;
+        text-decoration : underline;
+
+        &:hover {
+          color: #0A73DA;
+        }
       }
+
     }
-    ul.margin{
+    ul.margin {
       margin: 20px;
       color: #878CAF;
     }
-  }
 }
 
 
