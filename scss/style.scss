@@ -1361,7 +1361,7 @@ path.dash {
   vertical-align: baseline;
   line-height: 60px;
   text-align: left;
-  padding-left: 100px;
+  padding-left: 80px;
   position: relative;
   &:last-child{
     border-bottom: 0;
@@ -1369,11 +1369,26 @@ path.dash {
     -moz-border-radius: 0 0 5px 5px;
     border-radius: 0 0 5px 5px;
   }
+  &:before{
+    display: block;
+    content: " ";
+    width: 10px;
+    height: 10px;
+    background: #C6C8E0;
+    position: absolute;
+    top: 50%;
+    left: 55px;
+    margin-top: -3px;
+    border-radius: 5px;
+  }
   &.compact{
     padding: 0;
     margin: 0;
     text-align: inherit;
     line-height: inherit;
+    &:before{
+      display: none;
+    }
   }
   &.main-line{
     background: #ffffff;
