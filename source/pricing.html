@@ -1,0 +1,118 @@
+<% include _header %>
+
+    <section class="feature_banner">
+        Pricing
+    </section>
+
+    <section class="pricing">
+        <div class="price-table">
+            <div class="price-line clearfix compact">
+                <div class="price-block">
+                    <h2 class="price-title free-price-title">
+                        FREE
+                    </h2>
+                    <div class="free-points"><span>3,600</span> instance hour/month</div>
+                </div>
+                <div class="price-block">
+                    <h2 class="price-title pro-price-title">
+                        PRO
+                    </h2>
+                    <div class="point-costs">
+                        Pay per Usage: <span class="pro-cost-value"><span>$0.01<i>/</i></span>instance hour</span>
+                    </div>
+                    <div class="price-bonus-hint">With 3,600 free instance hour/month</div>
+                </div>
+            </div>
+            <div class="price-line compact main-line">
+                Enjoy all features of VisualOps with <strong>FREE</strong> instance hour each month.
+            </div>
+            <div class="price-line">
+                Design AWS infrastructure. WYSIWYG
+            </div>
+            <div class="price-line">
+                Manage application lifecycle. Run, stop, update & terminate
+            </div>
+            <div class="price-line">
+                Ensure Instance State. Real-time monitoring of app changes.
+                <div class="cost-points-tag">Cost <br/>Instance Hour</div>
+            </div>
+            <div class="price-line">
+                Import Existing AWS infrastructure.
+                <div class="cost-points-tag">Cost <br/>Instance Hour</div>
+            </div>
+            <div class="price-line compact main-line">
+                <a class="banner_btn btn-large" href="/register/">
+                    Get Started Free
+                    <span>No Credit Card Required Upfront</span>
+                </a>
+            </div>
+        </div>
+        <div class="enterprise-package clearfix">
+            <p>
+                Looking for an <strong>Enterprise</strong> Package?
+            </p>
+            <a class="banner_btn btn-contact-us" href="mailto:welcome@visualops.com">Contact US</a>
+        </div>
+    </section>
+    <section class="price-faqs clearfix">
+        <h3>FAQ</h3>
+        <div class="price-faq-col">
+            <div class="price-faq">
+                <h4>1. How is usage point counted?</h4>
+                <p>
+                    Instance hour are used when instances enable <a
+                        href="http://docs.visualops.io/getting_started/instance_state.html">Instance State</a> or when apps enable
+                    <a href="http://docs.visualops.io/app_management/track_app_changes.html">change monitoring</a>. If an instance has both Instance State and Change Monitoring enabled, it will consume 1 instance hour per hour.
+                </p>
+                <p>
+                    For example, if you have a running app containing 10 instances, enabling both Instance State and change monitoring, it would consume <code>240 points</code> per day. For a 30-day month, it would consume <code>7,200 points</code> if running continuously.
+                </p>
+                <p>A stopped app will not not use up any of your instance hours.</p>
+            </div>
+            <div class="price-faq">
+                <h4>2. How do I upgrade to become a paid user?</h4>
+                <p>You can upgrade to the Pro plan at any time simply by providing your billing information to our secure 3rd party payment service Chargify. Click on the user menu in the top right corner of VisualOps IDE, then selct "Billing". Here you can upgrade your account and review your usage. In the Billing window, open "Provide Billing Information". A new browser window will open to provide Chargify with the necessary details. Once this is done just switch back to VisualOps IDE and you will find your account has been instantly upgraded to the Pro plan.</p>
+            </div>
+        </div>
+        <div class="price-faq-col">
+            <div class="price-faq">
+                <h4>3. What is the billing cycle?</h4>
+                <p>Each month, your account will be renewed with 3,600 free instance hour for both our free and paid users.</p>
+                <p>
+                    If you are paid user, your billing day will be the same day that your free quota is renewed. On that day, we will charge you according to the usage of the month just gone.
+                </p>
+                <p>
+                    For users registered before we launched the price plan, your billing day will be the same date monthly as the day you first signed in to VisualOps, after the price plan was launched.
+                </p>
+                <p>
+                    For users registered after we launched the price plan, your billing day will be the same date monthly as the day you signed up to VisualOps.
+                </p>
+                <p>
+                    If your billing date is between the 29th - 31st of the month, you will automatically be reset to the 28th of the month.
+                </p>
+                <p>
+                    For example, a subscription created on October 31st in a non-leap year, the subsequent billing dates will be:
+                </p>
+            <pre><code>
+    November 30
+    December 30
+    January 30
+    February 28 and then the 28th of each month thereafter.
+            </code></pre>
+                <p>
+                    In a leap year, the billing date will remain the 29th until the following February when it will reset to the 28th.
+                </p>
+            </div>
+            <div class="price-faq">
+                <h4>4. I am a free user. What if I run out of free instance hours?</h4>
+                <p>If you run out of free instance hours, your VisualOps account will be set in a limited state. You will no longer be able to enjoy the following features: importing VPC, ensuring states, monitoring resource changes and basic app operations, unless you upgreade to the pro plan or your free instance hours are renewed.</p>
+            </div>
+            <div class="price-faq">
+                <h4>5. I am a paid user. What would happen if I failed to pay?</h4>
+                <p>If we are unable to charge your card after 3 attempts, your VisualOps account will be set in a limited state. You will no longer be able to enjoy the following features: importing VPC, ensuring states, monitoring resource changes and basic app operations, until you update your billing information or your free instance hours are renewed.</p>
+            </div>
+        </div>
+    </section>
+
+<% include _interested %>
+<% include _footer %>

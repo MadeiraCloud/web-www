@@ -1333,6 +1333,214 @@ path.dash {
   }
 }
 
+
+/* Pricing */
+
+.pricing{
+  padding-top: 80px;
+  padding-bottom: 20px;
+  background: #ffffff;
+  text-align: center;
+  font-weight: 100;
+}
+.price-table{
+  width: 80%;
+  max-width: 650px;
+  margin: 0 auto;
+  background: #fbfbfc;
+  border: 1px solid #C6C8E0;
+  display: block;
+  position: relative;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.price-line{
+  border-bottom: 1px solid #C6C8E0;
+  min-height: 65px;
+  vertical-align: baseline;
+  line-height: 60px;
+  text-align: left;
+  padding-left: 100px;
+  position: relative;
+  &:last-child{
+    border-bottom: 0;
+    -webkit-border-radius: 0 0 5px 5px;
+    -moz-border-radius: 0 0 5px 5px;
+    border-radius: 0 0 5px 5px;
+  }
+  &.compact{
+    padding: 0;
+    margin: 0;
+    text-align: inherit;
+    line-height: inherit;
+  }
+  &.main-line{
+    background: #ffffff;
+    font-size: 19px;
+    color: #878caf;
+    line-height: 65px;
+  }
+  .cost-points-tag{
+    display: block;
+    position: absolute;
+    padding-top: 5px;
+    top: 16px;
+    right: 10px;
+    width: 96px;
+    height: 30px;
+    line-height: 1;
+    color: #ffffff;
+    background: #f7a700;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    border-radius: 18px;
+  }
+}
+.price-block{
+  width: 50%;
+  height: 200px;
+  display: block;
+  background: #EDEEF6;
+  box-sizing: border-box;
+  float: left;
+  -webkit-transition: background 0.3s;
+  -moz-transition: background 0.3s;
+  -ms-transition: background 0.3s;
+  -o-transition: background 0.3s;
+  transition: background 0.3s;
+  &:hover{
+    background: #F5F6FB;
+  }
+  &:first-child{
+    border-right: 1px solid #C6C8E0;
+    -webkit-border-radius: 5px 0 0 0;
+    -moz-border-radius: 5px 0 0 0;
+    border-radius: 5px 0 0 0;
+  }
+  &:last-child{
+    border-left: 0px solid #C6C8E0;
+    -webkit-border-radius: 0 5px 0 0;
+    -moz-border-radius: 0 5px 0 0;
+    border-radius: 0 5px 0 0;
+  }
+  h2.price-title{
+    text-align: center;
+    font-size: 33px;
+    margin: 35px 0;
+    font-weight: 500;
+    &.free-price-title{
+      color: #1ec725;
+    }
+    &.pro-price-title{
+      color: #6369a2;
+    }
+  }
+  .free-points{
+    color: #55A2EA;
+    span{
+      font-size: 20px;
+      font-weight: 500;
+    }
+  }
+  .point-costs{
+    color: #96A9C1;
+    height: 55px;
+    width: 260px;
+    margin: 0 auto;
+    margin-top: -10px;
+    line-height: 45px;
+    vertical-align: top;
+    -webkit-border-radius: 33px;
+    -moz-border-radius: 33px;
+    border-radius: 33px;
+    border: 2px solid #55A2EA;
+    span.pro-cost-value{
+      line-height: 15px;
+      margin: 10px 0 0 10px;
+      width: 100px;
+      display: inline-block;
+      font-size: 13px;
+      color: #55A2EA;
+      span{
+        display: block;
+        font-size: 20px;
+        font-weight: 500;
+        i{
+          font-size: 13px;
+          font-style: normal;
+        }
+      }
+    }
+  }
+  .price-bonus-hint{
+    font-size: 13px;
+  }
+}
+.btn-large{
+  display: inline-block;
+  line-height: 1.2em;
+  margin: 30px auto;
+  padding: 10px 80px;
+  font-size: 25px;
+  span{
+    display: block;
+    font-size: 13px;
+  }
+}
+.enterprise-package{
+  max-width: 650px;
+  margin: 30px auto;
+  p{
+    display: block;
+    float: left;
+    font-size: 26px;
+    line-height: 40px;
+    color: #797a8b;
+    margin: 0
+  }
+}
+.btn-contact-us{
+  display: block;
+  float: right;
+  font-size: 18px;
+  background: #468EE5;
+  &:hover{
+    background: #0A73DA;
+  }
+}
+
+section.price-faqs{
+  margin: 0 auto;
+  padding: 20px 300px;
+  background: #f2f2f6;
+  h3{
+    font-size: 30px;
+    text-align: center;
+    font-weight: 100;
+    color: #878CAF;
+    margin-bottom: 0;
+  }
+  .price-faq-col{
+    display: block;
+    box-sizing: border-box;
+    width: 50%;
+    float: left;
+    padding: 50px;
+    h4{
+      font-size: 18px;
+      color: #79798b;
+    }
+    p{
+      color: #878CAF;
+      font-weight: 100;
+      line-height: 20px;
+    }
+  }
+}
 @media screen and (max-width : 580px) {
   .faq {
     article:before {
