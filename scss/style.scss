@@ -1552,7 +1552,15 @@ section.price-faqs{
     p{
       color: #878CAF;
       font-weight: 100;
-      line-height: 20px;
+      line-height: 25px;
+      a{
+        height: 20px;
+        text-decoration: underline;
+      }
+    }
+    ul.margin{
+      margin: 20px;
+      color: #878CAF;
     }
   }
 }
