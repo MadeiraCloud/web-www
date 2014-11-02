@@ -317,6 +317,12 @@ $base_logo_width: 250px;
 
 .nav_ide { border-radius : 4px; }
 
+@media screen and (max-width: 1280px){
+  .nav_lnk{
+    margin-right: 20px;
+  }
+}
+
 @media screen and (max-width: 1170px) {
   /* Hide "Open IDE" and "Login" for small screen */
   .nav_user { display : none; }
@@ -337,18 +343,13 @@ $base_logo_width: 250px;
 // @media screen and (max-width: 840px) {
 //   .nav_lnk { font-size : 12px; margin-right : 20px; }
 // }
-
-@media screen and (max-width: 760px) {
-  .nav_wrap nav {
-    @include background-size( ceil($base_logo_width * 0.8), auto );
-
-    .nav_home_lnk {
-      width : ceil($base_logo_width * 0.8);
-    }
+@media screen and (max-width: 800px) {
+  .nav_wrap nav .nav_home_lnk {
+    width: ceil($base_logo_width * 0.8);
   }
 }
 
-@media screen and (max-width: 670px) {
+@media screen and (max-width: 760px) {
   .nav_wrap nav {
     @include background-size( ceil($base_logo_width * 0.7), auto );
 
@@ -358,7 +359,7 @@ $base_logo_width: 250px;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 720px) {
   .nav_wrap {
     position : absolute;
 
