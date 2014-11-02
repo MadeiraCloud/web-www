@@ -448,26 +448,24 @@ $base_logo_width: 250px;
   }
   .point-costs {
     color          : #727880;
-    height         : 55px;
-    width          : 260px;
+    height         : 60px;
+    width          : 300px;
     margin         : 0 auto;
-    margin-top     : -10px;
-    line-height    : 45px;
+    margin-top     : -3px;
+    line-height    : 27px;
     vertical-align : top;
-
-    border-radius : 33px;
-    border        : 2px solid #4A90E2;
+    border-radius  : 30px;
+    border         : 2px solid #4A90E2;
 
     span.pro-cost-value {
       line-height : 15px;
       margin      : 10px 0 0 10px;
-      width       : 100px;
+      width       : 100%;
       display     : inline-block;
       font-size   : 13px;
       color       : #4A90E2;
 
       span{
-          display     : block;
           font-size   : 20px;
           font-weight : 500;
 
@@ -478,10 +476,11 @@ $base_logo_width: 250px;
       }
     }
   }
-  .price-bonus-hint{
-    font-size: 13px;
-  }
 }
+.price-bonus-hint{
+  font-size: 13px;
+}
+
 .banner_btn.btn-pricing{
   display     : inline-block;
   line-height : 1.2em;
