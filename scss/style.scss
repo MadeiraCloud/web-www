@@ -402,9 +402,23 @@ $base_logo_width: 250px;
           border-radius : 30px;
           border        : 1px solid #D6E7F7;
           background    : rgb(239, 239, 247);
-          line-height   : 10px;
-          height        : 14px;
+          line-height   : 14px;
+          // height        : 14px;
           padding       : 8px;
+          
+          @media screen and (max-width: 930px) {
+            & {
+              margin: 4px 25%;
+            }
+          }
+
+          @media screen and (max-width: 640px) {
+            & {
+              margin: 4px 10%;
+              width: 80%;
+            }
+          }
+
         }
 
         &:before {
