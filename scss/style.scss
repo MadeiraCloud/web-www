@@ -320,84 +320,122 @@ $base_logo_width: 250px;
 
 /* Pricing */
 
-.pricing{
-  padding-top: 80px;
-  padding-bottom: 20px;
-  background: #ffffff;
-  text-align: center;
-  font-weight: 100;
+.pricing {
+  padding-top    : 80px;
+  padding-bottom : 20px;
+  background     : #ffffff;
+  text-align     : center;
+  font-weight    : 100;
 }
-.price-table{
-  width: 80%;
-  max-width: 650px;
-  margin: 0 auto;
-  background: #fbfbfc;
-  border: 1px solid #C6C8E0;
-  display: block;
-  position: relative;
-  box-sizing: border-box;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+
+.price-table {
+  width         : 80%;
+  max-width     : 800px;
+  margin        : 0 auto;
+  background    : #fbfbfc;
+  border        : 1px solid #C6C8E0;
+  display       : block;
+  position      : relative;
+  box-sizing    : border-box;
+  border-radius : 5px;
 }
-.price-line{
-  border-bottom: 1px solid #C6C8E0;
-  vertical-align: baseline;
-  line-height: 1.3;
-  text-align: left;
-  position: relative;
-  min-height: 20px;
-  padding: 18px 100px 24px 80px;
-  &:last-child{
+.price-line {
+  border-bottom  : 1px solid #C6C8E0;
+  vertical-align : baseline;
+  line-height    : 1.3;
+  text-align     : left;
+  position       : relative;
+  min-height     : 20px;
+  padding        : 18px 100px 24px 80px;
+
+  &:last-child {
     border-bottom: 0;
     -webkit-border-radius: 0 0 5px 5px;
     -moz-border-radius: 0 0 5px 5px;
     border-radius: 0 0 5px 5px;
   }
-  &:before{
-    display: block;
-    content: " ";
-    width: 10px;
-    height: 10px;
-    background: #C6C8E0;
-    position: absolute;
-    top: 50%;
-    left: 55px;
-    margin-top: -3px;
-    border-radius: 5px;
+
+  &:before {
+    display       : block;
+    content       : " ";
+    width         : 10px;
+    height        : 10px;
+    background    : #C6C8E0;
+    position      : absolute;
+    top           : 50%;
+    left          : 55px;
+    margin-top    : -3px;
+    border-radius : 5px;
   }
-  &.compact{
-    padding: 0;
-    margin: 0;
-    text-align: inherit;
-    line-height: inherit;
-    &:before{
+
+  &.compact {
+    padding     : 0;
+    margin      : 0;
+    text-align  : inherit;
+    line-height : inherit;
+
+    &:before {
       display: none;
     }
   }
-  &.main-line{
+
+  &.main-line {
     background  : #FFF;
     font-size   : 19px;
     color       : #75789D;
     padding     : 14px 20px 20px 20px;
+
+    .def {
+        font-size : 13px;
+        color     : #0A73DA;
+        position  : relative;
+        width     : 80%;
+        margin    : 0 auto;
+
+        em {
+          font-style    : normal;
+          border-bottom : 1px dashed #0A73DA;
+        }
+
+        span {
+          display       : inline-block;
+          border-radius : 30px;
+          border        : 1px solid #D6E7F7;
+          background    : rgb(239, 239, 247);
+          line-height   : 10px;
+          height        : 14px;
+          padding       : 8px;
+        }
+
+        &:before {
+          content       : "i";
+          display       : inline-block;
+          width         : 16px;
+          height        : 16px;
+          border-radius : 50%;
+          color         : #fff;
+          background    : #0A73DA;
+          line-height   : 11px;
+          margin-right  : 4px;
+        }
+      }
   }
-  .cost-points-tag{
-    display: block;
-    position: absolute;
-    padding-top: 2px;
-    top: 16px;
-    right: 10px;
-    width: 96px;
-    height: 32px;
-    line-height: 1;
-    color: #ffffff;
-    background: #f7a700;
-    font-size: 12px;
-    font-weight: 100;
-    text-align: center;
-    -webkit-border-radius: 18px;
-    -moz-border-radius: 18px;
-    border-radius: 18px;
+
+  .cost-points-tag {
+    display       : block;
+    position      : absolute;
+    padding-top   : 2px;
+    top           : 16px;
+    right         : 10px;
+    width         : 96px;
+    height        : 32px;
+    line-height   : 1;
+    color         : #ffffff;
+    background    : #f7a700;
+    font-size     : 12px;
+    font-weight   : 100;
+    text-align    : center;
+    border-radius : 18px;
   }
 }
 .price-block{
@@ -427,58 +465,65 @@ $base_logo_width: 250px;
     -moz-border-radius: 0 5px 0 0;
     border-radius: 0 5px 0 0;
   }
-  h2.price-title{
-    text-align: center;
-    font-size: 33px;
-    margin: 35px 0;
-    font-weight: 500;
-    &.free-price-title{
+
+.price-title {
+    text-align  : center;
+    font-size   : 33px;
+    margin      : 35px 0;
+    font-weight : 500;
+
+    &.free-price-title {
       color: #1ec725;
     }
-    &.pro-price-title{
+
+    &.pro-price-title {
       color: #6369a2;
     }
   }
-  .free-points{
+  .free-points {
     color: #4A90E2;
     span{
       font-size: 20px;
       font-weight: 500;
     }
   }
+
+  .pro-cost-value {
+    line-height : 15px;
+    // margin      : 10px 0 0 10px;
+    width       : 100%;
+    display     : inline-block;
+    font-size   : 13px;
+    color       : #4A90E2;
+
+    span{
+        font-size   : 20px;
+        font-weight : 500;
+
+      i{
+        font-size  : 13px;
+        font-style : normal;
+      }
+  }
+
   .point-costs {
     color          : #727880;
     height         : 60px;
-    width          : 300px;
+    width          : 80%;
+    max-width      : 380px;
     margin         : 0 auto;
     margin-top     : -3px;
     line-height    : 27px;
     vertical-align : top;
     border-radius  : 30px;
     border         : 2px solid #4A90E2;
+    text-align     : center;
 
-    span.pro-cost-value {
-      line-height : 15px;
-      margin      : 10px 0 0 10px;
-      width       : 100%;
-      display     : inline-block;
-      font-size   : 13px;
-      color       : #4A90E2;
-
-      span{
-          font-size   : 20px;
-          font-weight : 500;
-
-        i{
-          font-size  : 13px;
-          font-style : normal;
-        }
-      }
     }
   }
 }
 .price-bonus-hint{
-  font-size: 13px;
+  font-size  : 13px;
 }
 
 .banner_btn.btn-pricing{
@@ -679,6 +724,7 @@ section.price-faqs {
       &.main-line{
         padding-left: 20px;
       }
+
     }
   }
   .enterprise-package{
