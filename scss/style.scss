@@ -403,8 +403,7 @@ $base_logo_width: 250px;
           border        : 1px solid #D6E7F7;
           background    : rgb(239, 239, 247);
           line-height   : 14px;
-          // height        : 14px;
-          padding       : 8px;
+          padding       : 4px 8px 10px 8px;
           
           @media screen and (max-width: 930px) {
             & {
@@ -414,8 +413,12 @@ $base_logo_width: 250px;
 
           @media screen and (max-width: 640px) {
             & {
-              margin: 4px 10%;
-              width: 80%;
+              // margin: 4px 10%;
+              // width: 80%;
+
+              margin: 4px -3%;
+              width: 96%;
+
             }
           }
 
@@ -553,6 +556,10 @@ $base_logo_width: 250px;
     font-size   : 13px;
     font-weight : 100;
   }
+
+  @media screen and (max-width: 480px) {
+    & { padding: 14px 30px 15px 30px; }
+  } 
 }
 .enterprise-package{
   max-width: 650px;
@@ -728,29 +735,31 @@ section.price-faqs {
       }
     }
     .price-line{
-      padding-left: 40px;
+      padding: 10px 16px 14px 16px;
       &:before{
         display: none;
       }
       &.compact{
-        padding-left: 0;
+        padding: 0;
       }
       &.main-line{
-        padding-left: 20px;
+        padding: 20px;
       }
 
     }
   }
-  .enterprise-package{
+  .enterprise-package {
     width: 80%;
-    p{
+    p {
+      font-size: 20px;
+    }
+
+    .btn-contact-us {
+      padding: 0 10px 10px 10px;
       font-size: 20px;
     }
   }
-  a.banner_btn.btn-contact-us{
-    padding: 0 10px 10px 10px;
-    font-size: 20px;
-  }
+  
 }
 
 @media screen and (max-width: 600px) {
@@ -763,6 +772,24 @@ section.price-faqs {
     }
     &:last-child{
       padding-top: 0;
+    }
+  }
+
+  .enterprise-package {
+    p {
+      display    : block;
+      float      : none;
+      width      : 100%;
+      text-align : center;
+    }
+
+    .btn-contact-us {
+      width       : 120px;
+      display     : block;
+      float       : none;
+      clear       : both;
+      margin      : 5px auto;
+      line-height : 38px;
     }
   }
 
