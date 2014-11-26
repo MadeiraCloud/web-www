@@ -364,6 +364,18 @@ body {
   .newvem       { background-image : image-url("press/newvem.png"); }
   .mongodb      { background-image : image-url("press/mongodb.png"); }
   .redhat       { background-image : image-url("press/redhat.png"); background-size: 80%; }
+  .vmware       {
+    background-image: image-url("press/vmware.png");
+    span{
+      position: absolute;
+      top: 80px;
+      text-align: center;
+      left: 0;
+      width: 100%;
+      display: inline-block;
+      font-size: 12px;
+    }
+  }
 }
 
 
