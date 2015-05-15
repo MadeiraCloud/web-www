@@ -115,5 +115,10 @@ app.get("/:params", function(q,s,next){
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
-  spawn('open', ['http://127.0.0.1:4000']);
+  try{
+    spawn('open', ['http://127.0.0.1:4000']);
+  }catch(err){
+    console.error(err);
+    console.log("Failed to open browser automatically, \nNever mind, just type Open your browser and open following link: \nhttp://127.0.0.1:4000 !")
+  }
 });

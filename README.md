@@ -1,4 +1,4 @@
-#WWW page of Visualops.io
+#WWW page of VisualOps.io
 
 ## Usage:
 If run this for the first time, please:
@@ -13,8 +13,7 @@ then:
 else just run:
     
     node app
-    
-## Attention: 
 
-DO NOT edit html in root directory. please edit `source/*.html` instead. it will render to html in root dir automatically.
+## Attention:
 
+**DO NOT** edit html in root directory. please edit `source/*.html` instead. it will render to html in root dir automatically.
