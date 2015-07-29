@@ -265,6 +265,7 @@ $base_logo_width: 250px;
     position: absolute;
     display: inline-block;
     line-height: 10px;
+    height: 14px;
   }
 }
 
@@ -1080,7 +1081,7 @@ section.price-faqs {
     position: absolute;
     left: 50%;
     margin-left: -340px;
-    width: auto;
+    //width: auto; // fix svg
     height: 300px;
     opacity: 0;
   }
